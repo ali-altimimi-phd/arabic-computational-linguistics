@@ -1,0 +1,572 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال",
+    "section": "",
+    "text": "1 Introduction",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#background",
+    "href": "index.html#background",
+    "title": "دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال",
+    "section": "1.1 Background",
+    "text": "1.1 Background\nComputational methods have become increasingly important in the study of historical texts, enabling large collections to be explored using statistical, linguistic, and machine learning approaches that would be impractical through manual inspection alone. While such methods have become commonplace for many modern languages, relatively few large-scale computational corpora exist for the classical hadith literature.\nKanz al-Ummāl fī Sunan al-Aqwāl wa al-Afʿāl is among the largest printed compilations of Prophetic traditions. Its size, sequential organization, and extensive source citations make it an attractive candidate for computational corpus construction. At the same time, its editorial structure presents numerous challenges for automatic parsing, including page continuations, abbreviated source citations, embedded section headings, publisher footnotes, and inconsistencies in the presentation of source material.\nThe present project seeks to develop a reproducible computational framework capable of transforming the printed work into a structured corpus suitable for quantitative analysis.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#objectives",
+    "href": "index.html#objectives",
+    "title": "دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال",
+    "section": "1.2 Objectives",
+    "text": "1.2 Objectives\nThe immediate objective of Version 1.0 is not to produce a definitive digital edition of Kanz al-Ummāl. Rather, the goal is to demonstrate the feasibility of constructing a machine-readable computational corpus that supports large-scale quantitative investigation of the Prophetic traditions contained within the collection.\nSpecific objectives include:\n\nConstruct a reproducible computational corpus from the digital source text.\nStore the corpus within a DuckDB repository for efficient querying and downstream analysis.\nImplement audit procedures to identify potential parsing problems.\nGenerate corpus-wide descriptive statistics.\nIdentify repeated linguistic expressions.\nAnalyze source abbreviations and narrator information.\nEstablish a foundation for future computational linguistic investigations.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#scope-of-version-1.0",
+    "href": "index.html#scope-of-version-1.0",
+    "title": "دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال",
+    "section": "1.3 Scope of Version 1.0",
+    "text": "1.3 Scope of Version 1.0\nVersion 1.0 should be regarded as a proof of concept. The project demonstrates that a large hadith collection can be transformed into a structured computational corpus and subjected to corpus-wide quantitative analysis using a reproducible processing pipeline.\nThe corpus is not yet considered complete. A number of parsing challenges remain, particularly regarding precise separation of the matn from source citations in a minority of reports. Consequently, the present release emphasizes conservative extraction, comprehensive auditing, and reproducibility over aggressive automation.\nDespite these limitations, the current corpus already supports a broad range of descriptive and exploratory analyses, several of which are presented in the remainder of this report.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#organization-of-this-report",
+    "href": "index.html#organization-of-this-report",
+    "title": "دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال",
+    "section": "1.4 Organization of this Report",
+    "text": "1.4 Organization of this Report\nThis report is organized into two major parts.\nThe first part describes the source materials used to construct the corpus, the computational framework developed for corpus construction, and the principal challenges encountered during automatic parsing.\nThe second part presents the analytical products generated from the current Version 1.0 corpus, including descriptive corpus statistics, repeated phrase discovery, source abbreviation analysis, and preliminary narrator extraction.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#development-philosophy",
+    "href": "index.html#development-philosophy",
+    "title": "دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال",
+    "section": "1.5 Development Philosophy",
+    "text": "1.5 Development Philosophy\nThroughout development, emphasis has been placed on reproducibility, transparency, and conservative corpus construction. Intermediate audit tables are retained, all analytical products are mirrored into DuckDB, and each stage of the workflow produces independently verifiable outputs.\nRather than attempting to maximize automatic parsing at the expense of reliability, the pipeline is designed to identify ambiguous cases explicitly and preserve them for later scholarly review. This philosophy ensures that future improvements to corpus fidelity can be incorporated incrementally without requiring reconstruction of the entire analytical framework.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</span>"
+    ]
+  },
+  {
+    "objectID": "01_source_text_and_digital_sources.html",
+    "href": "01_source_text_and_digital_sources.html",
+    "title": "2  Source Text and Digital Sources",
+    "section": "",
+    "text": "3 Source Text and Digital Sources",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Source Text and Digital Sources</span>"
+    ]
+  },
+  {
+    "objectID": "01_source_text_and_digital_sources.html#the-source-text",
+    "href": "01_source_text_and_digital_sources.html#the-source-text",
+    "title": "2  Source Text and Digital Sources",
+    "section": "3.1 The Source Text",
+    "text": "3.1 The Source Text\nThe computational corpus described in this report is derived from Kanz al-Ummāl fī Sunan al-Aqwāl wa al-Afʿāl.\nBibliographic information\n\nTitle: كنز العمال في سنن الأقوال والأفعال\nAuthor: علاء الدين علي المتقي بن حسام الدين الهندي (d. 975 AH)\nEdited by: الشيخ بكري حياني\nIndexes and verification: الشيخ صفوة السقا\nPublisher: مؤسسة الرسالة\nEdition: Fifth edition (1405 AH / 1985 CE)\nVolumes: 18 (16 text volumes plus indexes)\n\nThe edition contains an author’s introduction followed by the hadith corpus. The first hadith report begins on printed page 21 and the final report appears on printed page 12,325. Hadith reports are numbered sequentially from 1 through 46,624, although some numbers are intentionally absent from the printed edition and are discussed later in this report.\nConceptually, each report consists of three principal components:\n\nHadith number.\nMatn (the text of the report).\nSource citations identifying the original compilations from which the report was drawn.\n\nEditorial section titles and subsection headings are interspersed throughout the printed work and are not themselves hadith reports.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Source Text and Digital Sources</span>"
+    ]
+  },
+  {
+    "objectID": "01_source_text_and_digital_sources.html#digital-source-data",
+    "href": "01_source_text_and_digital_sources.html#digital-source-data",
+    "title": "2  Source Text and Digital Sources",
+    "section": "3.2 Digital Source Data",
+    "text": "3.2 Digital Source Data\nTwo complementary digital representations of Kanz al-Ummāl were used during development.\n\n3.2.1 HTML/Text Archive\nThe first source consisted of a locally archived copy of the online Shamela edition (https://shamela.ws/book/2677). A custom Python scraper downloaded each printed page individually and stored both the original HTML and a plain-text representation. The scraper supports checkpointing, resumable execution, randomized request delays, and incremental downloading, allowing the complete corpus to be acquired reliably over multiple sessions.\nThe HTML archive contains all printed pages containing hadith reports and served as the primary development and validation corpus during the early stages of parser construction.\n\n\n3.2.2 Shamela JSONL Database\nThe second source was the Shamela4 Full Database distributed through Hugging Face:\nhttps://huggingface.co/datasets/AuthenticIlm/Shamela4_Full_DB\nFor this project only the Kanz al-Ummāl portion of the database was imported:\nhttps://huggingface.co/datasets/AuthenticIlm/Shamela4_Full_DB/tree/main/06__كتب-السنة/1654__كنز-العمال-في-سنن-الأقوال-والأفعال-ط-الرسالة\nUnlike the HTML archive, the database stores the text as JSON Lines (JSONL), where each physical printed page is represented by a single JSON object. The principal file used for corpus construction is pages.jsonl, which contains one record for every printed page.\nThe most important fields include:\n\n\n\nField\nDescription\n\n\n\n\npage_id\nUnique page identifier\n\n\nbook_id\nShamela book identifier\n\n\npart\nPrinted volume\n\n\npage_num\nPrinted page number\n\n\nsequence_num\nSequential page order\n\n\nbody\nMain page text\n\n\nfootnotes\nEditorial footnotes\n\n\nhints\nAuxiliary metadata\n\n\nservices_raw\nAdditional metadata\n\n\n\nInspection of the source data shows that the principal textual content is stored in the body field. Editorial headings are embedded within the page text using HTML span elements and therefore require special handling during corpus construction to prevent them from being interpreted as hadith text.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Source Text and Digital Sources</span>"
+    ]
+  },
+  {
+    "objectID": "01_source_text_and_digital_sources.html#why-two-digital-sources",
+    "href": "01_source_text_and_digital_sources.html#why-two-digital-sources",
+    "title": "2  Source Text and Digital Sources",
+    "section": "3.3 Why Two Digital Sources?",
+    "text": "3.3 Why Two Digital Sources?\nThe HTML archive and the structured JSONL database represent the same printed edition but serve complementary purposes.\nThe HTML archive proved valuable during early parser development and manual validation because it closely reflects the appearance of the online edition. The structured JSONL database subsequently became the preferred source for corpus construction because it provides explicit page-level metadata and supports efficient import into DuckDB.\nThroughout development, the HTML archive continued to serve as an independent reference when investigating ambiguous parsing cases, while the JSONL database became the canonical source for automated corpus construction.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Source Text and Digital Sources</span>"
+    ]
+  },
+  {
+    "objectID": "02_computational_corpus.html",
+    "href": "02_computational_corpus.html",
+    "title": "3  Computational Corpus",
+    "section": "",
+    "text": "4 Computational Corpus",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Computational Corpus</span>"
+    ]
+  },
+  {
+    "objectID": "02_computational_corpus.html#overview",
+    "href": "02_computational_corpus.html#overview",
+    "title": "3  Computational Corpus",
+    "section": "4.1 Overview",
+    "text": "4.1 Overview\nThe canonical computational corpus is maintained in a DuckDB database. DuckDB stores the parsed hadith corpus together with audit tables, intermediate products, and downstream analytical results. This architecture provides a reproducible workflow from the original digital source files to the statistical analyses presented later in this report.\nThe principal analytical table is:\nkanz_hadith_reports\nConceptually, each record contains three components:\n\nHadith number\nMatn (text)\nSource citations\n\n\n\n\n\n\nAlthough this structure appears straightforward, several characteristics of the Shamela digitalization complicate automatic corpus construction.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Computational Corpus</span>"
+    ]
+  },
+  {
+    "objectID": "02_computational_corpus.html#audit-driven-corpus-construction",
+    "href": "02_computational_corpus.html#audit-driven-corpus-construction",
+    "title": "3  Computational Corpus",
+    "section": "4.2 Audit-Driven Corpus Construction",
+    "text": "4.2 Audit-Driven Corpus Construction\nRather than relying on a single parsing pass, the project adopts an audit-driven approach. Independent quality-control procedures are used to identify ambiguous records before they enter the canonical corpus.\nThis philosophy favors conservative extraction over aggressive automation. When uncertainty exists, the record is retained for later review rather than forcing an automatic decision.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Computational Corpus</span>"
+    ]
+  },
+  {
+    "objectID": "02_computational_corpus.html#example-1-hadith-numbering",
+    "href": "02_computational_corpus.html#example-1-hadith-numbering",
+    "title": "3  Computational Corpus",
+    "section": "4.3 Example 1 — Hadith Numbering",
+    "text": "4.3 Example 1 — Hadith Numbering\nThe printed edition does not contain a perfectly continuous sequence of hadith numbers. During development, a dedicated audit compared the extracted numbering with the original source text to distinguish genuine numbering irregularities from parser failures.\nThe primary purpose of this audit was validation rather than correction. It demonstrated that numbering anomalies are properties of the source edition itself and therefore should not automatically be interpreted as parser errors.\nFuture versions of the corpus are expected to rely primarily on a manually curated numbering table, making the detailed audit outputs largely historical.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Computational Corpus</span>"
+    ]
+  },
+  {
+    "objectID": "02_computational_corpus.html#hadith-numbering-audit",
+    "href": "02_computational_corpus.html#hadith-numbering-audit",
+    "title": "3  Computational Corpus",
+    "section": "4.4 Hadith Numbering Audit",
+    "text": "4.4 Hadith Numbering Audit\nDuring corpus construction, the hadith numbering sequence was audited against the source text. The purpose of this audit was not to produce a final corrected edition, but to determine whether apparent gaps and anomalies were parser artifacts or features already present in the source edition.\nThe audit reads the CSV outputs stored under:\nnumbering_audit_dir &lt;- file.path(\n  \"kanz_outputs\",\n  \"02a_missing_hadith_number_audit\"\n)\n\n\n\nSummary of the hadith numbering audit.\n\n\nMeasure\nValue\n\n\n\n\nExpected hadith numbering range\n1–46,624\n\n\nObserved hadith starts in source\n44,092\n\n\nMissing numbers checked\n2,582\n\n\nMissing numbers present as literal hadith starts\n0\n\n\nMissing numbers absent as literal hadith starts\n2,582\n\n\nConsecutive missing-number ranges\n159\n\n\nLikely local source misnumberings\n7\n\n\nSource numbering gaps\n152\n\n\nDuplicate-number rows inspected\n0\n\n\n\n\n\nThe numbering audit demonstrates that apparent gaps in the hadith sequence are not simply parser failures. Missing report numbers were checked directly against the source text, and the audit distinguishes numbers that are literally absent from the source from those requiring further review.\nFor the purposes of this Version 1.0 report, the detailed gap structure is less important than the general conclusion: the parser cannot assume a perfectly continuous sequence from 1 to 46,624. Numbering irregularities must be explicitly audited and, eventually, resolved through a curated reference table.\n\n\n\n\n\n\nNoteInterpretation\n\n\n\nThe numbering audit is primarily a validation layer. It documents that some numbering irregularities originate in the source edition itself and should not be treated automatically as extraction failures.\nIn later versions of the project, this audit can be reduced or replaced once a curated hadith number table exists.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Computational Corpus</span>"
+    ]
+  },
+  {
+    "objectID": "02_computational_corpus.html#example-2-separating-the-matn-from-source-citations",
+    "href": "02_computational_corpus.html#example-2-separating-the-matn-from-source-citations",
+    "title": "3  Computational Corpus",
+    "section": "4.5 Example 2 — Separating the Matn from Source Citations",
+    "text": "4.5 Example 2 — Separating the Matn from Source Citations\nA more substantial challenge concerns identification of the boundary between the matn and the abbreviated source citations.\nAlthough most reports follow the general pattern\n\nhadith number → matn → source citations\n\nthe editorial conventions used to indicate this transition are not completely standardized. Source citations may appear parenthetically, within quotation marks, or as bare abbreviations embedded directly in the running text. No single parsing rule correctly identifies every transition.\nAccordingly, the Version 1.0 parser adopts a conservative strategy. When the boundary cannot be determined confidently, potentially ambiguous material is preserved for subsequent scholarly review rather than being split automatically.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Computational Corpus</span>"
+    ]
+  },
+  {
+    "objectID": "02_computational_corpus.html#source-citation-audit",
+    "href": "02_computational_corpus.html#source-citation-audit",
+    "title": "3  Computational Corpus",
+    "section": "4.6 Source Citation Audit",
+    "text": "4.6 Source Citation Audit\nA second audit examined the abbreviated source citations that follow the matn. Unlike the hadith numbering audit, this stage focuses on the transition between the text of the report and the bibliographic information identifying its original sources.\nThe audit summarizes recognized source abbreviations, narrator extraction, unresolved source tokens, and report-level parsing decisions. Together these provide an overall assessment of the reliability of source identification in the current Version 1.0 corpus.\n\n\n\nSummary of the source citation audit.\n\n\nMeasure\nValue\n\n\n\n\nRecognized source abbreviations\n36\n\n\nDistinct source abbreviations observed\n33\n\n\nUnknown source-review tokens\n1182\n\n\nDistinct narrators extracted\n4283\n\n\nReports containing source abbreviations\n46,623\n\n\nHadith/source matrix rows\n46,623\n\n\n\n\n\nThe audit demonstrates that most source citations can be recognized using a controlled lookup table of standard abbreviations. Nevertheless, the printed edition does not employ a completely uniform editorial style, and some reports contain abbreviated forms or formatting patterns that cannot yet be classified automatically.\nRather than forcing uncertain classifications, the parser records these unresolved cases for subsequent scholarly review. This conservative strategy preserves the integrity of the corpus while simultaneously identifying the specific records that would benefit most from manual curation.\n\n\n\n\n\n\nImportantA Curated Source Table\n\n\n\nThe greatest remaining opportunity for improving the computational corpus is the creation of a manually curated hadith number → matn → source reference table.\nSuch a resource would establish definitive boundaries between the text of each hadith and its accompanying source citations. Once available, it would immediately improve lexical analyses, repeated phrase discovery, narrator extraction, source attribution, transmission-network reconstruction, stylometric studies, and virtually every downstream computational linguistic analysis.\nThe present audit framework is designed to facilitate that process by identifying precisely those records requiring scholarly review rather than attempting increasingly complex parsing heuristics.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Computational Corpus</span>"
+    ]
+  },
+  {
+    "objectID": "02_computational_corpus.html#why-corpus-refinement-matters",
+    "href": "02_computational_corpus.html#why-corpus-refinement-matters",
+    "title": "3  Computational Corpus",
+    "section": "4.7 Why Corpus Refinement Matters",
+    "text": "4.7 Why Corpus Refinement Matters\n\n\n\n\n\n\nImportantCollaborative Corpus Curation\n\n\n\nThe principal remaining challenge is no longer demonstrating that large-scale computational analysis of Kanz al-Ummāl is feasible. Version 1.0 establishes that proof of concept.\nThe next stage of the project is the creation of a carefully curated hadith number → matn → source reference table.\nSuch a curated table would immediately improve every downstream analysis, including lexical statistics, repeated phrase discovery, source abbreviation analysis, narrator extraction, stylometric studies, transmission-network analysis, and future computational linguistics research.\nFor this reason, scholarly corpus curation is expected to provide substantially greater long-term benefit than continued refinement of individual parsing heuristics.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Computational Corpus</span>"
+    ]
+  },
+  {
+    "objectID": "02_computational_corpus.html#transition-to-corpus-analysis",
+    "href": "02_computational_corpus.html#transition-to-corpus-analysis",
+    "title": "3  Computational Corpus",
+    "section": "4.8 Transition to Corpus Analysis",
+    "text": "4.8 Transition to Corpus Analysis\nDespite the remaining areas requiring curation, the current Version 1.0 corpus already supports meaningful quantitative investigation. The following chapters present three examples of corpus-wide analyses generated directly from the current DuckDB corpus: descriptive statistics of the matn, empirical discovery of repeated phrases, and analysis of source abbreviations and narrator information.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Computational Corpus</span>"
+    ]
+  },
+  {
+    "objectID": "03_matn_stats.html",
+    "href": "03_matn_stats.html",
+    "title": "4  Matn Statistics",
+    "section": "",
+    "text": "4.1 Script 04 — Matn Counts and Descriptive Statistics",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Matn Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "03_matn_stats.html#script-04-matn-counts-and-descriptive-statistics",
+    "href": "03_matn_stats.html#script-04-matn-counts-and-descriptive-statistics",
+    "title": "4  Matn Statistics",
+    "section": "",
+    "text": "4.1.1 Purpose\nThis script performs the first large-scale quantitative analysis of the hadith text (matn) after construction of the preliminary corpus. Rather than examining individual reports, it summarizes the linguistic characteristics of the corpus as a whole and produces reusable statistical tables for subsequent analyses. All outputs are written both as CSV files and as mirrored DuckDB tables, allowing later scripts to query the results directly without recomputation.\nThe script also reflects an important design principle of the pipeline: different linguistic phenomena are treated separately rather than merged into a single undifferentiated word count. Lexical vocabulary, independent particles (ḥurūf), and selected devotional formulae are counted independently. This allows later studies to focus on vocabulary, grammar, or formulaic language without repeating the preprocessing step.\n\n\n4.1.2 Outputs\nThe script generates the following analytical products. Each output is exported as a CSV file and mirrored into DuckDB, making the results immediately available for downstream statistical analyses.\n\n\n\nScript 04 analytical outputs\n\n\n\n\n\n\nOutput\nDescription\n\n\n\n\nkanz_04_matn_hadith_level_stats\nPer-hadith descriptive statistics, including word counts, character counts, lexical diversity, sentence estimates, token lists, and normalized matn.\n\n\nkanz_04_matn_lexical_word_counts\nFrequency table of lexical words across the corpus.\n\n\nkanz_04_matn_unconnected_huruf_counts\nCounts of independent Arabic particles (ḥurūf) using a reference lookup table.\n\n\nkanz_04_matn_pious_phrase_counts\nCounts of selected devotional formulae preserved as single textual units.\n\n\nkanz_04_matn_length_statistics\nSummary statistics describing corpus-wide length and token distributions.\n\n\nkanz_04_matn_length_quantiles\nQuantile distribution of report lengths and related measures.\n\n\nkanz_04_source_code_length_summary\nSummary of report lengths grouped by source classification.\n\n\nkanz_04_run_summary\nOverall processing summary for the corpus.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Matn Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "03_matn_stats.html#corpus-at-a-glance",
+    "href": "03_matn_stats.html#corpus-at-a-glance",
+    "title": "4  Matn Statistics",
+    "section": "4.2 Corpus at a Glance",
+    "text": "4.2 Corpus at a Glance\n\n\n\nCorpus-wide Script 04 summary\n\n\nMeasure\nValue\n\n\n\n\nHadith records loaded\n46,623\n\n\nReports with matn\n43,846\n\n\nReports with matn (%)\n94.0%\n\n\nTotal textual units\n1,266,206\n\n\nLexical words\n1,058,736\n\n\nLexical words (% of textual units)\n83.6%\n\n\nIndependent ḥurūf\n207,454\n\n\nIndependent ḥurūf (% of textual units)\n16.4%\n\n\nPious phrase units\n16\n\n\nPious phrase units (% of textual units)\n0.0%\n\n\nUnique lexical word forms\n83,280\n\n\nUnique independent ḥurūf observed\n32\n\n\nPious phrase types observed\n4\n\n\n\n\n\n\n\n\n\n\n\nNoteKey finding\n\n\n\nThe preliminary Version 1.0 corpus already contains more than one million lexical words distributed across more than forty-six thousand hadith records. This provides a substantial proof-of-concept foundation for quantitative corpus analysis, even though the underlying hadith number–matn–source table still requires further curation.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Matn Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "03_matn_stats.html#preliminary-results",
+    "href": "03_matn_stats.html#preliminary-results",
+    "title": "4  Matn Statistics",
+    "section": "4.3 Preliminary Results",
+    "text": "4.3 Preliminary Results\nThe current Version 1.0 corpus contains 46,623 hadith records, of which 43,846 (94.0%) currently contain matn text suitable for quantitative analysis. Across these reports, the corpus contains approximately 1,266,206 textual units, including approximately 1,058,736 lexical words and 207,454 independent Arabic particles. The lexical vocabulary presently consists of 83,280 distinct word forms.\nThese figures indicate that the preliminary corpus is already large enough to support corpus-level descriptive analysis. Basic lexical statistics, length distributions, and particle frequencies can now be computed reproducibly across tens of thousands of reports.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Matn Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "03_matn_stats.html#matn-length-statistics",
+    "href": "03_matn_stats.html#matn-length-statistics",
+    "title": "4  Matn Statistics",
+    "section": "4.4 Matn Length Statistics",
+    "text": "4.4 Matn Length Statistics\n\n\n\nSelected matn length and token statistics\n\n\n\n\n\n\n\n\n\n\n\n\n\nMeasure\nN\nMin\nQ1\nMedian\nMean\nQ3\nMax\nSD\n\n\n\n\nTotal textual units\n46623\n0\n10\n17\n27.16\n31\n2925\n43.93\n\n\nLexical words\n46623\n0\n8\n14\n22.71\n26\n2458\n37.61\n\n\nIndependent ḥurūf\n46623\n0\n1\n3\n4.45\n5\n467\n6.71\n\n\nPious phrase units\n46623\n0\n0\n0\n0.00\n0\n2\n0.02\n\n\nUnique lexical words per report\n46623\n0\n8\n13\n18.97\n22\n1608\n25.39\n\n\nArabic characters\n46623\n0\n39\n67\n106.77\n120\n11749\n175.10\n\n\nEstimated sentential units\n46623\n0\n1\n2\n2.99\n3\n547\n5.34\n\n\n\n\n\nReport length is highly variable, reflecting the heterogeneous nature of Kanz al-Ummāl. The median report contains 17 textual units (14 lexical words), while the mean report contains approximately 27.2 textual units (22.7 lexical words). This difference between the median and mean shows that the distribution is right-skewed: most reports are relatively short, while a smaller number of very long reports raise the arithmetic average.\nThe interquartile range extends from approximately 10 to 31 textual units. In practical terms, the middle half of the corpus consists of reports in this range. The longest report contains 2,925 textual units, and the longest lexical-word count is 2,458. For this reason, future analyses should report medians and quantiles rather than relying only on arithmetic means.\n\n\n\nQuantiles for selected matn measures\n\n\n\n\n\n\n\n\n\n\n\nQuantile\nTotal textual units\nLexical words\nIndependent ḥurūf\nPious phrase units\nUnique lexical words\nArabic characters\n\n\n\n\n0%\n0\n0\n0\n0\n0\n0\n\n\n5%\n0\n0\n0\n0\n0\n0\n\n\n10%\n5\n4\n0\n0\n4\n21\n\n\n25%\n10\n8\n1\n0\n8\n39\n\n\n50%\n17\n14\n3\n0\n13\n67\n\n\n75%\n31\n26\n5\n0\n22\n120\n\n\n90%\n54\n46\n9\n0\n37\n211\n\n\n95%\n80\n68\n13\n0\n53\n313\n\n\n100%\n2925\n2458\n467\n2\n1608\n11749\n\n\n\n\n\nThe quantile table provides a compact way to understand what is typical in the corpus. Half of all reports contain 17 or fewer textual units, while the upper tail contains relatively few but substantially longer narrations.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Matn Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "03_matn_stats.html#distribution-of-matn-lengths",
+    "href": "03_matn_stats.html#distribution-of-matn-lengths",
+    "title": "4  Matn Statistics",
+    "section": "4.5 Distribution of Matn Lengths",
+    "text": "4.5 Distribution of Matn Lengths\n\n\n\n\n\n\n\n\n\nThe histogram illustrates the strongly right-skewed nature of report lengths. Most narrations are comparatively short, while progressively fewer reports occupy the long tail of the distribution. The plot is truncated at 200 textual units to make the main distribution readable; the full corpus contains a small number of much longer reports.\nThis pattern is expected in large hadith compilations, where many reports consist of brief statements, rulings, or narrative fragments, while a smaller number preserve extended narrations. Analytically, this means that later statistical models and stylometric comparisons should be designed with skewed text lengths in mind.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Matn Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "03_matn_stats.html#lexical-word-frequencies",
+    "href": "03_matn_stats.html#lexical-word-frequencies",
+    "title": "4  Matn Statistics",
+    "section": "4.6 Lexical Word Frequencies",
+    "text": "4.6 Lexical Word Frequencies\n\n\n\nTop 30 lexical words in the matn corpus\n\n\nWord\nCount\n\n\n\n\nالله\n34,315\n\n\nقال\n25,313\n\n\nبن\n16,479\n\n\nرسول\n11,515\n\n\nفقال\n10,787\n\n\nيا\n8,280\n\n\nعمر\n7,854\n\n\nله\n7,852\n\n\nولا\n7,803\n\n\nكان\n7,490\n\n\nابن\n6,878\n\n\nابي\n6,868\n\n\nالنبي\n4,621\n\n\nيوم\n4,510\n\n\nعبد\n4,353\n\n\nالناس\n4,350\n\n\nبه\n3,953\n\n\nفان\n3,763\n\n\nذلك\n3,731\n\n\nوان\n3,680\n\n\nعليه\n3,671\n\n\nهذا\n3,591\n\n\nالجنه\n3,341\n\n\nومن\n3,182\n\n\nكل\n3,008\n\n\nرجل\n2,829\n\n\nبكر\n2,759\n\n\nاهل\n2,653\n\n\nابو\n2,512\n\n\nانه\n2,492\n\n\n\n\n\nThe lexical frequency table provides the foundation for later corpus linguistic work. It can be used to identify common vocabulary, compare subsets of reports, detect unusual lexical patterns, and support later phrase-level and semantic analyses.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Matn Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "03_matn_stats.html#independent-ḥurūf",
+    "href": "03_matn_stats.html#independent-ḥurūf",
+    "title": "4  Matn Statistics",
+    "section": "4.7 Independent Ḥurūf",
+    "text": "4.7 Independent Ḥurūf\n\n\n\nObserved independent Arabic particles\n\n\n\n\n\n\n\n\n\n\nhuruf\nnormalized_huruf\ncategory\nsubcategory\ncount\nnotes\n\n\n\n\nمن\nمن\npreposition\njar\n35,330\nunconnected particle\n\n\nعن\nعن\npreposition\njar\n25,713\nunconnected particle\n\n\nفي\nفي\npreposition\njar\n23,914\nunconnected particle\n\n\nإن\nان\nparticle\ntawkid_or_condition\n21,816\nambiguous after normalization\n\n\nعلى\nعلي\npreposition\njar\n17,782\nunconnected particle\n\n\nلا\nلا\nnegation\nnafy\n12,962\nunconnected particle\n\n\nما\nما\nnegation_or_relative_or_interrogative\nmultiple\n11,657\nambiguous; count separately as unconnected particle\n\n\nإلى\nالي\npreposition\njar\n9,422\nunconnected particle\n\n\nألا\nالا\nparticle\nopening_or_warning\n8,852\nambiguous after normalization with إلا\n\n\nثم\nثم\nconjunction\nataf\n8,175\nunconnected particle\n\n\nحتى\nحتي\npreposition_or_conjunction\njar_or_ataf\n6,314\nambiguous; count as unconnected particle\n\n\nإذا\nاذا\nconditional_or_temporal\nshart_or_zarf\n6,015\nunconnected particle\n\n\nأو\nاو\nconjunction\nataf\n4,684\nunconnected particle\n\n\nلم\nلم\nnegation\nnafy_jazm\n4,255\nunconnected particle\n\n\nقد\nقد\nparticle\ntahqiq_or_taqrib\n2,854\nunconnected particle\n\n\nلو\nلو\nconditional\nshart\n1,326\nunconnected particle\n\n\nلما\nلما\nconditional_or_temporal\nshart_or_zarf\n1,084\nunconnected particle\n\n\nأما\nاما\nparticle\ndetail_or_condition\n1,055\nunconnected particle\n\n\nأم\nام\nconjunction\nataf\n1,018\nunconnected particle\n\n\nرب\nرب\npreposition\njar\n884\nunconnected particle\n\n\nهل\nهل\ninterrogative\nistifham\n731\nunconnected particle\n\n\nإذ\nاذ\ntemporal\nzarf\n454\nunconnected particle\n\n\nلن\nلن\nnegation\nnafy_nasb\n285\nunconnected particle\n\n\nبل\nبل\nconjunction\nataf\n265\nunconnected particle\n\n\nلولا\nلولا\nconditional_or_preventive\nshart_or_imtina\n221\nunconnected particle\n\n\nمنذ\nمنذ\npreposition_or_temporal\njar_or_time\n146\nunconnected particle\n\n\nكلما\nكلما\nconditional\nshart\n115\nunconnected compound particle\n\n\nخلا\nخلا\nexception\nistithna\n54\nunconnected particle in exception constructions\n\n\nلكن\nلكن\nconjunction_or_correction\nistidrak\n35\nunconnected particle\n\n\nعدا\nعدا\nexception\nistithna\n18\nunconnected particle in exception constructions\n\n\nمذ\nمذ\npreposition_or_temporal\njar_or_time\n17\nunconnected particle\n\n\nحاشا\nحاشا\nexception\nistithna\n1\nunconnected particle in exception constructions\n\n\n\n\n\nIndependent particles account for approximately 16.4% of all textual units. This is important for Arabic analysis because particles carry significant grammatical and discourse functions. Counting them separately makes it possible to study Arabic function-word behavior without confusing it with lexical vocabulary.\nThe current Version 1.0 script does not split connected prefixes such as و-, ف-, ب-, ل-, and ك-. The reported particle counts should therefore be understood as counts of independent particles only. This is a conservative choice and avoids overinterpreting attached forms before a dedicated Arabic morphological layer is added.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Matn Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "03_matn_stats.html#pious-and-devotional-formulae",
+    "href": "03_matn_stats.html#pious-and-devotional-formulae",
+    "title": "4  Matn Statistics",
+    "section": "4.8 Pious and Devotional Formulae",
+    "text": "4.8 Pious and Devotional Formulae\n\n\n\nObserved pious and devotional formulae\n\n\n\n\n\n\n\n\nphrase_id\ncanonical_phrase\ncategory\ncount\n\n\n\n\nAZZA_WA_JALLA\nعز وجل\ndivine_formula\n6\n\n\nSUBHANAHU\nسبحانه\ndivine_formula\n5\n\n\nSALLA_ALLAHU_ALAYHI_WA_SALLAM\nصلى الله عليه وسلم\nprophetic_blessing\n3\n\n\nRADIYA_ALLAHU_ANHU\nرضي الله عنه\ncompanion_formula\n2\n\n\n\n\n\nSelected devotional formulae are protected and counted as single textual units. This prevents blessings, peace formulae, divine honorifics, and companion formulae from being fragmented into ordinary word counts. The result is a cleaner separation between the lexical content of the matn and recurring formulaic expressions that serve religious, devotional, or editorial functions.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Matn Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "03_matn_stats.html#source-code-length-summary",
+    "href": "03_matn_stats.html#source-code-length-summary",
+    "title": "4  Matn Statistics",
+    "section": "4.9 Source-Code Length Summary",
+    "text": "4.9 Source-Code Length Summary\n\n\n\nMatn length summary by source-code classification\n\n\n\n\n\n\n\n\n\n\n\n\n\nsource_code\nrows\nrows_with_matn\nmedian_total_unit_count\nmean_total_unit_count\nmax_total_unit_count\nmedian_lexical_word_count\nmean_lexical_word_count\nmax_lexical_word_count\n\n\n\n\nA_PAREN\n3253\n3252\n17\n26.11\n417\n14.0\n21.77\n364\n\n\nB_QUOTE\n30484\n30286\n17\n27.59\n1340\n14.0\n23.07\n1159\n\n\nB_QUOTE | C_BARE_REVIEW\n6\n6\n18\n93.83\n480\n15.5\n81.50\n422\n\n\nB_QUOTE | NONE\n1\n1\n27\n27.00\n27\n19.0\n19.00\n19\n\n\nC_BARE_REVIEW\n5249\n5246\n20\n31.00\n2157\n16.0\n26.14\n1853\n\n\nC_BARE_REVIEW | B_QUOTE\n4\n4\n25\n31.75\n58\n22.0\n26.75\n50\n\n\nMISSING_NUMBER\n2575\n0\n0\n0.00\n0\n0.0\n0.00\n0\n\n\nNONE\n5050\n5050\n24\n35.00\n2925\n19.0\n29.06\n2458\n\n\nNONE | B_QUOTE\n1\n1\n38\n38.00\n38\n34.0\n34.00\n34\n\n\n\n\n\nThe source-code summary provides a preliminary way to compare report lengths across source-classification categories. At this stage, these comparisons should be read cautiously because source classification remains under refinement. However, the table is useful as a quality-control tool and can help identify categories that contain unusually long or short records.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Matn Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "03_matn_stats.html#interpretation",
+    "href": "03_matn_stats.html#interpretation",
+    "title": "4  Matn Statistics",
+    "section": "4.10 Interpretation",
+    "text": "4.10 Interpretation\nThis stage demonstrates that the preliminary corpus is already suitable for corpus-level descriptive analysis. Basic lexical statistics, report-length distributions, and Arabic particle frequencies can now be computed reproducibly across more than forty-six thousand hadith records.\nAn important design principle of the pipeline is the explicit separation of lexical vocabulary, independent particles (ḥurūf), and devotional formulae. Rather than collapsing all tokens into a single frequency table, these linguistic categories are preserved independently. This allows future studies to investigate vocabulary, grammatical structure, and formulaic language without additional preprocessing.\nAt the same time, these statistics should be regarded as preliminary because they reflect the current state of the corpus. Future refinement of report segmentation or source extraction may produce modest changes in individual counts. However, the overall statistical profile of the corpus is unlikely to change substantially unless large-scale changes are made to the underlying hadith number–matn–source table.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Matn Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "03_matn_stats.html#building-on-these-results",
+    "href": "03_matn_stats.html#building-on-these-results",
+    "title": "4  Matn Statistics",
+    "section": "4.11 Building on These Results",
+    "text": "4.11 Building on These Results\nAlthough this script performs only descriptive statistics, it establishes the foundation for a broad range of computational analyses. Reasonable extensions include:\n\nLexical profiling: identifying the most characteristic vocabulary of the corpus.\nFormulaic language studies: examining recurring expressions and patterns of religious discourse.\nArabic function-word analysis: using particle frequencies to investigate stylistic and grammatical variation.\nVocabulary richness: comparing lexical diversity across subsets of the corpus.\nReport-length modeling: characterizing the distribution of short and long traditions.\nCorpus comparison: enabling future comparisons with other hadith collections or Classical Arabic texts.\nStatistical and machine-learning applications: using normalized lexical frequency tables as input for clustering, topic discovery, semantic modeling, and information retrieval.\n\n\n\n\n\n\n\nImportantPractical conclusion\n\n\n\nFor Version 1.0, the main conclusion is that the computational framework is functional as a proof of concept. The strongest next step is not to redesign this analysis, but to improve the underlying hadith number–matn–source table through systematic corpus curation.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Matn Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "03_matn_stats.html#template-pattern-for-later-script-sections",
+    "href": "03_matn_stats.html#template-pattern-for-later-script-sections",
+    "title": "4  Matn Statistics",
+    "section": "4.12 Template Pattern for Later Script Sections",
+    "text": "4.12 Template Pattern for Later Script Sections\nThe same report structure can be reused for subsequent post-corpus scripts:\n\nPurpose — what question the script answers and why it matters.\nOutputs — CSV files and mirrored DuckDB tables created by the script.\nPreliminary results — the most important numerical or qualitative findings.\nTables and figures — generated directly from current output files.\nInterpretation — what the results mean and what cautions apply.\nBuilding on these results — practical computational analyses made possible by the script.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Matn Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "04_repeated_phrases.html",
+    "href": "04_repeated_phrases.html",
+    "title": "5  Repeated Matn Phrases",
+    "section": "",
+    "text": "5.1 Script 04b — Repeated Matn Phrase Analysis",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Repeated Matn Phrases</span>"
+    ]
+  },
+  {
+    "objectID": "04_repeated_phrases.html#script-04b-repeated-matn-phrase-analysis",
+    "href": "04_repeated_phrases.html#script-04b-repeated-matn-phrase-analysis",
+    "title": "5  Repeated Matn Phrases",
+    "section": "",
+    "text": "5.1.1 Purpose\nScript 04b extends the lexical analyses of Script 04 by identifying repeated multi-word expressions occurring throughout the matn. Rather than relying on predefined phrase lists or manually curated formulae, the procedure discovers repeated expressions directly from the corpus using an unsupervised n-gram approach. This allows recurring language to emerge naturally from the text itself and provides a quantitative basis for investigating formulaic expression in Kanz al-Ummāl.\nUnlike Script 04, which counts a predefined set of devotional formulae, Script 04b discovers repeated language empirically from the corpus itself. Together, the two scripts provide complementary approaches: one hypothesis-driven and one data-driven.\n\n\n5.1.2 Outputs\nThe script generates the following analytical products. Separate phrase-length files are intentionally produced because they are easier to inspect manually than a single large review table.\n\n\n\nScript 04b analytical outputs\n\n\n\n\n\n\nOutput\nDescription\n\n\n\n\nkanz_04b_repeated_matn_phrases_all\nMaster table of all retained repeated phrases from 2-word through 8-word expressions.\n\n\nkanz_04b_repeated_2grams\nReview table containing repeated two-word phrases.\n\n\nkanz_04b_repeated_3grams\nReview table containing repeated three-word phrases.\n\n\nkanz_04b_repeated_4grams\nReview table containing repeated four-word phrases.\n\n\nkanz_04b_repeated_5grams\nReview table containing repeated five-word phrases.\n\n\nkanz_04b_repeated_6grams\nReview table containing repeated six-word phrases.\n\n\nkanz_04b_repeated_7grams\nReview table containing repeated seven-word phrases.\n\n\nkanz_04b_repeated_8grams\nReview table containing repeated eight-word phrases.\n\n\nkanz_04b_hadith_repeated_phrase_hits\nHadith-level occurrences of every retained repeated phrase, including count within the hadith and matn context.\n\n\nkanz_04b_run_summary\nOverall processing summary, parameters, retained phrase counts, and output file locations.\n\n\n\n\n\nThe master repeated-phrase table, hadith-level phrase-hit table, and run summary are also mirrored into DuckDB as:\n\nkanz_04b_repeated_matn_phrases_all\nkanz_04b_hadith_repeated_phrase_hits\nkanz_04b_run_summary",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Repeated Matn Phrases</span>"
+    ]
+  },
+  {
+    "objectID": "04_repeated_phrases.html#phrase-discovery-at-a-glance",
+    "href": "04_repeated_phrases.html#phrase-discovery-at-a-glance",
+    "title": "5  Repeated Matn Phrases",
+    "section": "5.2 Phrase Discovery at a Glance",
+    "text": "5.2 Phrase Discovery at a Glance\n\n\n\nCorpus-wide Script 04b repeated-phrase summary\n\n\nMeasure\nValue\n\n\n\n\nHadith records loaded\n46,623\n\n\nRows processed\n46,623\n\n\nRows with matn\n43,846\n\n\nRows with matn (%)\n94.0%\n\n\nMinimum n-gram length\n2\n\n\nMaximum n-gram length\n8\n\n\nMinimum corpus count\n2\n\n\nMinimum hadith count\n2\n\n\nUnique candidate phrases\n6,009,654\n\n\nRetained repeated phrases\n567,715\n\n\nRetained repeated phrases (%)\n9.4%\n\n\nHadith phrase-hit rows\n2,071,563\n\n\n\n\n\n\n\n\n\n\n\nNoteKey finding\n\n\n\nScript 04b demonstrates that the current corpus can support data-driven discovery of recurring language. The analysis does not begin with a predefined list of formulae; instead, it identifies repeated phrases directly from the matn and then organizes them into reviewable files by phrase length.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Repeated Matn Phrases</span>"
+    ]
+  },
+  {
+    "objectID": "04_repeated_phrases.html#preliminary-results",
+    "href": "04_repeated_phrases.html#preliminary-results",
+    "title": "5  Repeated Matn Phrases",
+    "section": "5.3 Preliminary Results",
+    "text": "5.3 Preliminary Results\nScript 04b examined 43,846 matn-bearing reports and generated contiguous word sequences from 2-word through 8-word phrases. To reduce noise, a phrase was retained only if it occurred at least 2 times in the corpus and appeared in at least 2 separate hadith reports.\nThe analysis produced 6,009,654 unique candidate phrases before filtering and retained 567,715 repeated phrases for review. These retained phrases generated 2,071,563 hadith-level phrase-hit rows, allowing each recurring expression to be traced back to the reports in which it appears.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Repeated Matn Phrases</span>"
+    ]
+  },
+  {
+    "objectID": "04_repeated_phrases.html#retained-phrases-by-n-gram-length",
+    "href": "04_repeated_phrases.html#retained-phrases-by-n-gram-length",
+    "title": "5  Repeated Matn Phrases",
+    "section": "5.4 Retained Phrases by N-gram Length",
+    "text": "5.4 Retained Phrases by N-gram Length\n\n\n\n\n\n\n\n\n\n\n\n\nRetained repeated phrases by n-gram length\n\n\nPhrase length\nRetained repeated phrases\n\n\n\n\n2-gram\n134,383\n\n\n3-gram\n125,708\n\n\n4-gram\n97,226\n\n\n5-gram\n74,328\n\n\n6-gram\n56,738\n\n\n7-gram\n44,177\n\n\n8-gram\n35,155\n\n\n\n\n\nThe retained-phrase counts decline as phrase length increases. This is expected: short two-word and three-word sequences are common because they often reflect ordinary grammatical or lexical combinations, whereas longer repeated phrases are more selective and more likely to represent recognizable formulae, stock expressions, or recurring narrative patterns.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Repeated Matn Phrases</span>"
+    ]
+  },
+  {
+    "objectID": "04_repeated_phrases.html#example-repeated-2-grams",
+    "href": "04_repeated_phrases.html#example-repeated-2-grams",
+    "title": "5  Repeated Matn Phrases",
+    "section": "5.5 Example: Repeated 2-grams",
+    "text": "5.5 Example: Repeated 2-grams\nTwo-word repeated phrases provide a broad view of recurring lexical pairings and common grammatical combinations. Many are expected to be frequent and general, but they help establish the lower-level texture of the corpus and provide a starting point for later collocation analysis.\n\n\n\nTop repeated 2-grams\n\n\n\n\n\n\n\n\nPhrase\nCorpus count\nHadith count\nExample hadith numbers\n\n\n\n\nرسول الله\n11,422\n6,890\n6 | 15 | 16 | 18 | 21 | 24 | 30 | 36 | 38 | 40 | 41 | 116 | 122 | 124 | 125 | 129 | 138 | 140 | 141 | 142 | 145 | 146 | 148 | 162 | 171\n\n\nعن ابي\n3,037\n2,973\n14 | 39 | 45 | 76 | 132 | 160 | 161 | 184 | 194 | 200 | 301 | 405 | 417 | 485 | 507 | 572 | 639 | 670 | 697 | 714 | 723 | 742 | 795 | 820 | 825\n\n\nعن ابن\n2,500\n2,461\n23 | 39 | 148 | 175 | 186 | 194 | 251 | 289 | 445 | 558 | 631 | 670 | 793 | 830 | 901 | 1024 | 1030 | 1074 | 1119 | 1181 | 1192 | 1332 | 1355 | 1365 | 1380\n\n\nيا رسول\n2,341\n1,884\n125 | 146 | 199 | 206 | 210 | 589 | 754 | 783 | 829 | 864 | 867 | 928 | 946 | 957 | 992 | 998 | 1004 | 1053 | 1080 | 1081 | 1118 | 1129 | 1198 | 1243 | 1275\n\n\nيوم القيامه\n2,111\n1,931\n109 | 110 | 119 | 121 | 133 | 138 | 139 | 151 | 179 | 184 | 233 | 286 | 287 | 288 | 292 | 293 | 294 | 330 | 342 | 364 | 428 | 539 | 559 | 569 | 575\n\n\nعبد الله\n1,994\n1,620\n10 | 277 | 324 | 330 | 465 | 477 | 756 | 776 | 782 | 799 | 945 | 1011 | 1085 | 1368 | 1379 | 1400 | 1413 | 1414 | 1419 | 1420 | 1421 | 1426 | 1427 | 1431 | 1440\n\n\nالله تعالي\n1,848\n1,677\n30 | 100 | 109 | 127 | 158 | 181 | 220 | 235 | 236 | 252 | 253 | 262 | 285 | 287 | 288 | 335 | 336 | 388 | 421 | 482 | 483 | 498 | 519 | 527 | 584\n\n\nبن الخطاب\n1,845\n1,736\n1355 | 1358 | 1384 | 1414 | 1415 | 1431 | 1433 | 1444 | 1466 | 1469 | 1487 | 1488 | 1498 | 1500 | 1502 | 1543 | 1550 | 1583 | 1606 | 1622 | 1629 | 1631 | 1632 | 1655 | 1673\n\n\nعن علي\n1,829\n1,814\n59 | 421 | 719 | 782 | 828 | 1360 | 1361 | 1362 | 1370 | 1371 | 1372 | 1426 | 1434 | 1475 | 1552 | 1553 | 1555 | 1556 | 1557 | 1558 | 1562 | 1567 | 1594 | 1597 | 1598\n\n\nعمر بن\n1,808\n1,711\n1355 | 1358 | 1384 | 1414 | 1415 | 1431 | 1433 | 1444 | 1466 | 1469 | 1487 | 1488 | 1498 | 1500 | 1502 | 1543 | 1550 | 1583 | 1606 | 1622 | 1624 | 1629 | 1631 | 1632 | 1650\n\n\nان الله\n1,463\n1,390\n66 | 109 | 143 | 145 | 146 | 257 | 261 | 262 | 270 | 285 | 292 | 300 | 323 | 347 | 348 | 363 | 445 | 510 | 511 | 519 | 528 | 529 | 530 | 531 | 532\n\n\nالله بن\n1,430\n1,217\n477 | 756 | 776 | 782 | 945 | 1011 | 1085 | 1379 | 1400 | 1413 | 1419 | 1420 | 1421 | 1431 | 1442 | 1451 | 1458 | 1473 | 1483 | 1497 | 1505 | 1525 | 1533 | 1536 | 1539\n\n\nبن ابي\n1,349\n1,201\n793 | 1370 | 1387 | 1389 | 1422 | 1430 | 1476 | 1481 | 1496 | 1525 | 1536 | 1539 | 1567 | 1568 | 1570 | 1571 | 1597 | 1623 | 1650 | 1663 | 1675 | 1727 | 1736 | 1746 | 2794\n\n\nعلي قال\n1,207\n1,197\n782 | 1360 | 1361 | 1362 | 1371 | 1434 | 1475 | 1552 | 1553 | 1555 | 1556 | 1562 | 1594 | 1598 | 1607 | 1612 | 1638 | 1640 | 1641 | 1645 | 1647 | 1649 | 1651 | 1652 | 1653\n\n\nابن عباس\n1,205\n1,107\n23 | 39 | 175 | 186 | 289 | 445 | 558 | 631 | 1074 | 1119 | 1181 | 1395 | 1396 | 1494 | 1496 | 1539 | 1589 | 1590 | 1623 | 1668 | 1674 | 1683 | 1744 | 1853 | 1897\n\n\nقال قال\n1,154\n1,150\n465 | 1362 | 1380 | 1390 | 1407 | 1413 | 1428 | 1432 | 1437 | 1438 | 1443 | 1444 | 1449 | 1477 | 1492 | 1538 | 1540 | 1544 | 1550 | 1555 | 1587 | 1591 | 1592 | 1593 | 1600\n\n\nابو بكر\n1,139\n863\n875 | 1404 | 1405 | 1409 | 1411 | 1412 | 1428 | 1429 | 1430 | 1431 | 1443 | 1479 | 1480 | 1482 | 1499 | 1538 | 1539 | 1540 | 1560 | 1572 | 1696 | 3316 | 3951 | 3991 | 4031\n\n\nعمر قال\n1,113\n1,105\n1355 | 1356 | 1357 | 1367 | 1369 | 1380 | 1417 | 1479 | 1483 | 1485 | 1486 | 1489 | 1522 | 1523 | 1537 | 1544 | 1545 | 1549 | 1551 | 1576 | 1591 | 1618 | 1626 | 1627 | 1628\n\n\nثم قال\n1,107\n858\n175 | 520 | 572 | 597 | 1256 | 1298 | 1355 | 1363 | 1368 | 1382 | 1464 | 1466 | 1502 | 1525 | 1543 | 1547 | 1553 | 1561 | 1576 | 1608 | 1625 | 1655 | 1670 | 1686 | 1702\n\n\nعن عمر\n1,063\n1,060\n111 | 194 | 516 | 917 | 1356 | 1357 | 1358 | 1359 | 1367 | 1369 | 1417 | 1433 | 1484 | 1485 | 1486 | 1488 | 1489 | 1544 | 1545 | 1546 | 1547 | 1549 | 1550 | 1551 | 1604",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Repeated Matn Phrases</span>"
+    ]
+  },
+  {
+    "objectID": "04_repeated_phrases.html#example-repeated-5-grams",
+    "href": "04_repeated_phrases.html#example-repeated-5-grams",
+    "title": "5  Repeated Matn Phrases",
+    "section": "5.6 Example: Repeated 5-grams",
+    "text": "5.6 Example: Repeated 5-grams\nFive-word repeated phrases are often more interpretable than two-word phrases because they are long enough to capture formulaic wording or recurring narrative language. For a non-specialist reader, the 5-gram table is therefore a useful bridge between raw frequency counting and the study of formulaic expression.\n\n\n\nTop repeated 5-grams\n\n\n\n\n\n\n\n\nPhrase\nCorpus count\nHadith count\nExample hadith numbers\n\n\n\n\nان لا اله الا الله\n316\n283\n6 | 16 | 18 | 20 | 21 | 23 | 24 | 27 | 28 | 29 | 30 | 31 | 36 | 38 | 39 | 40 | 41 | 43 | 80 | 109 | 110 | 111 | 112 | 116 | 122\n\n\nاشهد ان لا اله الا\n139\n116\n24 | 36 | 109 | 110 | 116 | 136 | 138 | 139 | 140 | 148 | 233 | 1373 | 1421 | 1462 | 1736 | 2612 | 3517 | 3589 | 3724 | 3734 | 3878 | 3898 | 4947 | 4950 | 12110\n\n\nلا اله الا الله وحده\n133\n123\n39 | 111 | 118 | 139 | 160 | 166 | 204 | 207 | 277 | 377 | 1359 | 1363 | 1417 | 1491 | 1905 | 2048 | 3488 | 3517 | 3523 | 3524 | 3525 | 3526 | 3527 | 3528 | 3529\n\n\nالله وحده لا شريك له\n132\n126\n111 | 118 | 139 | 166 | 204 | 1359 | 1363 | 1417 | 1491 | 1905 | 2048 | 3488 | 3517 | 3523 | 3524 | 3525 | 3526 | 3527 | 3528 | 3529 | 3531 | 3532 | 3534 | 3535 | 3572\n\n\nاله الا الله وحده لا\n130\n124\n111 | 118 | 139 | 166 | 204 | 1359 | 1363 | 1417 | 1491 | 1905 | 2048 | 3488 | 3517 | 3523 | 3524 | 3525 | 3526 | 3527 | 3528 | 3529 | 3531 | 3532 | 3534 | 3535 | 3572\n\n\nالا الله وحده لا شريك\n129\n123\n111 | 118 | 139 | 166 | 204 | 1359 | 1363 | 1417 | 1491 | 1905 | 2048 | 3488 | 3517 | 3523 | 3524 | 3525 | 3526 | 3527 | 3528 | 3529 | 3531 | 3532 | 3534 | 3535 | 3572\n\n\nحول ولا قوه الا بالله\n124\n123\n1951 | 1952 | 1953 | 1954 | 1955 | 1956 | 1957 | 1958 | 1959 | 1960 | 1961 | 1962 | 1963 | 1964 | 1965 | 1966 | 1967 | 1968 | 1969 | 1970 | 1971 | 1972 | 1973 | 1974 | 1975\n\n\nاللهم اني اعوذ بك من\n101\n95\n3330 | 3572 | 3583 | 3609 | 3618 | 3619 | 3622 | 3628 | 3631 | 3634 | 3637 | 3641 | 3642 | 3649 | 3651 | 3666 | 3669 | 3670 | 3671 | 3681 | 3687 | 3688 | 3689 | 3690 | 3693\n\n\nقال لا اله الا الله\n99\n84\n118 | 120 | 126 | 132 | 134 | 143 | 148 | 155 | 159 | 166 | 169 | 180 | 183 | 201 | 202 | 203 | 204 | 205 | 206 | 207 | 208 | 209 | 210 | 219 | 229\n\n\nعلي قال قال رسول الله\n93\n93\n1555 | 1612 | 1652 | 4029 | 4030 | 4074 | 4075 | 4440 | 4460 | 4547 | 4614 | 4642 | 4675 | 4704 | 4718 | 4883 | 5056 | 5063 | 8412 | 8512 | 8619 | 8659 | 8808 | 8811 | 8887\n\n\nعن علي قال قال رسول\n92\n92\n1555 | 1612 | 1652 | 4029 | 4030 | 4074 | 4075 | 4440 | 4460 | 4547 | 4614 | 4642 | 4675 | 4704 | 4718 | 4883 | 5056 | 5063 | 8412 | 8512 | 8619 | 8659 | 8808 | 8811 | 8887\n\n\nالخرايطي في مكارم الاخلاق عن\n88\n88\n95 | 107 | 756 | 3237 | 3360 | 3426 | 3433 | 3518 | 3568 | 3795 | 3799 | 3852 | 5134 | 5190 | 5196 | 5206 | 5211 | 5219 | 5224 | 5242 | 5243 | 5456 | 5457 | 5461 | 5718\n\n\nلا اله الا الله وان\n86\n83\n6 | 18 | 20 | 21 | 28 | 29 | 30 | 38 | 40 | 110 | 129 | 148 | 156 | 162 | 195 | 198 | 199 | 215 | 217 | 225 | 233 | 365 | 374 | 434 | 957\n\n\nاله الا الله وان محمدا\n85\n82\n6 | 18 | 20 | 21 | 28 | 29 | 30 | 38 | 40 | 110 | 129 | 148 | 156 | 162 | 195 | 198 | 199 | 215 | 217 | 225 | 233 | 365 | 374 | 434 | 957\n\n\nوهو علي كل شيء قدير\n84\n84\n2022 | 2048 | 3040 | 3488 | 3523 | 3524 | 3525 | 3526 | 3527 | 3528 | 3529 | 3531 | 3532 | 3534 | 3535 | 3576 | 3579 | 3586 | 3590 | 3591 | 3603 | 3604 | 3721 | 3722 | 3725\n\n\nقال قال عمر بن الخطاب\n82\n82\n1730 | 4018 | 4094 | 4179 | 4228 | 4289 | 4523 | 4636 | 8481 | 8689 | 8815 | 8888 | 8898 | 8934 | 8939 | 8945 | 8946 | 8979 | 9854 | 10093 | 10095 | 11460 | 11494 | 11652 | 11670\n\n\nقال سمعت رسول الله يقول\n81\n80\n1415 | 1422 | 1571 | 1580 | 1653 | 1673 | 1684 | 1688 | 4926 | 4928 | 4972 | 4980 | 5017 | 5058 | 5077 | 8421 | 8447 | 8678 | 8779 | 8782 | 8840 | 11340 | 11502 | 12395 | 12417\n\n\nاله الا الله والله اكبر\n77\n72\n1798 | 1909 | 1963 | 1989 | 1990 | 1993 | 1995 | 1999 | 2000 | 2002 | 2003 | 2004 | 2005 | 2008 | 2011 | 2012 | 2015 | 2020 | 2023 | 2024 | 2025 | 2028 | 2031 | 2032 | 2033\n\n\nان عمر بن الخطاب كان\n74\n74\n1384 | 4103 | 4231 | 4817 | 5043 | 8608 | 8827 | 11418 | 11419 | 11462 | 11470 | 11471 | 11516 | 12517 | 12656 | 12745 | 12752 | 13429 | 13597 | 13668 | 13977 | 15357 | 15554 | 16868 | 16892\n\n\nشريك له له الملك وله\n74\n74\n2022 | 2048 | 3488 | 3523 | 3524 | 3525 | 3526 | 3527 | 3528 | 3531 | 3532 | 3534 | 3535 | 3572 | 3576 | 3579 | 3582 | 3586 | 3590 | 3591 | 3603 | 3604 | 3721 | 3722 | 3725",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Repeated Matn Phrases</span>"
+    ]
+  },
+  {
+    "objectID": "04_repeated_phrases.html#cross-length-examples",
+    "href": "04_repeated_phrases.html#cross-length-examples",
+    "title": "5  Repeated Matn Phrases",
+    "section": "5.7 Cross-Length Examples",
+    "text": "5.7 Cross-Length Examples\nThe table below shows the highest-frequency examples across phrase lengths. It is intended as a quick inspection table rather than a complete inventory. The complete review files should be used for detailed phrase evaluation.\n\n\n\nTop repeated phrases by phrase length\n\n\n\n\n\n\n\n\nPhrase length\nPhrase\nCorpus count\nHadith count\n\n\n\n\n2-gram\nرسول الله\n11,422\n6,890\n\n\n2-gram\nعن ابي\n3,037\n2,973\n\n\n2-gram\nعن ابن\n2,500\n2,461\n\n\n2-gram\nيا رسول\n2,341\n1,884\n\n\n2-gram\nيوم القيامه\n2,111\n1,931\n\n\n3-gram\nيا رسول الله\n2,312\n1,865\n\n\n3-gram\nعمر بن الخطاب\n1,722\n1,641\n\n\n3-gram\nعبد الله بن\n1,253\n1,103\n\n\n3-gram\nعن علي قال\n1,139\n1,139\n\n\n3-gram\nلا اله الا\n936\n757\n\n\n4-gram\nلا اله الا الله\n772\n627\n\n\n4-gram\nعن عبد الله بن\n560\n554\n\n\n4-gram\nقال قال رسول الله\n531\n530\n\n\n4-gram\nعن ابن عباس قال\n471\n471\n\n\n4-gram\nان عمر بن الخطاب\n408\n405\n\n\n5-gram\nان لا اله الا الله\n316\n283\n\n\n5-gram\nاشهد ان لا اله الا\n139\n116\n\n\n5-gram\nلا اله الا الله وحده\n133\n123\n\n\n5-gram\nالله وحده لا شريك له\n132\n126\n\n\n5-gram\nاله الا الله وحده لا\n130\n124\n\n\n6-gram\nالا الله وحده لا شريك له\n129\n123\n\n\n6-gram\nاله الا الله وحده لا شريك\n129\n123\n\n\n6-gram\nاشهد ان لا اله الا الله\n128\n105\n\n\n6-gram\nلا اله الا الله وحده لا\n121\n115\n\n\n6-gram\nعن علي قال قال رسول الله\n92\n92\n\n\n7-gram\nاله الا الله وحده لا شريك له\n129\n123\n\n\n7-gram\nلا اله الا الله وحده لا شريك\n120\n114\n\n\n7-gram\nان لا اله الا الله وان محمدا\n82\n80\n\n\n7-gram\nالا الله وحده لا شريك له له\n74\n74\n\n\n7-gram\nلا شريك له له الملك وله الحمد\n74\n74\n\n\n8-gram\nلا اله الا الله وحده لا شريك له\n120\n114\n\n\n8-gram\nاله الا الله وحده لا شريك له له\n74\n74\n\n\n8-gram\nالا الله وحده لا شريك له له الملك\n73\n73\n\n\n8-gram\nالله وحده لا شريك له له الملك وله\n73\n73\n\n\n8-gram\nوحده لا شريك له له الملك وله الحمد\n73\n73",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Repeated Matn Phrases</span>"
+    ]
+  },
+  {
+    "objectID": "04_repeated_phrases.html#interpretation",
+    "href": "04_repeated_phrases.html#interpretation",
+    "title": "5  Repeated Matn Phrases",
+    "section": "5.8 Interpretation",
+    "text": "5.8 Interpretation\nUnlike the manually curated devotional expressions counted in Script 04, this procedure makes no assumptions about which phrases are linguistically or religiously significant. Repeated language is discovered directly from the corpus itself. This distinction matters because recurrent expressions in hadith literature may include standard openings, narrative transitions, oaths, quotation formulae, supplications, and other conventional wording that would be difficult to enumerate exhaustively beforehand.\nThe separate review files organized by phrase length also support practical human inspection. Short phrases are useful for identifying common lexical and grammatical pairings, while longer repeated phrases are more likely to reveal complete formulaic expressions or stereotyped narrative patterns. The 2-gram and 5-gram examples therefore serve different purposes: the former gives a broad view of local word association, while the latter begins to expose more meaningful repeated language.\nAt the same time, these results should be interpreted as phrase candidates rather than final linguistic categories. Repetition alone does not prove that a phrase has a specific rhetorical, theological, or transmission function. The value of Script 04b is that it narrows the search space and produces an empirical phrase inventory that can be reviewed, classified, and reused in later analyses.\n\n\n\n\n\n\nImportantPractical implication\n\n\n\nScript 04b turns the corpus into a source of candidate formulae. Rather than asking a reviewer to invent a phrase list from memory, the pipeline can surface repeated expressions automatically and then allow human reviewers to decide which ones are linguistically or religiously meaningful.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Repeated Matn Phrases</span>"
+    ]
+  },
+  {
+    "objectID": "04_repeated_phrases.html#building-on-these-results",
+    "href": "04_repeated_phrases.html#building-on-these-results",
+    "title": "5  Repeated Matn Phrases",
+    "section": "5.9 Building on These Results",
+    "text": "5.9 Building on These Results\nThe repeated-phrase inventory provides a foundation for several accessible computational linguistic extensions:\n\nFormulaic language discovery: identifying recurring expressions that appear across multiple hadith reports.\nPhrase dictionaries: building reviewable lists of repeated expressions for later annotation and classification.\nCollocation analysis: studying which words tend to occur together more often than expected.\nNarrative-pattern analysis: identifying repeated openings, transitions, quotations, and closing formulae.\nStylometric comparison: measuring how formula density differs across subsets of the corpus.\nSearch and retrieval: enabling phrase-based search rather than only single-word search.\nCorpus comparison: comparing repeated expressions in Kanz al-Ummāl with other hadith collections or Classical Arabic corpora.\nMachine-learning preparation: producing phrase-level features that can be used in clustering, topic discovery, or semantic modelling.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Repeated Matn Phrases</span>"
+    ]
+  },
+  {
+    "objectID": "04_repeated_phrases.html#summary-assessment",
+    "href": "04_repeated_phrases.html#summary-assessment",
+    "title": "5  Repeated Matn Phrases",
+    "section": "5.10 Summary Assessment",
+    "text": "5.10 Summary Assessment\nScript 04b is a proof-of-concept for data-driven formulaic language discovery in the preliminary Kanz al-Ummāl corpus. It does not solve the linguistic classification problem by itself, but it creates the empirical foundation needed for later classification. The result is a practical bridge between raw text extraction and higher-level computational linguistics: repeated language can now be found, counted, reviewed, and traced back to individual hadith reports.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Repeated Matn Phrases</span>"
+    ]
+  },
+  {
+    "objectID": "05_source_narrator.html",
+    "href": "05_source_narrator.html",
+    "title": "6  Source Abbreviations and Narrators",
+    "section": "",
+    "text": "7 Script 05 — Source Abbreviations and Narrator Tally",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Source Abbreviations and Narrators</span>"
+    ]
+  },
+  {
+    "objectID": "05_source_narrator.html#purpose",
+    "href": "05_source_narrator.html#purpose",
+    "title": "6  Source Abbreviations and Narrators",
+    "section": "7.1 Purpose",
+    "text": "7.1 Purpose\nScript 05 extends the Version 1.0 corpus from matn analysis to source-field analysis. It identifies source abbreviations, tallies their frequency across the corpus, creates a hadith-level source-abbreviation matrix, extracts preliminary narrator names from the source field, and produces audit tables for unresolved or ambiguous source tokens.\nThe script is designed as a conservative analytical layer. It does not attempt full isnād reconstruction. Instead, it separates what can be recognized reliably from what requires human review. This makes the current corpus useful for preliminary source and narrator analysis while preserving unresolved cases for later scholarly curation.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Source Abbreviations and Narrators</span>"
+    ]
+  },
+  {
+    "objectID": "05_source_narrator.html#outputs",
+    "href": "05_source_narrator.html#outputs",
+    "title": "6  Source Abbreviations and Narrators",
+    "section": "7.2 Outputs",
+    "text": "7.2 Outputs\nThe script generates nine analytical products. Each output is exported as a CSV file and mirrored into DuckDB using the same kanz_05_* table name.\n\n\n\n\n\n\n\nOutput\nDescription\n\n\n\n\nkanz_05_source_abbreviation_lookup\nLookup table of abbreviation variants, canonical abbreviations, source names, status, category, and notes.\n\n\nkanz_05_source_abbreviation_counts\nCorpus-wide frequency counts for recognized source abbreviations.\n\n\nkanz_05_source_narrator_counts\nFrequency counts of narrator names extracted from source-field patterns.\n\n\nkanz_05_source_narrator_report_audit\nHadith-level audit table showing narrator spans, stop reasons, and associated source text.\n\n\nkanz_05_source_token_category_counts\nCounts of token categories observed while parsing the source field.\n\n\nkanz_05_source_unknown_review_tokens\nTokens requiring review because they were not recognized as source abbreviations or standard formulae.\n\n\nkanz_05_source_abbreviation_report_audit\nHadith-level audit table classifying source-field recognition status.\n\n\nkanz_05_hadith_source_abbreviation_matrix\nHadith-by-source matrix showing source abbreviation counts per report.\n\n\nkanz_05_source_analysis_run_summary\nOverall processing summary for Script 05.\n\n\n\n\n\n\n\n\n\nNoteDesign note\n\n\n\nScript 05 combines two complementary tasks: source abbreviation recognition and preliminary narrator extraction. The abbreviation analysis is lookup-driven and relatively stable. The narrator extraction is intentionally heuristic and should be treated as a first-pass index for review rather than a completed isnād analysis.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Source Abbreviations and Narrators</span>"
+    ]
+  },
+  {
+    "objectID": "05_source_narrator.html#source-analysis-at-a-glance",
+    "href": "05_source_narrator.html#source-analysis-at-a-glance",
+    "title": "6  Source Abbreviations and Narrators",
+    "section": "7.3 Source Analysis at a Glance",
+    "text": "7.3 Source Analysis at a Glance\n\n\n\nScript 05 source and narrator analysis summary\n\n\n\n\n\n\nMeasure\nValue\n\n\n\n\nInput hadith rows\n46,623\n\n\nReports with source present\n38,998 (83.6%)\n\n\nReports missing source\n7,625 (16.4%)\n\n\nLookup rows loaded\n36\n\n\nCanonical source abbreviations\n33\n\n\nReports with recognized abbreviation\n31,598 (67.8% of all rows; 81.0% of source-present rows)\n\n\nSource abbreviation instances\n48,991\n\n\nReports with narrator extracted\n22,998 (49.3% of all rows; 59.0% of source-present rows)\n\n\nNarrator instances\n23,875\n\n\nUnique narrator names\n4,283\n\n\nReports with review tokens\n2,289 (4.9%)\n\n\nReview token instances\n5,836\n\n\nConservative source rows (B/A)\n33,737\n\n\nReview source rows\n12,884\n\n\n\n\n\nVersion 1.0 includes 46,623 hadith rows. Source text is present in 38,998 rows (83.6%), while 7,625 rows (16.4%) currently lack a source field. The lookup table contains 33 canonical source abbreviations derived from 36 lookup rows.\nRecognized source abbreviations occur in 31,598 reports, representing 67.8% of all rows and 81.0% of rows with source text. Across the corpus, the script identifies 48,991 source-abbreviation instances.\nPreliminary narrator extraction identifies 23,875 narrator instances, corresponding to 4,283 distinct normalized narrator names. Narrator information is extracted from 22,998 reports, or 59.0% of source-present rows.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Source Abbreviations and Narrators</span>"
+    ]
+  },
+  {
+    "objectID": "05_source_narrator.html#source-recognition-audit",
+    "href": "05_source_narrator.html#source-recognition-audit",
+    "title": "6  Source Abbreviations and Narrators",
+    "section": "7.4 Source Recognition Audit",
+    "text": "7.4 Source Recognition Audit\n\n\n\nHadith-level source recognition audit status\n\n\nAudit status\nReports\nPercent\n\n\n\n\nrecognized source abbreviation\n29,913\n64.2%\n\n\nmissing source\n7,625\n16.4%\n\n\nsource present but no abbreviation detected\n6,796\n14.6%\n\n\nrecognized abbreviation with review tokens\n1,685\n3.6%\n\n\nunrecognized source tokens\n604\n1.3%\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe audit table distinguishes several levels of confidence. Reports with recognized abbreviations can be used immediately for preliminary source-frequency analysis. Reports with recognized abbreviations plus review tokens are partially interpretable but should remain flagged. Reports with source text but no detected abbreviation require closer inspection, since they may contain narrator-only material, non-standard formatting, or source forms not yet captured in the lookup table.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Source Abbreviations and Narrators</span>"
+    ]
+  },
+  {
+    "objectID": "05_source_narrator.html#top-source-abbreviations",
+    "href": "05_source_narrator.html#top-source-abbreviations",
+    "title": "6  Source Abbreviations and Narrators",
+    "section": "7.5 Top Source Abbreviations",
+    "text": "7.5 Top Source Abbreviations\n\n\n\nTop recognized source abbreviations\n\n\n\n\n\n\n\n\n\nAbbreviation\nSource\nStatus\nCategory\nCount\n\n\n\n\nطب\nالطبراني في الكبير\nknown\nsource_abbreviation\n5,553\n\n\nحم\nأحمد في المسند\nknown\nsource_abbreviation\n5,348\n\n\nك\nالحاكم\nknown\nsource_abbreviation\n3,489\n\n\nق\nمتفق عليه\nknown\nsource_abbreviation\n3,210\n\n\nكر\nابن عساكر\nknown\nsource_abbreviation\n3,018\n\n\nعب\nعبد الرزاق\nknown\nsource_abbreviation\n2,992\n\n\nش\nابن أبي شيبة\nknown\nsource_abbreviation\n2,588\n\n\nهـ\nابن ماجه\nknown\nsource_abbreviation\n2,309\n\n\nد\nأبو داود\nknown\nsource_abbreviation\n2,170\n\n\nت\nالترمذي\nknown\nsource_abbreviation\n2,033\n\n\nهب\nالبيهقي في شعب الإيمان\nknown\nsource_abbreviation\n2,022\n\n\nن\nالنسائي\nknown\nsource_abbreviation\n1,955\n\n\nص\nسعيد بن منصور\nknown\nsource_abbreviation\n1,450\n\n\nم\nمسلم\nknown\nsource_abbreviation\n1,433\n\n\nحب\nابن حبان في صحيحه\nknown\nsource_abbreviation\n1,335\n\n\nحل\nأبو نعيم في الحلية\nknown\nsource_abbreviation\n991\n\n\nخ\nالبخاري\nknown\nsource_abbreviation\n957\n\n\nطس\nالطبراني في الأوسط\nknown\nsource_abbreviation\n934\n\n\nقط\nالدارقطني\nknown\nsource_abbreviation\n815\n\n\nع\nأبو يعلى\nknown\nsource_abbreviation\n732\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe highest-frequency abbreviations provide an initial source profile for the corpus. This table is especially useful because it converts compact editorial abbreviations into canonical source labels while preserving the original abbreviation system for audit and reproducibility.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Source Abbreviations and Narrators</span>"
+    ]
+  },
+  {
+    "objectID": "05_source_narrator.html#preliminary-narrator-extraction",
+    "href": "05_source_narrator.html#preliminary-narrator-extraction",
+    "title": "6  Source Abbreviations and Narrators",
+    "section": "7.6 Preliminary Narrator Extraction",
+    "text": "7.6 Preliminary Narrator Extraction\n\n\n\nTop preliminary narrator names extracted from source fields\n\n\nNarrator\nInstances\nReports\n\n\n\n\nابي هريره\n2,980\n2,979\n\n\nانس\n1,683\n1,683\n\n\nابن عمر\n1,533\n1,530\n\n\nابن عباس\n1,520\n1,520\n\n\nعايشه\n980\n979\n\n\nجابر\n941\n941\n\n\nابي سعيد\n681\n681\n\n\nابن مسعود\n663\n663\n\n\nعلي\n542\n540\n\n\nابي امامه\n482\n482\n\n\nابن عمرو\n401\n400\n\n\nابي الدرداء\n284\n284\n\n\nابي ذر\n238\n238\n\n\nابي موسي\n236\n236\n\n\nعمر\n235\n235\n\n\nمعاذ\n219\n219\n\n\nام سلمه\n191\n191\n\n\nحذيفه\n147\n147\n\n\nعقبه بن عامر\n137\n137\n\n\nسمره\n134\n134\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNarrator extraction is intentionally preliminary. The current rule captures phrases following عن until the end of the source field or until a recognized source abbreviation is encountered. This is useful for building an initial narrator index, but it does not yet resolve name variants, patronymics, ambiguous shortened names, or full isnād chains. The resulting table should therefore be understood as a reviewable working index rather than a finalized biographical authority file.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Source Abbreviations and Narrators</span>"
+    ]
+  },
+  {
+    "objectID": "05_source_narrator.html#token-categories-and-review-tokens",
+    "href": "05_source_narrator.html#token-categories-and-review-tokens",
+    "title": "6  Source Abbreviations and Narrators",
+    "section": "7.7 Token Categories and Review Tokens",
+    "text": "7.7 Token Categories and Review Tokens\n\n\n\nSource-field token category counts\n\n\nToken category\nCount\nPercent\n\n\n\n\nprobable narrator or name\n85,823\n40.0%\n\n\nsource formula or connector\n64,815\n30.2%\n\n\nrecognized source abbreviation\n48,991\n22.8%\n\n\npunctuation or separator\n8,009\n3.7%\n\n\nshort arabic review token\n3,608\n1.7%\n\n\nunknown review\n2,228\n1.0%\n\n\nnumeric artifact\n1,299\n0.6%\n\n\n\n\n\n\n\n\nTop source-field tokens requiring review\n\n\nToken\nCount\n\n\n\n\nأن\n367\n\n\nلا\n362\n\n\nما\n313\n\n\nذر\n285\n\n\nثم\n258\n\n\nيا\n245\n\n\nله\n210\n\n\nبه\n155\n\n\nإن\n149\n\n\nلم\n118\n\n\nهو\n100\n\n\nقد\n96\n\n\nأو\n84\n\n\nلي\n82\n\n\nد1\n60\n\n\nمر\n57\n\n\nالله!\n54\n\n\nم1\n54\n\n\nبز\n53\n\n\nت1\n46\n\n\n﷿\n45\n\n\nهل\n41\n\n\n…\n41\n\n\nد2\n40\n\n\nلك\n40\n\n\n\n\n\nThe review-token output is important for iterative corpus improvement. Rather than hiding unrecognized material, the script explicitly surfaces unresolved tokens so that the source lookup table can be refined over time. This allows manual review to be focused on the highest-yield cases first.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Source Abbreviations and Narrators</span>"
+    ]
+  },
+  {
+    "objectID": "05_source_narrator.html#interpretation",
+    "href": "05_source_narrator.html#interpretation",
+    "title": "6  Source Abbreviations and Narrators",
+    "section": "7.8 Interpretation",
+    "text": "7.8 Interpretation\nScript 05 demonstrates that the source field is already sufficiently structured to support preliminary quantitative analysis. A large majority of source-present reports contain recognized abbreviations, and the source lookup framework makes it possible to convert compact editorial symbols into analyzable source categories.\nThe narrator extraction results are promising but should be interpreted cautiously. They show that narrator information can be recovered at scale from recurring source-field patterns, but the output remains dependent on heuristic name-span extraction. This is useful for exploratory analysis and prioritizing manual review, but not yet sufficient for full isnād reconstruction.\nThe most important contribution of this stage is not simply the frequency counts themselves, but the creation of a reviewable source-analysis layer. Recognized abbreviations, narrator spans, unknown tokens, and audit statuses are all preserved in separate tables. This makes the corpus both analytically useful and incrementally correctable.\n\n\n\n\n\n\nImportantKey point\n\n\n\nScript 05 supports preliminary source and narrator analysis, but it also identifies where human curation would have the greatest effect: unresolved source tokens, source-present rows without detected abbreviations, and narrator-name normalization.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Source Abbreviations and Narrators</span>"
+    ]
+  },
+  {
+    "objectID": "05_source_narrator.html#building-on-these-results",
+    "href": "05_source_narrator.html#building-on-these-results",
+    "title": "6  Source Abbreviations and Narrators",
+    "section": "7.9 Building on These Results",
+    "text": "7.9 Building on These Results\nThe Script 05 outputs provide the foundation for several future lines of analysis:\n\nsource-frequency profiling across the corpus;\nidentification of dominant source collections and compilers;\nsource co-occurrence analysis using the hadith-by-source matrix;\npreliminary narrator frequency analysis;\nnarrator-name normalization and authority-table construction;\nfocused manual review of unresolved source tokens;\ncomparison of source patterns across thematic or structural subsets of the corpus;\nfuture transmission-network analysis after additional curation;\neventual isnād reconstruction once source segmentation and narrator normalization are more mature.\n\nAt the current Version 1.0 stage, source abbreviation analysis is more reliable than narrator reconstruction. The best near-term use of these results is therefore exploratory source profiling and targeted corpus curation, rather than definitive claims about transmission networks.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Source Abbreviations and Narrators</span>"
+    ]
+  },
+  {
+    "objectID": "06_towards_computational_study_prophetic_traditions.html",
+    "href": "06_towards_computational_study_prophetic_traditions.html",
+    "title": "7  Towards the Computational Study of the Prophetic Traditions",
+    "section": "",
+    "text": "8 Towards the Computational Study of the Prophetic Traditions\nThe analyses presented in this report demonstrate that a computational corpus can be constructed from Kanz al-Ummāl and used for reproducible quantitative analysis. The greatest remaining challenge is no longer computational infrastructure, but scholarly refinement of the underlying hadith number → matn → source reference table.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Towards the Computational Study of the Prophetic Traditions</span>"
+    ]
+  },
+  {
+    "objectID": "06_towards_computational_study_prophetic_traditions.html#phase-i-questions-within-kanz-al-ummāl",
+    "href": "06_towards_computational_study_prophetic_traditions.html#phase-i-questions-within-kanz-al-ummāl",
+    "title": "7  Towards the Computational Study of the Prophetic Traditions",
+    "section": "8.1 Phase I — Questions Within Kanz al-Ummāl",
+    "text": "8.1 Phase I — Questions Within Kanz al-Ummāl\n\n8.1.1 1. Which words and expressions most characterize the Prophetic traditions?\nA curated corpus would allow reliable identification of common vocabulary, rare vocabulary, lexical diversity, and recurring expressions across the entire collection.\n\n\n8.1.2 2. Which phrases recur throughout the Prophetic traditions, and which are unique?\nRepeated phrase analysis can identify formulaic language and recurring patterns directly from the Arabic text.\n\n\n8.1.3 3. How does the language vary across the thematic organization of Kanz al-Ummāl?\nAl-Muttaqī al-Hindī arranged Kanz al-Ummāl according to subject matter. A curated corpus would permit comparison of vocabulary, phraseology, grammatical features, and style across belief, worship, ethics, commerce, family life, governance, and other major subjects.\n\n\n8.1.4 4. Which words most frequently occur together?\nStudying recurring combinations of words can reveal characteristic expressions and conceptual associations.\n\n\n8.1.5 5. Can reports be grouped automatically according to their linguistic characteristics?\nComputational methods can identify reports that naturally cluster according to vocabulary, phrase usage, or linguistic style.\n\n\n8.1.6 6. How is Classical Arabic used throughout the Prophetic traditions?\nA computational corpus can support quantitative studies of particles, roots, verb forms, verbal nouns (maṣādir), prefixes, suffixes, and other grammatical features.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Towards the Computational Study of the Prophetic Traditions</span>"
+    ]
+  },
+  {
+    "objectID": "06_towards_computational_study_prophetic_traditions.html#phase-ii-extending-beyond-kanz-al-ummāl",
+    "href": "06_towards_computational_study_prophetic_traditions.html#phase-ii-extending-beyond-kanz-al-ummāl",
+    "title": "7  Towards the Computational Study of the Prophetic Traditions",
+    "section": "8.2 Phase II — Extending Beyond Kanz al-Ummāl",
+    "text": "8.2 Phase II — Extending Beyond Kanz al-Ummāl\n\n8.2.1 7. Which original hadith collections did al-Suyūṭī rely upon most heavily when assembling his earlier alphabetical compilation?\nKanz al-Ummāl is based upon the earlier work of al-Suyūṭī, while al-Muttaqī al-Hindī reorganized the material by subject. Quantitative analysis of abbreviated source citations may help reconstruct which earlier collections appear to have contributed most heavily.\n\n\n8.2.2 8. What becomes possible when the abbreviated source citations are linked to the original source books containing the complete chains of transmission?\nLinking the curated corpus to the original collections would permit large-scale studies of narrator activity, transmission pathways, and relationships among narrators extending beyond Kanz al-Ummāl itself.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Towards the Computational Study of the Prophetic Traditions</span>"
+    ]
+  },
+  {
+    "objectID": "06_towards_computational_study_prophetic_traditions.html#broader-opportunities",
+    "href": "06_towards_computational_study_prophetic_traditions.html#broader-opportunities",
+    "title": "7  Towards the Computational Study of the Prophetic Traditions",
+    "section": "8.3 Broader Opportunities",
+    "text": "8.3 Broader Opportunities\n\n8.3.1 9. How can quantitative methods complement traditional scholarship?\nStatistical summaries, corpus linguistics, computational linguistics, and information retrieval can reveal vocabulary, recurring expressions, thematic organization, and linguistic variation across more than forty-six thousand reports.\n\n\n8.3.2 10. What new discoveries become possible when a carefully curated computational corpus is made available to the wider research community?\nA reliable computational corpus provides a foundation for semantic analysis, narrator and source network analysis, statistical modeling, and machine-assisted discovery of textual patterns.\n\n\n\n\n\n\nImportantA Long-Term Research Resource\n\n\n\nThe objective of this project is not simply to create another digital edition of Kanz al-Ummāl. Rather, it is to establish a carefully curated computational corpus that serves as a durable research resource.\nEvery improvement to the underlying hadith number → matn → source reference table immediately strengthens every downstream analysis, from descriptive corpus statistics to studies of language, transmission, compilation history, and the broader computational study of the Prophetic traditions.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Towards the Computational Study of the Prophetic Traditions</span>"
+    ]
+  }
+]

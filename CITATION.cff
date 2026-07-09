@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+
+message: >
+  If you use this project or its reports in academic work, please cite
+  this repository.
+
+title: "Classical Arabic Computational Linguistics"
+
+abstract: >
+  An evolving computational linguistics framework for constructing,
+  curating, and analyzing the Arabic hadith corpus of Kanz al-Ummāl.
+
+type: software
+
+authors:
+  - family-names: "Al-Timimi"
+    given-names: "Ali M."
+
+repository-code: "https://github.com/<your-github-username>/<repository-name>"
+
+license: "CC-BY-4.0"
+
+date-released: 2026
+
+keywords:
+  - Classical Arabic
+  - Computational Linguistics
+  - Corpus Linguistics
+  - Hadith
+  - Kanz al-Ummāl
+  - Arabic
+  - Digital Humanities
+  - Text Mining
+  - Corpus Construction
+  - Digital Editions
+
+preferred-citation:
+  type: report
+  authors:
+    - family-names: "Al-Timimi"
+      given-names: "Ali M."
+  title: "دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال"
+  title-translated:
+    value: "A Preliminary Computational Study of the Language of the Hadith Reports in Kanz al-Ummāl"
+    lang: en
+  year: 2026
+  language: ar

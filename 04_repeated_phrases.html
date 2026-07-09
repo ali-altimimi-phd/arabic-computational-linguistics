@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5&nbsp; Repeated Matn Phrases – دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./05_source_narrator.html" rel="next">
+<link href="./03_matn_stats.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-9e3e5b9121e68b3f077afb32f2c64d95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04_repeated_phrases.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Repeated Matn Phrases</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_source_text_and_digital_sources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Source Text and Digital Sources</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_computational_corpus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Computational Corpus</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_matn_stats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matn Statistics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_repeated_phrases.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Repeated Matn Phrases</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_source_narrator.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Source Abbreviations and Narrators</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_towards_computational_study_prophetic_traditions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Towards the Computational Study of the Prophetic Traditions</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#script-04b-repeated-matn-phrase-analysis" id="toc-script-04b-repeated-matn-phrase-analysis" class="nav-link active" data-scroll-target="#script-04b-repeated-matn-phrase-analysis"><span class="header-section-number">5.1</span> Script 04b — Repeated Matn Phrase Analysis</a>
+  <ul class="collapse">
+  <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose"><span class="header-section-number">5.1.1</span> Purpose</a></li>
+  <li><a href="#outputs" id="toc-outputs" class="nav-link" data-scroll-target="#outputs"><span class="header-section-number">5.1.2</span> Outputs</a></li>
+  </ul></li>
+  <li><a href="#phrase-discovery-at-a-glance" id="toc-phrase-discovery-at-a-glance" class="nav-link" data-scroll-target="#phrase-discovery-at-a-glance"><span class="header-section-number">5.2</span> Phrase Discovery at a Glance</a></li>
+  <li><a href="#preliminary-results" id="toc-preliminary-results" class="nav-link" data-scroll-target="#preliminary-results"><span class="header-section-number">5.3</span> Preliminary Results</a></li>
+  <li><a href="#retained-phrases-by-n-gram-length" id="toc-retained-phrases-by-n-gram-length" class="nav-link" data-scroll-target="#retained-phrases-by-n-gram-length"><span class="header-section-number">5.4</span> Retained Phrases by N-gram Length</a></li>
+  <li><a href="#example-repeated-2-grams" id="toc-example-repeated-2-grams" class="nav-link" data-scroll-target="#example-repeated-2-grams"><span class="header-section-number">5.5</span> Example: Repeated 2-grams</a></li>
+  <li><a href="#example-repeated-5-grams" id="toc-example-repeated-5-grams" class="nav-link" data-scroll-target="#example-repeated-5-grams"><span class="header-section-number">5.6</span> Example: Repeated 5-grams</a></li>
+  <li><a href="#cross-length-examples" id="toc-cross-length-examples" class="nav-link" data-scroll-target="#cross-length-examples"><span class="header-section-number">5.7</span> Cross-Length Examples</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation"><span class="header-section-number">5.8</span> Interpretation</a></li>
+  <li><a href="#building-on-these-results" id="toc-building-on-these-results" class="nav-link" data-scroll-target="#building-on-these-results"><span class="header-section-number">5.9</span> Building on These Results</a></li>
+  <li><a href="#summary-assessment" id="toc-summary-assessment" class="nav-link" data-scroll-target="#summary-assessment"><span class="header-section-number">5.10</span> Summary Assessment</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Repeated Matn Phrases</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="script-04b-repeated-matn-phrase-analysis" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="script-04b-repeated-matn-phrase-analysis"><span class="header-section-number">5.1</span> Script 04b — Repeated Matn Phrase Analysis</h2>
+<section id="purpose" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="purpose"><span class="header-section-number">5.1.1</span> Purpose</h3>
+<p>Script 04b extends the lexical analyses of Script 04 by identifying repeated multi-word expressions occurring throughout the matn. Rather than relying on predefined phrase lists or manually curated formulae, the procedure discovers repeated expressions directly from the corpus using an unsupervised n-gram approach. This allows recurring language to emerge naturally from the text itself and provides a quantitative basis for investigating formulaic expression in <em>Kanz al-Ummāl</em>.</p>
+<p>Unlike Script 04, which counts a predefined set of devotional formulae, Script 04b discovers repeated language empirically from the corpus itself. Together, the two scripts provide complementary approaches: one hypothesis-driven and one data-driven.</p>
+</section>
+<section id="outputs" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="outputs"><span class="header-section-number">5.1.2</span> Outputs</h3>
+<p>The script generates the following analytical products. Separate phrase-length files are intentionally produced because they are easier to inspect manually than a single large review table.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Script 04b analytical outputs</caption>
+<colgroup>
+<col style="width: 24%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Output</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">kanz_04b_repeated_matn_phrases_all</td>
+<td style="text-align: left;">Master table of all retained repeated phrases from 2-word through 8-word expressions.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">kanz_04b_repeated_2grams</td>
+<td style="text-align: left;">Review table containing repeated two-word phrases.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">kanz_04b_repeated_3grams</td>
+<td style="text-align: left;">Review table containing repeated three-word phrases.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">kanz_04b_repeated_4grams</td>
+<td style="text-align: left;">Review table containing repeated four-word phrases.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">kanz_04b_repeated_5grams</td>
+<td style="text-align: left;">Review table containing repeated five-word phrases.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">kanz_04b_repeated_6grams</td>
+<td style="text-align: left;">Review table containing repeated six-word phrases.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">kanz_04b_repeated_7grams</td>
+<td style="text-align: left;">Review table containing repeated seven-word phrases.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">kanz_04b_repeated_8grams</td>
+<td style="text-align: left;">Review table containing repeated eight-word phrases.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">kanz_04b_hadith_repeated_phrase_hits</td>
+<td style="text-align: left;">Hadith-level occurrences of every retained repeated phrase, including count within the hadith and matn context.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">kanz_04b_run_summary</td>
+<td style="text-align: left;">Overall processing summary, parameters, retained phrase counts, and output file locations.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>The master repeated-phrase table, hadith-level phrase-hit table, and run summary are also mirrored into DuckDB as:</p>
+<ul>
+<li><code>kanz_04b_repeated_matn_phrases_all</code></li>
+<li><code>kanz_04b_hadith_repeated_phrase_hits</code></li>
+<li><code>kanz_04b_run_summary</code></li>
+</ul>
+</section>
+</section>
+<section id="phrase-discovery-at-a-glance" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="phrase-discovery-at-a-glance"><span class="header-section-number">5.2</span> Phrase Discovery at a Glance</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Corpus-wide Script 04b repeated-phrase summary</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Measure</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Hadith records loaded</td>
+<td style="text-align: left;">46,623</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rows processed</td>
+<td style="text-align: left;">46,623</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rows with matn</td>
+<td style="text-align: left;">43,846</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rows with matn (%)</td>
+<td style="text-align: left;">94.0%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Minimum n-gram length</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Maximum n-gram length</td>
+<td style="text-align: left;">8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Minimum corpus count</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Minimum hadith count</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Unique candidate phrases</td>
+<td style="text-align: left;">6,009,654</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Retained repeated phrases</td>
+<td style="text-align: left;">567,715</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Retained repeated phrases (%)</td>
+<td style="text-align: left;">9.4%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hadith phrase-hit rows</td>
+<td style="text-align: left;">2,071,563</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key finding
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Script 04b demonstrates that the current corpus can support data-driven discovery of recurring language. The analysis does not begin with a predefined list of formulae; instead, it identifies repeated phrases directly from the matn and then organizes them into reviewable files by phrase length.</p>
+</div>
+</div>
+</section>
+<section id="preliminary-results" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="preliminary-results"><span class="header-section-number">5.3</span> Preliminary Results</h2>
+<p>Script 04b examined 43,846 matn-bearing reports and generated contiguous word sequences from 2-word through 8-word phrases. To reduce noise, a phrase was retained only if it occurred at least 2 times in the corpus and appeared in at least 2 separate hadith reports.</p>
+<p>The analysis produced 6,009,654 unique candidate phrases before filtering and retained 567,715 repeated phrases for review. These retained phrases generated 2,071,563 hadith-level phrase-hit rows, allowing each recurring expression to be traced back to the reports in which it appears.</p>
+</section>
+<section id="retained-phrases-by-n-gram-length" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="retained-phrases-by-n-gram-length"><span class="header-section-number">5.4</span> Retained Phrases by N-gram Length</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="04_repeated_phrases_files/figure-html/retained-phrases-chart-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Retained repeated phrases by n-gram length</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Phrase length</th>
+<th style="text-align: left;">Retained repeated phrases</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2-gram</td>
+<td style="text-align: left;">134,383</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3-gram</td>
+<td style="text-align: left;">125,708</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4-gram</td>
+<td style="text-align: left;">97,226</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">5-gram</td>
+<td style="text-align: left;">74,328</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6-gram</td>
+<td style="text-align: left;">56,738</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7-gram</td>
+<td style="text-align: left;">44,177</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">8-gram</td>
+<td style="text-align: left;">35,155</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>The retained-phrase counts decline as phrase length increases. This is expected: short two-word and three-word sequences are common because they often reflect ordinary grammatical or lexical combinations, whereas longer repeated phrases are more selective and more likely to represent recognizable formulae, stock expressions, or recurring narrative patterns.</p>
+</section>
+<section id="example-repeated-2-grams" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="example-repeated-2-grams"><span class="header-section-number">5.5</span> Example: Repeated 2-grams</h2>
+<p>Two-word repeated phrases provide a broad view of recurring lexical pairings and common grammatical combinations. Many are expected to be frequent and general, but they help establish the lower-level texture of the corpus and provide a starting point for later collocation analysis.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Top repeated 2-grams</caption>
+<colgroup>
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 88%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Phrase</th>
+<th style="text-align: left;">Corpus count</th>
+<th style="text-align: left;">Hadith count</th>
+<th style="text-align: left;">Example hadith numbers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">رسول الله</td>
+<td style="text-align: left;">11,422</td>
+<td style="text-align: left;">6,890</td>
+<td style="text-align: left;">6 | 15 | 16 | 18 | 21 | 24 | 30 | 36 | 38 | 40 | 41 | 116 | 122 | 124 | 125 | 129 | 138 | 140 | 141 | 142 | 145 | 146 | 148 | 162 | 171</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">عن ابي</td>
+<td style="text-align: left;">3,037</td>
+<td style="text-align: left;">2,973</td>
+<td style="text-align: left;">14 | 39 | 45 | 76 | 132 | 160 | 161 | 184 | 194 | 200 | 301 | 405 | 417 | 485 | 507 | 572 | 639 | 670 | 697 | 714 | 723 | 742 | 795 | 820 | 825</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">عن ابن</td>
+<td style="text-align: left;">2,500</td>
+<td style="text-align: left;">2,461</td>
+<td style="text-align: left;">23 | 39 | 148 | 175 | 186 | 194 | 251 | 289 | 445 | 558 | 631 | 670 | 793 | 830 | 901 | 1024 | 1030 | 1074 | 1119 | 1181 | 1192 | 1332 | 1355 | 1365 | 1380</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">يا رسول</td>
+<td style="text-align: left;">2,341</td>
+<td style="text-align: left;">1,884</td>
+<td style="text-align: left;">125 | 146 | 199 | 206 | 210 | 589 | 754 | 783 | 829 | 864 | 867 | 928 | 946 | 957 | 992 | 998 | 1004 | 1053 | 1080 | 1081 | 1118 | 1129 | 1198 | 1243 | 1275</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">يوم القيامه</td>
+<td style="text-align: left;">2,111</td>
+<td style="text-align: left;">1,931</td>
+<td style="text-align: left;">109 | 110 | 119 | 121 | 133 | 138 | 139 | 151 | 179 | 184 | 233 | 286 | 287 | 288 | 292 | 293 | 294 | 330 | 342 | 364 | 428 | 539 | 559 | 569 | 575</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">عبد الله</td>
+<td style="text-align: left;">1,994</td>
+<td style="text-align: left;">1,620</td>
+<td style="text-align: left;">10 | 277 | 324 | 330 | 465 | 477 | 756 | 776 | 782 | 799 | 945 | 1011 | 1085 | 1368 | 1379 | 1400 | 1413 | 1414 | 1419 | 1420 | 1421 | 1426 | 1427 | 1431 | 1440</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">الله تعالي</td>
+<td style="text-align: left;">1,848</td>
+<td style="text-align: left;">1,677</td>
+<td style="text-align: left;">30 | 100 | 109 | 127 | 158 | 181 | 220 | 235 | 236 | 252 | 253 | 262 | 285 | 287 | 288 | 335 | 336 | 388 | 421 | 482 | 483 | 498 | 519 | 527 | 584</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">بن الخطاب</td>
+<td style="text-align: left;">1,845</td>
+<td style="text-align: left;">1,736</td>
+<td style="text-align: left;">1355 | 1358 | 1384 | 1414 | 1415 | 1431 | 1433 | 1444 | 1466 | 1469 | 1487 | 1488 | 1498 | 1500 | 1502 | 1543 | 1550 | 1583 | 1606 | 1622 | 1629 | 1631 | 1632 | 1655 | 1673</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">عن علي</td>
+<td style="text-align: left;">1,829</td>
+<td style="text-align: left;">1,814</td>
+<td style="text-align: left;">59 | 421 | 719 | 782 | 828 | 1360 | 1361 | 1362 | 1370 | 1371 | 1372 | 1426 | 1434 | 1475 | 1552 | 1553 | 1555 | 1556 | 1557 | 1558 | 1562 | 1567 | 1594 | 1597 | 1598</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">عمر بن</td>
+<td style="text-align: left;">1,808</td>
+<td style="text-align: left;">1,711</td>
+<td style="text-align: left;">1355 | 1358 | 1384 | 1414 | 1415 | 1431 | 1433 | 1444 | 1466 | 1469 | 1487 | 1488 | 1498 | 1500 | 1502 | 1543 | 1550 | 1583 | 1606 | 1622 | 1624 | 1629 | 1631 | 1632 | 1650</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ان الله</td>
+<td style="text-align: left;">1,463</td>
+<td style="text-align: left;">1,390</td>
+<td style="text-align: left;">66 | 109 | 143 | 145 | 146 | 257 | 261 | 262 | 270 | 285 | 292 | 300 | 323 | 347 | 348 | 363 | 445 | 510 | 511 | 519 | 528 | 529 | 530 | 531 | 532</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">الله بن</td>
+<td style="text-align: left;">1,430</td>
+<td style="text-align: left;">1,217</td>
+<td style="text-align: left;">477 | 756 | 776 | 782 | 945 | 1011 | 1085 | 1379 | 1400 | 1413 | 1419 | 1420 | 1421 | 1431 | 1442 | 1451 | 1458 | 1473 | 1483 | 1497 | 1505 | 1525 | 1533 | 1536 | 1539</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">بن ابي</td>
+<td style="text-align: left;">1,349</td>
+<td style="text-align: left;">1,201</td>
+<td style="text-align: left;">793 | 1370 | 1387 | 1389 | 1422 | 1430 | 1476 | 1481 | 1496 | 1525 | 1536 | 1539 | 1567 | 1568 | 1570 | 1571 | 1597 | 1623 | 1650 | 1663 | 1675 | 1727 | 1736 | 1746 | 2794</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">علي قال</td>
+<td style="text-align: left;">1,207</td>
+<td style="text-align: left;">1,197</td>
+<td style="text-align: left;">782 | 1360 | 1361 | 1362 | 1371 | 1434 | 1475 | 1552 | 1553 | 1555 | 1556 | 1562 | 1594 | 1598 | 1607 | 1612 | 1638 | 1640 | 1641 | 1645 | 1647 | 1649 | 1651 | 1652 | 1653</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ابن عباس</td>
+<td style="text-align: left;">1,205</td>
+<td style="text-align: left;">1,107</td>
+<td style="text-align: left;">23 | 39 | 175 | 186 | 289 | 445 | 558 | 631 | 1074 | 1119 | 1181 | 1395 | 1396 | 1494 | 1496 | 1539 | 1589 | 1590 | 1623 | 1668 | 1674 | 1683 | 1744 | 1853 | 1897</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">قال قال</td>
+<td style="text-align: left;">1,154</td>
+<td style="text-align: left;">1,150</td>
+<td style="text-align: left;">465 | 1362 | 1380 | 1390 | 1407 | 1413 | 1428 | 1432 | 1437 | 1438 | 1443 | 1444 | 1449 | 1477 | 1492 | 1538 | 1540 | 1544 | 1550 | 1555 | 1587 | 1591 | 1592 | 1593 | 1600</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ابو بكر</td>
+<td style="text-align: left;">1,139</td>
+<td style="text-align: left;">863</td>
+<td style="text-align: left;">875 | 1404 | 1405 | 1409 | 1411 | 1412 | 1428 | 1429 | 1430 | 1431 | 1443 | 1479 | 1480 | 1482 | 1499 | 1538 | 1539 | 1540 | 1560 | 1572 | 1696 | 3316 | 3951 | 3991 | 4031</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">عمر قال</td>
+<td style="text-align: left;">1,113</td>
+<td style="text-align: left;">1,105</td>
+<td style="text-align: left;">1355 | 1356 | 1357 | 1367 | 1369 | 1380 | 1417 | 1479 | 1483 | 1485 | 1486 | 1489 | 1522 | 1523 | 1537 | 1544 | 1545 | 1549 | 1551 | 1576 | 1591 | 1618 | 1626 | 1627 | 1628</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ثم قال</td>
+<td style="text-align: left;">1,107</td>
+<td style="text-align: left;">858</td>
+<td style="text-align: left;">175 | 520 | 572 | 597 | 1256 | 1298 | 1355 | 1363 | 1368 | 1382 | 1464 | 1466 | 1502 | 1525 | 1543 | 1547 | 1553 | 1561 | 1576 | 1608 | 1625 | 1655 | 1670 | 1686 | 1702</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">عن عمر</td>
+<td style="text-align: left;">1,063</td>
+<td style="text-align: left;">1,060</td>
+<td style="text-align: left;">111 | 194 | 516 | 917 | 1356 | 1357 | 1358 | 1359 | 1367 | 1369 | 1417 | 1433 | 1484 | 1485 | 1486 | 1488 | 1489 | 1544 | 1545 | 1546 | 1547 | 1549 | 1550 | 1551 | 1604</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="example-repeated-5-grams" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="example-repeated-5-grams"><span class="header-section-number">5.6</span> Example: Repeated 5-grams</h2>
+<p>Five-word repeated phrases are often more interpretable than two-word phrases because they are long enough to capture formulaic wording or recurring narrative language. For a non-specialist reader, the 5-gram table is therefore a useful bridge between raw frequency counting and the study of formulaic expression.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Top repeated 5-grams</caption>
+<colgroup>
+<col style="width: 7%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 84%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Phrase</th>
+<th style="text-align: left;">Corpus count</th>
+<th style="text-align: left;">Hadith count</th>
+<th style="text-align: left;">Example hadith numbers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ان لا اله الا الله</td>
+<td style="text-align: left;">316</td>
+<td style="text-align: left;">283</td>
+<td style="text-align: left;">6 | 16 | 18 | 20 | 21 | 23 | 24 | 27 | 28 | 29 | 30 | 31 | 36 | 38 | 39 | 40 | 41 | 43 | 80 | 109 | 110 | 111 | 112 | 116 | 122</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">اشهد ان لا اله الا</td>
+<td style="text-align: left;">139</td>
+<td style="text-align: left;">116</td>
+<td style="text-align: left;">24 | 36 | 109 | 110 | 116 | 136 | 138 | 139 | 140 | 148 | 233 | 1373 | 1421 | 1462 | 1736 | 2612 | 3517 | 3589 | 3724 | 3734 | 3878 | 3898 | 4947 | 4950 | 12110</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">لا اله الا الله وحده</td>
+<td style="text-align: left;">133</td>
+<td style="text-align: left;">123</td>
+<td style="text-align: left;">39 | 111 | 118 | 139 | 160 | 166 | 204 | 207 | 277 | 377 | 1359 | 1363 | 1417 | 1491 | 1905 | 2048 | 3488 | 3517 | 3523 | 3524 | 3525 | 3526 | 3527 | 3528 | 3529</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">الله وحده لا شريك له</td>
+<td style="text-align: left;">132</td>
+<td style="text-align: left;">126</td>
+<td style="text-align: left;">111 | 118 | 139 | 166 | 204 | 1359 | 1363 | 1417 | 1491 | 1905 | 2048 | 3488 | 3517 | 3523 | 3524 | 3525 | 3526 | 3527 | 3528 | 3529 | 3531 | 3532 | 3534 | 3535 | 3572</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">اله الا الله وحده لا</td>
+<td style="text-align: left;">130</td>
+<td style="text-align: left;">124</td>
+<td style="text-align: left;">111 | 118 | 139 | 166 | 204 | 1359 | 1363 | 1417 | 1491 | 1905 | 2048 | 3488 | 3517 | 3523 | 3524 | 3525 | 3526 | 3527 | 3528 | 3529 | 3531 | 3532 | 3534 | 3535 | 3572</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">الا الله وحده لا شريك</td>
+<td style="text-align: left;">129</td>
+<td style="text-align: left;">123</td>
+<td style="text-align: left;">111 | 118 | 139 | 166 | 204 | 1359 | 1363 | 1417 | 1491 | 1905 | 2048 | 3488 | 3517 | 3523 | 3524 | 3525 | 3526 | 3527 | 3528 | 3529 | 3531 | 3532 | 3534 | 3535 | 3572</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">حول ولا قوه الا بالله</td>
+<td style="text-align: left;">124</td>
+<td style="text-align: left;">123</td>
+<td style="text-align: left;">1951 | 1952 | 1953 | 1954 | 1955 | 1956 | 1957 | 1958 | 1959 | 1960 | 1961 | 1962 | 1963 | 1964 | 1965 | 1966 | 1967 | 1968 | 1969 | 1970 | 1971 | 1972 | 1973 | 1974 | 1975</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">اللهم اني اعوذ بك من</td>
+<td style="text-align: left;">101</td>
+<td style="text-align: left;">95</td>
+<td style="text-align: left;">3330 | 3572 | 3583 | 3609 | 3618 | 3619 | 3622 | 3628 | 3631 | 3634 | 3637 | 3641 | 3642 | 3649 | 3651 | 3666 | 3669 | 3670 | 3671 | 3681 | 3687 | 3688 | 3689 | 3690 | 3693</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">قال لا اله الا الله</td>
+<td style="text-align: left;">99</td>
+<td style="text-align: left;">84</td>
+<td style="text-align: left;">118 | 120 | 126 | 132 | 134 | 143 | 148 | 155 | 159 | 166 | 169 | 180 | 183 | 201 | 202 | 203 | 204 | 205 | 206 | 207 | 208 | 209 | 210 | 219 | 229</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">علي قال قال رسول الله</td>
+<td style="text-align: left;">93</td>
+<td style="text-align: left;">93</td>
+<td style="text-align: left;">1555 | 1612 | 1652 | 4029 | 4030 | 4074 | 4075 | 4440 | 4460 | 4547 | 4614 | 4642 | 4675 | 4704 | 4718 | 4883 | 5056 | 5063 | 8412 | 8512 | 8619 | 8659 | 8808 | 8811 | 8887</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">عن علي قال قال رسول</td>
+<td style="text-align: left;">92</td>
+<td style="text-align: left;">92</td>
+<td style="text-align: left;">1555 | 1612 | 1652 | 4029 | 4030 | 4074 | 4075 | 4440 | 4460 | 4547 | 4614 | 4642 | 4675 | 4704 | 4718 | 4883 | 5056 | 5063 | 8412 | 8512 | 8619 | 8659 | 8808 | 8811 | 8887</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">الخرايطي في مكارم الاخلاق عن</td>
+<td style="text-align: left;">88</td>
+<td style="text-align: left;">88</td>
+<td style="text-align: left;">95 | 107 | 756 | 3237 | 3360 | 3426 | 3433 | 3518 | 3568 | 3795 | 3799 | 3852 | 5134 | 5190 | 5196 | 5206 | 5211 | 5219 | 5224 | 5242 | 5243 | 5456 | 5457 | 5461 | 5718</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">لا اله الا الله وان</td>
+<td style="text-align: left;">86</td>
+<td style="text-align: left;">83</td>
+<td style="text-align: left;">6 | 18 | 20 | 21 | 28 | 29 | 30 | 38 | 40 | 110 | 129 | 148 | 156 | 162 | 195 | 198 | 199 | 215 | 217 | 225 | 233 | 365 | 374 | 434 | 957</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">اله الا الله وان محمدا</td>
+<td style="text-align: left;">85</td>
+<td style="text-align: left;">82</td>
+<td style="text-align: left;">6 | 18 | 20 | 21 | 28 | 29 | 30 | 38 | 40 | 110 | 129 | 148 | 156 | 162 | 195 | 198 | 199 | 215 | 217 | 225 | 233 | 365 | 374 | 434 | 957</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">وهو علي كل شيء قدير</td>
+<td style="text-align: left;">84</td>
+<td style="text-align: left;">84</td>
+<td style="text-align: left;">2022 | 2048 | 3040 | 3488 | 3523 | 3524 | 3525 | 3526 | 3527 | 3528 | 3529 | 3531 | 3532 | 3534 | 3535 | 3576 | 3579 | 3586 | 3590 | 3591 | 3603 | 3604 | 3721 | 3722 | 3725</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">قال قال عمر بن الخطاب</td>
+<td style="text-align: left;">82</td>
+<td style="text-align: left;">82</td>
+<td style="text-align: left;">1730 | 4018 | 4094 | 4179 | 4228 | 4289 | 4523 | 4636 | 8481 | 8689 | 8815 | 8888 | 8898 | 8934 | 8939 | 8945 | 8946 | 8979 | 9854 | 10093 | 10095 | 11460 | 11494 | 11652 | 11670</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">قال سمعت رسول الله يقول</td>
+<td style="text-align: left;">81</td>
+<td style="text-align: left;">80</td>
+<td style="text-align: left;">1415 | 1422 | 1571 | 1580 | 1653 | 1673 | 1684 | 1688 | 4926 | 4928 | 4972 | 4980 | 5017 | 5058 | 5077 | 8421 | 8447 | 8678 | 8779 | 8782 | 8840 | 11340 | 11502 | 12395 | 12417</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">اله الا الله والله اكبر</td>
+<td style="text-align: left;">77</td>
+<td style="text-align: left;">72</td>
+<td style="text-align: left;">1798 | 1909 | 1963 | 1989 | 1990 | 1993 | 1995 | 1999 | 2000 | 2002 | 2003 | 2004 | 2005 | 2008 | 2011 | 2012 | 2015 | 2020 | 2023 | 2024 | 2025 | 2028 | 2031 | 2032 | 2033</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ان عمر بن الخطاب كان</td>
+<td style="text-align: left;">74</td>
+<td style="text-align: left;">74</td>
+<td style="text-align: left;">1384 | 4103 | 4231 | 4817 | 5043 | 8608 | 8827 | 11418 | 11419 | 11462 | 11470 | 11471 | 11516 | 12517 | 12656 | 12745 | 12752 | 13429 | 13597 | 13668 | 13977 | 15357 | 15554 | 16868 | 16892</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">شريك له له الملك وله</td>
+<td style="text-align: left;">74</td>
+<td style="text-align: left;">74</td>
+<td style="text-align: left;">2022 | 2048 | 3488 | 3523 | 3524 | 3525 | 3526 | 3527 | 3528 | 3531 | 3532 | 3534 | 3535 | 3572 | 3576 | 3579 | 3582 | 3586 | 3590 | 3591 | 3603 | 3604 | 3721 | 3722 | 3725</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="cross-length-examples" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="cross-length-examples"><span class="header-section-number">5.7</span> Cross-Length Examples</h2>
+<p>The table below shows the highest-frequency examples across phrase lengths. It is intended as a quick inspection table rather than a complete inventory. The complete review files should be used for detailed phrase evaluation.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Top repeated phrases by phrase length</caption>
+<colgroup>
+<col style="width: 18%">
+<col style="width: 46%">
+<col style="width: 17%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Phrase length</th>
+<th style="text-align: left;">Phrase</th>
+<th style="text-align: left;">Corpus count</th>
+<th style="text-align: left;">Hadith count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2-gram</td>
+<td style="text-align: left;">رسول الله</td>
+<td style="text-align: left;">11,422</td>
+<td style="text-align: left;">6,890</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2-gram</td>
+<td style="text-align: left;">عن ابي</td>
+<td style="text-align: left;">3,037</td>
+<td style="text-align: left;">2,973</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2-gram</td>
+<td style="text-align: left;">عن ابن</td>
+<td style="text-align: left;">2,500</td>
+<td style="text-align: left;">2,461</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2-gram</td>
+<td style="text-align: left;">يا رسول</td>
+<td style="text-align: left;">2,341</td>
+<td style="text-align: left;">1,884</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2-gram</td>
+<td style="text-align: left;">يوم القيامه</td>
+<td style="text-align: left;">2,111</td>
+<td style="text-align: left;">1,931</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3-gram</td>
+<td style="text-align: left;">يا رسول الله</td>
+<td style="text-align: left;">2,312</td>
+<td style="text-align: left;">1,865</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3-gram</td>
+<td style="text-align: left;">عمر بن الخطاب</td>
+<td style="text-align: left;">1,722</td>
+<td style="text-align: left;">1,641</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3-gram</td>
+<td style="text-align: left;">عبد الله بن</td>
+<td style="text-align: left;">1,253</td>
+<td style="text-align: left;">1,103</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3-gram</td>
+<td style="text-align: left;">عن علي قال</td>
+<td style="text-align: left;">1,139</td>
+<td style="text-align: left;">1,139</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3-gram</td>
+<td style="text-align: left;">لا اله الا</td>
+<td style="text-align: left;">936</td>
+<td style="text-align: left;">757</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4-gram</td>
+<td style="text-align: left;">لا اله الا الله</td>
+<td style="text-align: left;">772</td>
+<td style="text-align: left;">627</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4-gram</td>
+<td style="text-align: left;">عن عبد الله بن</td>
+<td style="text-align: left;">560</td>
+<td style="text-align: left;">554</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4-gram</td>
+<td style="text-align: left;">قال قال رسول الله</td>
+<td style="text-align: left;">531</td>
+<td style="text-align: left;">530</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4-gram</td>
+<td style="text-align: left;">عن ابن عباس قال</td>
+<td style="text-align: left;">471</td>
+<td style="text-align: left;">471</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4-gram</td>
+<td style="text-align: left;">ان عمر بن الخطاب</td>
+<td style="text-align: left;">408</td>
+<td style="text-align: left;">405</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">5-gram</td>
+<td style="text-align: left;">ان لا اله الا الله</td>
+<td style="text-align: left;">316</td>
+<td style="text-align: left;">283</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5-gram</td>
+<td style="text-align: left;">اشهد ان لا اله الا</td>
+<td style="text-align: left;">139</td>
+<td style="text-align: left;">116</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">5-gram</td>
+<td style="text-align: left;">لا اله الا الله وحده</td>
+<td style="text-align: left;">133</td>
+<td style="text-align: left;">123</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5-gram</td>
+<td style="text-align: left;">الله وحده لا شريك له</td>
+<td style="text-align: left;">132</td>
+<td style="text-align: left;">126</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">5-gram</td>
+<td style="text-align: left;">اله الا الله وحده لا</td>
+<td style="text-align: left;">130</td>
+<td style="text-align: left;">124</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6-gram</td>
+<td style="text-align: left;">الا الله وحده لا شريك له</td>
+<td style="text-align: left;">129</td>
+<td style="text-align: left;">123</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6-gram</td>
+<td style="text-align: left;">اله الا الله وحده لا شريك</td>
+<td style="text-align: left;">129</td>
+<td style="text-align: left;">123</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6-gram</td>
+<td style="text-align: left;">اشهد ان لا اله الا الله</td>
+<td style="text-align: left;">128</td>
+<td style="text-align: left;">105</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6-gram</td>
+<td style="text-align: left;">لا اله الا الله وحده لا</td>
+<td style="text-align: left;">121</td>
+<td style="text-align: left;">115</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6-gram</td>
+<td style="text-align: left;">عن علي قال قال رسول الله</td>
+<td style="text-align: left;">92</td>
+<td style="text-align: left;">92</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7-gram</td>
+<td style="text-align: left;">اله الا الله وحده لا شريك له</td>
+<td style="text-align: left;">129</td>
+<td style="text-align: left;">123</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7-gram</td>
+<td style="text-align: left;">لا اله الا الله وحده لا شريك</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">114</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7-gram</td>
+<td style="text-align: left;">ان لا اله الا الله وان محمدا</td>
+<td style="text-align: left;">82</td>
+<td style="text-align: left;">80</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7-gram</td>
+<td style="text-align: left;">الا الله وحده لا شريك له له</td>
+<td style="text-align: left;">74</td>
+<td style="text-align: left;">74</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7-gram</td>
+<td style="text-align: left;">لا شريك له له الملك وله الحمد</td>
+<td style="text-align: left;">74</td>
+<td style="text-align: left;">74</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">8-gram</td>
+<td style="text-align: left;">لا اله الا الله وحده لا شريك له</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">114</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8-gram</td>
+<td style="text-align: left;">اله الا الله وحده لا شريك له له</td>
+<td style="text-align: left;">74</td>
+<td style="text-align: left;">74</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">8-gram</td>
+<td style="text-align: left;">الا الله وحده لا شريك له له الملك</td>
+<td style="text-align: left;">73</td>
+<td style="text-align: left;">73</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8-gram</td>
+<td style="text-align: left;">الله وحده لا شريك له له الملك وله</td>
+<td style="text-align: left;">73</td>
+<td style="text-align: left;">73</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">8-gram</td>
+<td style="text-align: left;">وحده لا شريك له له الملك وله الحمد</td>
+<td style="text-align: left;">73</td>
+<td style="text-align: left;">73</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="interpretation" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="interpretation"><span class="header-section-number">5.8</span> Interpretation</h2>
+<p>Unlike the manually curated devotional expressions counted in Script 04, this procedure makes no assumptions about which phrases are linguistically or religiously significant. Repeated language is discovered directly from the corpus itself. This distinction matters because recurrent expressions in hadith literature may include standard openings, narrative transitions, oaths, quotation formulae, supplications, and other conventional wording that would be difficult to enumerate exhaustively beforehand.</p>
+<p>The separate review files organized by phrase length also support practical human inspection. Short phrases are useful for identifying common lexical and grammatical pairings, while longer repeated phrases are more likely to reveal complete formulaic expressions or stereotyped narrative patterns. The 2-gram and 5-gram examples therefore serve different purposes: the former gives a broad view of local word association, while the latter begins to expose more meaningful repeated language.</p>
+<p>At the same time, these results should be interpreted as phrase candidates rather than final linguistic categories. Repetition alone does not prove that a phrase has a specific rhetorical, theological, or transmission function. The value of Script 04b is that it narrows the search space and produces an empirical phrase inventory that can be reviewed, classified, and reused in later analyses.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Practical implication
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Script 04b turns the corpus into a source of candidate formulae. Rather than asking a reviewer to invent a phrase list from memory, the pipeline can surface repeated expressions automatically and then allow human reviewers to decide which ones are linguistically or religiously meaningful.</p>
+</div>
+</div>
+</section>
+<section id="building-on-these-results" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="building-on-these-results"><span class="header-section-number">5.9</span> Building on These Results</h2>
+<p>The repeated-phrase inventory provides a foundation for several accessible computational linguistic extensions:</p>
+<ul>
+<li><strong>Formulaic language discovery:</strong> identifying recurring expressions that appear across multiple hadith reports.</li>
+<li><strong>Phrase dictionaries:</strong> building reviewable lists of repeated expressions for later annotation and classification.</li>
+<li><strong>Collocation analysis:</strong> studying which words tend to occur together more often than expected.</li>
+<li><strong>Narrative-pattern analysis:</strong> identifying repeated openings, transitions, quotations, and closing formulae.</li>
+<li><strong>Stylometric comparison:</strong> measuring how formula density differs across subsets of the corpus.</li>
+<li><strong>Search and retrieval:</strong> enabling phrase-based search rather than only single-word search.</li>
+<li><strong>Corpus comparison:</strong> comparing repeated expressions in <em>Kanz al-Ummāl</em> with other hadith collections or Classical Arabic corpora.</li>
+<li><strong>Machine-learning preparation:</strong> producing phrase-level features that can be used in clustering, topic discovery, or semantic modelling.</li>
+</ul>
+</section>
+<section id="summary-assessment" class="level2" data-number="5.10">
+<h2 data-number="5.10" class="anchored" data-anchor-id="summary-assessment"><span class="header-section-number">5.10</span> Summary Assessment</h2>
+<p>Script 04b is a proof-of-concept for data-driven formulaic language discovery in the preliminary <em>Kanz al-Ummāl</em> corpus. It does not solve the linguistic classification problem by itself, but it creates the empirical foundation needed for later classification. The result is a practical bridge between raw text extraction and higher-level computational linguistics: repeated language can now be found, counted, reviewed, and traced back to individual hadith reports.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./03_matn_stats.html" class="pagination-link" aria-label="Matn Statistics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matn Statistics</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./05_source_narrator.html" class="pagination-link" aria-label="Source Abbreviations and Narrators">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Source Abbreviations and Narrators</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

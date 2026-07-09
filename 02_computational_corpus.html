@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Computational Corpus – دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./03_matn_stats.html" rel="next">
+<link href="./01_source_text_and_digital_sources.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-9e3e5b9121e68b3f077afb32f2c64d95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02_computational_corpus.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Computational Corpus</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_source_text_and_digital_sources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Source Text and Digital Sources</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_computational_corpus.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Computational Corpus</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_matn_stats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matn Statistics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_repeated_phrases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Repeated Matn Phrases</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_source_narrator.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Source Abbreviations and Narrators</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_towards_computational_study_prophetic_traditions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Towards the Computational Study of the Prophetic Traditions</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#computational-corpus" id="toc-computational-corpus" class="nav-link active" data-scroll-target="#computational-corpus"><span class="header-section-number">4</span> Computational Corpus</a>
+  <ul class="collapse">
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview"><span class="header-section-number">4.1</span> Overview</a></li>
+  <li><a href="#audit-driven-corpus-construction" id="toc-audit-driven-corpus-construction" class="nav-link" data-scroll-target="#audit-driven-corpus-construction"><span class="header-section-number">4.2</span> Audit-Driven Corpus Construction</a></li>
+  <li><a href="#example-1-hadith-numbering" id="toc-example-1-hadith-numbering" class="nav-link" data-scroll-target="#example-1-hadith-numbering"><span class="header-section-number">4.3</span> Example 1 — Hadith Numbering</a></li>
+  <li><a href="#hadith-numbering-audit" id="toc-hadith-numbering-audit" class="nav-link" data-scroll-target="#hadith-numbering-audit"><span class="header-section-number">4.4</span> Hadith Numbering Audit</a></li>
+  <li><a href="#example-2-separating-the-matn-from-source-citations" id="toc-example-2-separating-the-matn-from-source-citations" class="nav-link" data-scroll-target="#example-2-separating-the-matn-from-source-citations"><span class="header-section-number">4.5</span> Example 2 — Separating the Matn from Source Citations</a></li>
+  <li><a href="#source-citation-audit" id="toc-source-citation-audit" class="nav-link" data-scroll-target="#source-citation-audit"><span class="header-section-number">4.6</span> Source Citation Audit</a></li>
+  <li><a href="#why-corpus-refinement-matters" id="toc-why-corpus-refinement-matters" class="nav-link" data-scroll-target="#why-corpus-refinement-matters"><span class="header-section-number">4.7</span> Why Corpus Refinement Matters</a></li>
+  <li><a href="#transition-to-corpus-analysis" id="toc-transition-to-corpus-analysis" class="nav-link" data-scroll-target="#transition-to-corpus-analysis"><span class="header-section-number">4.8</span> Transition to Corpus Analysis</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Computational Corpus</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="computational-corpus" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Computational Corpus</h1>
+<section id="overview" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">4.1</span> Overview</h2>
+<p>The canonical computational corpus is maintained in a DuckDB database. DuckDB stores the parsed hadith corpus together with audit tables, intermediate products, and downstream analytical results. This architecture provides a reproducible workflow from the original digital source files to the statistical analyses presented later in this report.</p>
+<p>The principal analytical table is:</p>
+<p><code>kanz_hadith_reports</code></p>
+<p>Conceptually, each record contains three components:</p>
+<ol type="1">
+<li>Hadith number</li>
+<li>Matn (text)</li>
+<li>Source citations</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="qmd_resources/structure_of_a_report.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Although this structure appears straightforward, several characteristics of the Shamela digitalization complicate automatic corpus construction.</p>
+</section>
+<section id="audit-driven-corpus-construction" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="audit-driven-corpus-construction"><span class="header-section-number">4.2</span> Audit-Driven Corpus Construction</h2>
+<p>Rather than relying on a single parsing pass, the project adopts an audit-driven approach. Independent quality-control procedures are used to identify ambiguous records before they enter the canonical corpus.</p>
+<p>This philosophy favors conservative extraction over aggressive automation. When uncertainty exists, the record is retained for later review rather than forcing an automatic decision.</p>
+</section>
+<section id="example-1-hadith-numbering" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="example-1-hadith-numbering"><span class="header-section-number">4.3</span> Example 1 — Hadith Numbering</h2>
+<p>The printed edition does not contain a perfectly continuous sequence of hadith numbers. During development, a dedicated audit compared the extracted numbering with the original source text to distinguish genuine numbering irregularities from parser failures.</p>
+<p>The primary purpose of this audit was validation rather than correction. It demonstrated that numbering anomalies are properties of the source edition itself and therefore should not automatically be interpreted as parser errors.</p>
+<p>Future versions of the corpus are expected to rely primarily on a manually curated numbering table, making the detailed audit outputs largely historical.</p>
+</section>
+<section id="hadith-numbering-audit" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="hadith-numbering-audit"><span class="header-section-number">4.4</span> Hadith Numbering Audit</h2>
+<p>During corpus construction, the hadith numbering sequence was audited against the source text. The purpose of this audit was not to produce a final corrected edition, but to determine whether apparent gaps and anomalies were parser artifacts or features already present in the source edition.</p>
+<p>The audit reads the CSV outputs stored under:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>numbering_audit_dir <span class="ot">&lt;-</span> <span class="fu">file.path</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"kanz_outputs"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"02a_missing_hadith_number_audit"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Summary of the hadith numbering audit.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Measure</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Expected hadith numbering range</td>
+<td style="text-align: left;">1–46,624</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Observed hadith starts in source</td>
+<td style="text-align: left;">44,092</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Missing numbers checked</td>
+<td style="text-align: left;">2,582</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Missing numbers present as literal hadith starts</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Missing numbers absent as literal hadith starts</td>
+<td style="text-align: left;">2,582</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Consecutive missing-number ranges</td>
+<td style="text-align: left;">159</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Likely local source misnumberings</td>
+<td style="text-align: left;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Source numbering gaps</td>
+<td style="text-align: left;">152</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Duplicate-number rows inspected</td>
+<td style="text-align: left;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>The numbering audit demonstrates that apparent gaps in the hadith sequence are not simply parser failures. Missing report numbers were checked directly against the source text, and the audit distinguishes numbers that are literally absent from the source from those requiring further review.</p>
+<p>For the purposes of this Version 1.0 report, the detailed gap structure is less important than the general conclusion: the parser cannot assume a perfectly continuous sequence from 1 to 46,624. Numbering irregularities must be explicitly audited and, eventually, resolved through a curated reference table.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Interpretation">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Interpretation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The numbering audit is primarily a validation layer. It documents that some numbering irregularities originate in the source edition itself and should not be treated automatically as extraction failures.</p>
+<p>In later versions of the project, this audit can be reduced or replaced once a curated hadith number table exists.</p>
+</div>
+</div>
+</section>
+<section id="example-2-separating-the-matn-from-source-citations" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="example-2-separating-the-matn-from-source-citations"><span class="header-section-number">4.5</span> Example 2 — Separating the Matn from Source Citations</h2>
+<p>A more substantial challenge concerns identification of the boundary between the matn and the abbreviated source citations.</p>
+<p>Although most reports follow the general pattern</p>
+<blockquote class="blockquote">
+<p>hadith number → matn → source citations</p>
+</blockquote>
+<p>the editorial conventions used to indicate this transition are not completely standardized. Source citations may appear parenthetically, within quotation marks, or as bare abbreviations embedded directly in the running text. No single parsing rule correctly identifies every transition.</p>
+<p>Accordingly, the Version 1.0 parser adopts a conservative strategy. When the boundary cannot be determined confidently, potentially ambiguous material is preserved for subsequent scholarly review rather than being split automatically.</p>
+</section>
+<section id="source-citation-audit" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="source-citation-audit"><span class="header-section-number">4.6</span> Source Citation Audit</h2>
+<p>A second audit examined the abbreviated source citations that follow the matn. Unlike the hadith numbering audit, this stage focuses on the transition between the text of the report and the bibliographic information identifying its original sources.</p>
+<p>The audit summarizes recognized source abbreviations, narrator extraction, unresolved source tokens, and report-level parsing decisions. Together these provide an overall assessment of the reliability of source identification in the current Version 1.0 corpus.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Summary of the source citation audit.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Measure</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Recognized source abbreviations</td>
+<td style="text-align: left;">36</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Distinct source abbreviations observed</td>
+<td style="text-align: left;">33</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Unknown source-review tokens</td>
+<td style="text-align: left;">1182</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Distinct narrators extracted</td>
+<td style="text-align: left;">4283</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Reports containing source abbreviations</td>
+<td style="text-align: left;">46,623</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hadith/source matrix rows</td>
+<td style="text-align: left;">46,623</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>The audit demonstrates that most source citations can be recognized using a controlled lookup table of standard abbreviations. Nevertheless, the printed edition does not employ a completely uniform editorial style, and some reports contain abbreviated forms or formatting patterns that cannot yet be classified automatically.</p>
+<p>Rather than forcing uncertain classifications, the parser records these unresolved cases for subsequent scholarly review. This conservative strategy preserves the integrity of the corpus while simultaneously identifying the specific records that would benefit most from manual curation.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="A Curated Source Table">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>A Curated Source Table
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The greatest remaining opportunity for improving the computational corpus is the creation of a manually curated <strong>hadith number → matn → source</strong> reference table.</p>
+<p>Such a resource would establish definitive boundaries between the text of each hadith and its accompanying source citations. Once available, it would immediately improve lexical analyses, repeated phrase discovery, narrator extraction, source attribution, transmission-network reconstruction, stylometric studies, and virtually every downstream computational linguistic analysis.</p>
+<p>The present audit framework is designed to facilitate that process by identifying precisely those records requiring scholarly review rather than attempting increasingly complex parsing heuristics.</p>
+</div>
+</div>
+</section>
+<section id="why-corpus-refinement-matters" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="why-corpus-refinement-matters"><span class="header-section-number">4.7</span> Why Corpus Refinement Matters</h2>
+<div class="callout callout-style-default callout-important callout-titled" title="Collaborative Corpus Curation">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Collaborative Corpus Curation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The principal remaining challenge is no longer demonstrating that large-scale computational analysis of <em>Kanz al-Ummāl</em> is feasible. Version 1.0 establishes that proof of concept.</p>
+<p>The next stage of the project is the creation of a carefully curated <strong>hadith number → matn → source</strong> reference table.</p>
+<p>Such a curated table would immediately improve every downstream analysis, including lexical statistics, repeated phrase discovery, source abbreviation analysis, narrator extraction, stylometric studies, transmission-network analysis, and future computational linguistics research.</p>
+<p>For this reason, scholarly corpus curation is expected to provide substantially greater long-term benefit than continued refinement of individual parsing heuristics.</p>
+</div>
+</div>
+</section>
+<section id="transition-to-corpus-analysis" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="transition-to-corpus-analysis"><span class="header-section-number">4.8</span> Transition to Corpus Analysis</h2>
+<p>Despite the remaining areas requiring curation, the current Version 1.0 corpus already supports meaningful quantitative investigation. The following chapters present three examples of corpus-wide analyses generated directly from the current DuckDB corpus: descriptive statistics of the matn, empirical discovery of repeated phrases, and analysis of source abbreviations and narrator information.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./01_source_text_and_digital_sources.html" class="pagination-link" aria-label="Source Text and Digital Sources">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Source Text and Digital Sources</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./03_matn_stats.html" class="pagination-link" aria-label="Matn Statistics">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matn Statistics</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,38 @@
+############################################################
+# Classical Arabic Computational Linguistics
+# Git ignore rules
+############################################################
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor settings
+.vscode/
+.idea/
+*.Rproj.user/
+
+# Quarto build cache
+.quarto/
+
+# Temporary LaTeX files
+*.aux
+*.log
+*.out
+*.toc
+*.tex
+*.synctex.gz
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# Future project outputs
+cache/
+tmp/
