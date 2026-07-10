@@ -1,38 +1,23 @@
 ############################################################
 # Classical Arabic Computational Linguistics
-# Git ignore rules
+# Ignore everything except the published website and
+# essential project metadata.
 ############################################################
 
-# Operating system files
-.DS_Store
-Thumbs.db
-desktop.ini
+# Ignore everything
+*
 
-# Editor settings
-.vscode/
-.idea/
-*.Rproj.user/
+# Keep Git configuration
+!.gitignore
 
-# Quarto build cache
-.quarto/
+# Keep project documentation
+!README.md
+!LICENSE
+!CITATION.cff
 
-# Temporary LaTeX files
-*.aux
-*.log
-*.out
-*.toc
-*.tex
-*.synctex.gz
+# Keep the published website
+!docs/
+!docs/**
 
-# Python
-__pycache__/
-*.py[cod]
-
-# Temporary files
-*.tmp
-*.bak
-*~
-
-# Future project outputs
-cache/
-tmp/
+# (Optional) Keep the GitHub Pages configuration if you add one later
+#!.nojekyll
