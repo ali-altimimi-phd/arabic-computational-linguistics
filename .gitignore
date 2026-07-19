@@ -21,3 +21,5 @@
 
 # (Optional) Keep the GitHub Pages configuration if you add one later
 #!.nojekyll
+/.quarto/
+**/*.quarto_ipynb

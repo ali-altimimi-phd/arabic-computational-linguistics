@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Computational Corpus – دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</title>
+<title>Computational Corpus – Arabic Computational Linguistics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,24 +68,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./03_matn_stats.html" rel="next">
-<link href="./01_source_text_and_digital_sources.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9e3e5b9121e68b3f077afb32f2c64d95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bb22cb1031d83fa3367499398b846a4e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -107,117 +105,114 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02_computational_corpus.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Computational Corpus</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Arabic Computational Linguistics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-corpus" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Corpus</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-corpus">    
+        <li>
+    <a class="dropdown-item" href="./01_source_text_and_digital_sources.html">
+ <span class="dropdown-text">Source Text &amp; Digital Sources</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./02_computational_corpus.html">
+ <span class="dropdown-text">Computational Corpus</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-analyses" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Analyses</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-analyses">    
+        <li>
+    <a class="dropdown-item" href="./03_matn_stats.html">
+ <span class="dropdown-text">Matn Statistics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./04_repeated_phrases.html">
+ <span class="dropdown-text">Repeated Phrases</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./05_source_narrator.html">
+ <span class="dropdown-text">Sources &amp; Narrators</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./06_towards_computational_study_prophetic_traditions.html"> 
+<span class="menu-text">Future Directions</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ali-altimimi-phd/arabic-computational-linguistics"> <i class="bi bi-github" role="img" aria-label="GitHub repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./01_source_text_and_digital_sources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Source Text and Digital Sources</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./02_computational_corpus.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Computational Corpus</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./03_matn_stats.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matn Statistics</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./04_repeated_phrases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Repeated Matn Phrases</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./05_source_narrator.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Source Abbreviations and Narrators</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./06_towards_computational_study_prophetic_traditions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Towards the Computational Study of the Prophetic Traditions</span></span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#computational-corpus" id="toc-computational-corpus" class="nav-link active" data-scroll-target="#computational-corpus"><span class="header-section-number">4</span> Computational Corpus</a>
+  <li><a href="#computational-corpus" id="toc-computational-corpus" class="nav-link active" data-scroll-target="#computational-corpus"><span class="header-section-number">1</span> Computational Corpus</a>
   <ul class="collapse">
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview"><span class="header-section-number">4.1</span> Overview</a></li>
-  <li><a href="#audit-driven-corpus-construction" id="toc-audit-driven-corpus-construction" class="nav-link" data-scroll-target="#audit-driven-corpus-construction"><span class="header-section-number">4.2</span> Audit-Driven Corpus Construction</a></li>
-  <li><a href="#example-1-hadith-numbering" id="toc-example-1-hadith-numbering" class="nav-link" data-scroll-target="#example-1-hadith-numbering"><span class="header-section-number">4.3</span> Example 1 — Hadith Numbering</a></li>
-  <li><a href="#hadith-numbering-audit" id="toc-hadith-numbering-audit" class="nav-link" data-scroll-target="#hadith-numbering-audit"><span class="header-section-number">4.4</span> Hadith Numbering Audit</a></li>
-  <li><a href="#example-2-separating-the-matn-from-source-citations" id="toc-example-2-separating-the-matn-from-source-citations" class="nav-link" data-scroll-target="#example-2-separating-the-matn-from-source-citations"><span class="header-section-number">4.5</span> Example 2 — Separating the Matn from Source Citations</a></li>
-  <li><a href="#source-citation-audit" id="toc-source-citation-audit" class="nav-link" data-scroll-target="#source-citation-audit"><span class="header-section-number">4.6</span> Source Citation Audit</a></li>
-  <li><a href="#why-corpus-refinement-matters" id="toc-why-corpus-refinement-matters" class="nav-link" data-scroll-target="#why-corpus-refinement-matters"><span class="header-section-number">4.7</span> Why Corpus Refinement Matters</a></li>
-  <li><a href="#transition-to-corpus-analysis" id="toc-transition-to-corpus-analysis" class="nav-link" data-scroll-target="#transition-to-corpus-analysis"><span class="header-section-number">4.8</span> Transition to Corpus Analysis</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview"><span class="header-section-number">1.1</span> Overview</a></li>
+  <li><a href="#audit-driven-corpus-construction" id="toc-audit-driven-corpus-construction" class="nav-link" data-scroll-target="#audit-driven-corpus-construction"><span class="header-section-number">1.2</span> Audit-Driven Corpus Construction</a></li>
+  <li><a href="#example-1-hadith-numbering" id="toc-example-1-hadith-numbering" class="nav-link" data-scroll-target="#example-1-hadith-numbering"><span class="header-section-number">1.3</span> Example 1 — Hadith Numbering</a></li>
+  <li><a href="#hadith-numbering-audit" id="toc-hadith-numbering-audit" class="nav-link" data-scroll-target="#hadith-numbering-audit"><span class="header-section-number">1.4</span> Hadith Numbering Audit</a></li>
+  <li><a href="#example-2-separating-the-matn-from-source-citations" id="toc-example-2-separating-the-matn-from-source-citations" class="nav-link" data-scroll-target="#example-2-separating-the-matn-from-source-citations"><span class="header-section-number">1.5</span> Example 2 — Separating the Matn from Source Citations</a></li>
+  <li><a href="#source-citation-audit" id="toc-source-citation-audit" class="nav-link" data-scroll-target="#source-citation-audit"><span class="header-section-number">1.6</span> Source Citation Audit</a></li>
+  <li><a href="#why-corpus-refinement-matters" id="toc-why-corpus-refinement-matters" class="nav-link" data-scroll-target="#why-corpus-refinement-matters"><span class="header-section-number">1.7</span> Why Corpus Refinement Matters</a></li>
+  <li><a href="#transition-to-corpus-analysis" id="toc-transition-to-corpus-analysis" class="nav-link" data-scroll-target="#transition-to-corpus-analysis"><span class="header-section-number">1.8</span> Transition to Corpus Analysis</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ali-altimimi-phd/arabic-computational-linguistics/blob/main/02_computational_corpus.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Computational Corpus</span></h1>
+<h1 class="title">Computational Corpus</h1>
 </div>
 
 
@@ -234,10 +229,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="computational-corpus" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Computational Corpus</h1>
-<section id="overview" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">4.1</span> Overview</h2>
+<section id="computational-corpus" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Computational Corpus</h1>
+<section id="overview" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">1.1</span> Overview</h2>
 <p>The canonical computational corpus is maintained in a DuckDB database. DuckDB stores the parsed hadith corpus together with audit tables, intermediate products, and downstream analytical results. This architecture provides a reproducible workflow from the original digital source files to the statistical analyses presented later in this report.</p>
 <p>The principal analytical table is:</p>
 <p><code>kanz_hadith_reports</code></p>
@@ -254,19 +249,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Although this structure appears straightforward, several characteristics of the Shamela digitalization complicate automatic corpus construction.</p>
 </section>
-<section id="audit-driven-corpus-construction" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="audit-driven-corpus-construction"><span class="header-section-number">4.2</span> Audit-Driven Corpus Construction</h2>
+<section id="audit-driven-corpus-construction" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="audit-driven-corpus-construction"><span class="header-section-number">1.2</span> Audit-Driven Corpus Construction</h2>
 <p>Rather than relying on a single parsing pass, the project adopts an audit-driven approach. Independent quality-control procedures are used to identify ambiguous records before they enter the canonical corpus.</p>
 <p>This philosophy favors conservative extraction over aggressive automation. When uncertainty exists, the record is retained for later review rather than forcing an automatic decision.</p>
 </section>
-<section id="example-1-hadith-numbering" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="example-1-hadith-numbering"><span class="header-section-number">4.3</span> Example 1 — Hadith Numbering</h2>
+<section id="example-1-hadith-numbering" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="example-1-hadith-numbering"><span class="header-section-number">1.3</span> Example 1 — Hadith Numbering</h2>
 <p>The printed edition does not contain a perfectly continuous sequence of hadith numbers. During development, a dedicated audit compared the extracted numbering with the original source text to distinguish genuine numbering irregularities from parser failures.</p>
 <p>The primary purpose of this audit was validation rather than correction. It demonstrated that numbering anomalies are properties of the source edition itself and therefore should not automatically be interpreted as parser errors.</p>
 <p>Future versions of the corpus are expected to rely primarily on a manually curated numbering table, making the detailed audit outputs largely historical.</p>
 </section>
-<section id="hadith-numbering-audit" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="hadith-numbering-audit"><span class="header-section-number">4.4</span> Hadith Numbering Audit</h2>
+<section id="hadith-numbering-audit" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="hadith-numbering-audit"><span class="header-section-number">1.4</span> Hadith Numbering Audit</h2>
 <p>During corpus construction, the hadith numbering sequence was audited against the source text. The purpose of this audit was not to produce a final corrected edition, but to determine whether apparent gaps and anomalies were parser artifacts or features already present in the source edition.</p>
 <p>The audit reads the CSV outputs stored under:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>numbering_audit_dir <span class="ot">&lt;-</span> <span class="fu">file.path</span>(</span>
@@ -341,8 +336,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="example-2-separating-the-matn-from-source-citations" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="example-2-separating-the-matn-from-source-citations"><span class="header-section-number">4.5</span> Example 2 — Separating the Matn from Source Citations</h2>
+<section id="example-2-separating-the-matn-from-source-citations" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="example-2-separating-the-matn-from-source-citations"><span class="header-section-number">1.5</span> Example 2 — Separating the Matn from Source Citations</h2>
 <p>A more substantial challenge concerns identification of the boundary between the matn and the abbreviated source citations.</p>
 <p>Although most reports follow the general pattern</p>
 <blockquote class="blockquote">
@@ -351,8 +346,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>the editorial conventions used to indicate this transition are not completely standardized. Source citations may appear parenthetically, within quotation marks, or as bare abbreviations embedded directly in the running text. No single parsing rule correctly identifies every transition.</p>
 <p>Accordingly, the Version 1.0 parser adopts a conservative strategy. When the boundary cannot be determined confidently, potentially ambiguous material is preserved for subsequent scholarly review rather than being split automatically.</p>
 </section>
-<section id="source-citation-audit" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="source-citation-audit"><span class="header-section-number">4.6</span> Source Citation Audit</h2>
+<section id="source-citation-audit" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="source-citation-audit"><span class="header-section-number">1.6</span> Source Citation Audit</h2>
 <p>A second audit examined the abbreviated source citations that follow the matn. Unlike the hadith numbering audit, this stage focuses on the transition between the text of the report and the bibliographic information identifying its original sources.</p>
 <p>The audit summarizes recognized source abbreviations, narrator extraction, unresolved source tokens, and report-level parsing decisions. Together these provide an overall assessment of the reliability of source identification in the current Version 1.0 corpus.</p>
 <div class="cell">
@@ -412,8 +407,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="why-corpus-refinement-matters" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="why-corpus-refinement-matters"><span class="header-section-number">4.7</span> Why Corpus Refinement Matters</h2>
+<section id="why-corpus-refinement-matters" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="why-corpus-refinement-matters"><span class="header-section-number">1.7</span> Why Corpus Refinement Matters</h2>
 <div class="callout callout-style-default callout-important callout-titled" title="Collaborative Corpus Curation">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -431,8 +426,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="transition-to-corpus-analysis" class="level2" data-number="4.8">
-<h2 data-number="4.8" class="anchored" data-anchor-id="transition-to-corpus-analysis"><span class="header-section-number">4.8</span> Transition to Corpus Analysis</h2>
+<section id="transition-to-corpus-analysis" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="transition-to-corpus-analysis"><span class="header-section-number">1.8</span> Transition to Corpus Analysis</h2>
 <p>Despite the remaining areas requiring curation, the current Version 1.0 corpus already supports meaningful quantitative investigation. The following chapters present three examples of corpus-wide analyses generated directly from the current DuckDB corpus: descriptive statistics of the matn, empirical discovery of repeated phrases, and analysis of source abbreviations and narrator information.</p>
 
 
@@ -513,7 +508,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ali-altimimi-phd\.github\.io\/arabic-computational-linguistics\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -527,6 +522,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -840,21 +840,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./01_source_text_and_digital_sources.html" class="pagination-link" aria-label="Source Text and Digital Sources">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Source Text and Digital Sources</span></span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./03_matn_stats.html" class="pagination-link" aria-label="Matn Statistics">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matn Statistics</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Ali M. Al-Timimi, PhD</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Version 1.0 — Proof of Concept</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ali-altimimi-phd/arabic-computational-linguistics/blob/main/02_computational_corpus.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>CC BY 4.0</p>
+</div>
+  </div>
+</footer>
 
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

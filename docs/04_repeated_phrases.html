@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Repeated Matn Phrases – دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</title>
+<title>Repeated Matn Phrases – Arabic Computational Linguistics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,24 +33,22 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./05_source_narrator.html" rel="next">
-<link href="./03_matn_stats.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9e3e5b9121e68b3f077afb32f2c64d95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bb22cb1031d83fa3367499398b846a4e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -72,120 +70,117 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04_repeated_phrases.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Repeated Matn Phrases</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Arabic Computational Linguistics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-corpus" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Corpus</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-corpus">    
+        <li>
+    <a class="dropdown-item" href="./01_source_text_and_digital_sources.html">
+ <span class="dropdown-text">Source Text &amp; Digital Sources</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./02_computational_corpus.html">
+ <span class="dropdown-text">Computational Corpus</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-analyses" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Analyses</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-analyses">    
+        <li>
+    <a class="dropdown-item" href="./03_matn_stats.html">
+ <span class="dropdown-text">Matn Statistics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./04_repeated_phrases.html">
+ <span class="dropdown-text">Repeated Phrases</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./05_source_narrator.html">
+ <span class="dropdown-text">Sources &amp; Narrators</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./06_towards_computational_study_prophetic_traditions.html"> 
+<span class="menu-text">Future Directions</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ali-altimimi-phd/arabic-computational-linguistics"> <i class="bi bi-github" role="img" aria-label="GitHub repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./01_source_text_and_digital_sources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Source Text and Digital Sources</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./02_computational_corpus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Computational Corpus</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./03_matn_stats.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matn Statistics</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./04_repeated_phrases.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Repeated Matn Phrases</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./05_source_narrator.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Source Abbreviations and Narrators</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./06_towards_computational_study_prophetic_traditions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Towards the Computational Study of the Prophetic Traditions</span></span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#script-04b-repeated-matn-phrase-analysis" id="toc-script-04b-repeated-matn-phrase-analysis" class="nav-link active" data-scroll-target="#script-04b-repeated-matn-phrase-analysis"><span class="header-section-number">5.1</span> Script 04b — Repeated Matn Phrase Analysis</a>
+  <li><a href="#script-04b-repeated-matn-phrase-analysis" id="toc-script-04b-repeated-matn-phrase-analysis" class="nav-link active" data-scroll-target="#script-04b-repeated-matn-phrase-analysis"><span class="header-section-number">1</span> Script 04b — Repeated Matn Phrase Analysis</a>
   <ul class="collapse">
-  <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose"><span class="header-section-number">5.1.1</span> Purpose</a></li>
-  <li><a href="#outputs" id="toc-outputs" class="nav-link" data-scroll-target="#outputs"><span class="header-section-number">5.1.2</span> Outputs</a></li>
+  <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose"><span class="header-section-number">1.1</span> Purpose</a></li>
+  <li><a href="#outputs" id="toc-outputs" class="nav-link" data-scroll-target="#outputs"><span class="header-section-number">1.2</span> Outputs</a></li>
   </ul></li>
-  <li><a href="#phrase-discovery-at-a-glance" id="toc-phrase-discovery-at-a-glance" class="nav-link" data-scroll-target="#phrase-discovery-at-a-glance"><span class="header-section-number">5.2</span> Phrase Discovery at a Glance</a></li>
-  <li><a href="#preliminary-results" id="toc-preliminary-results" class="nav-link" data-scroll-target="#preliminary-results"><span class="header-section-number">5.3</span> Preliminary Results</a></li>
-  <li><a href="#retained-phrases-by-n-gram-length" id="toc-retained-phrases-by-n-gram-length" class="nav-link" data-scroll-target="#retained-phrases-by-n-gram-length"><span class="header-section-number">5.4</span> Retained Phrases by N-gram Length</a></li>
-  <li><a href="#example-repeated-2-grams" id="toc-example-repeated-2-grams" class="nav-link" data-scroll-target="#example-repeated-2-grams"><span class="header-section-number">5.5</span> Example: Repeated 2-grams</a></li>
-  <li><a href="#example-repeated-5-grams" id="toc-example-repeated-5-grams" class="nav-link" data-scroll-target="#example-repeated-5-grams"><span class="header-section-number">5.6</span> Example: Repeated 5-grams</a></li>
-  <li><a href="#cross-length-examples" id="toc-cross-length-examples" class="nav-link" data-scroll-target="#cross-length-examples"><span class="header-section-number">5.7</span> Cross-Length Examples</a></li>
-  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation"><span class="header-section-number">5.8</span> Interpretation</a></li>
-  <li><a href="#building-on-these-results" id="toc-building-on-these-results" class="nav-link" data-scroll-target="#building-on-these-results"><span class="header-section-number">5.9</span> Building on These Results</a></li>
-  <li><a href="#summary-assessment" id="toc-summary-assessment" class="nav-link" data-scroll-target="#summary-assessment"><span class="header-section-number">5.10</span> Summary Assessment</a></li>
+  <li><a href="#phrase-discovery-at-a-glance" id="toc-phrase-discovery-at-a-glance" class="nav-link" data-scroll-target="#phrase-discovery-at-a-glance"><span class="header-section-number">2</span> Phrase Discovery at a Glance</a></li>
+  <li><a href="#preliminary-results" id="toc-preliminary-results" class="nav-link" data-scroll-target="#preliminary-results"><span class="header-section-number">3</span> Preliminary Results</a></li>
+  <li><a href="#retained-phrases-by-n-gram-length" id="toc-retained-phrases-by-n-gram-length" class="nav-link" data-scroll-target="#retained-phrases-by-n-gram-length"><span class="header-section-number">4</span> Retained Phrases by N-gram Length</a></li>
+  <li><a href="#example-repeated-2-grams" id="toc-example-repeated-2-grams" class="nav-link" data-scroll-target="#example-repeated-2-grams"><span class="header-section-number">5</span> Example: Repeated 2-grams</a></li>
+  <li><a href="#example-repeated-5-grams" id="toc-example-repeated-5-grams" class="nav-link" data-scroll-target="#example-repeated-5-grams"><span class="header-section-number">6</span> Example: Repeated 5-grams</a></li>
+  <li><a href="#cross-length-examples" id="toc-cross-length-examples" class="nav-link" data-scroll-target="#cross-length-examples"><span class="header-section-number">7</span> Cross-Length Examples</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation"><span class="header-section-number">8</span> Interpretation</a></li>
+  <li><a href="#building-on-these-results" id="toc-building-on-these-results" class="nav-link" data-scroll-target="#building-on-these-results"><span class="header-section-number">9</span> Building on These Results</a></li>
+  <li><a href="#summary-assessment" id="toc-summary-assessment" class="nav-link" data-scroll-target="#summary-assessment"><span class="header-section-number">10</span> Summary Assessment</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ali-altimimi-phd/arabic-computational-linguistics/blob/main/04_repeated_phrases.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Repeated Matn Phrases</span></h1>
+<h1 class="title">Repeated Matn Phrases</h1>
 </div>
 
 
@@ -202,15 +197,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="script-04b-repeated-matn-phrase-analysis" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="script-04b-repeated-matn-phrase-analysis"><span class="header-section-number">5.1</span> Script 04b — Repeated Matn Phrase Analysis</h2>
-<section id="purpose" class="level3" data-number="5.1.1">
-<h3 data-number="5.1.1" class="anchored" data-anchor-id="purpose"><span class="header-section-number">5.1.1</span> Purpose</h3>
+<section id="script-04b-repeated-matn-phrase-analysis" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="script-04b-repeated-matn-phrase-analysis"><span class="header-section-number">1</span> Script 04b — Repeated Matn Phrase Analysis</h2>
+<section id="purpose" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="purpose"><span class="header-section-number">1.1</span> Purpose</h3>
 <p>Script 04b extends the lexical analyses of Script 04 by identifying repeated multi-word expressions occurring throughout the matn. Rather than relying on predefined phrase lists or manually curated formulae, the procedure discovers repeated expressions directly from the corpus using an unsupervised n-gram approach. This allows recurring language to emerge naturally from the text itself and provides a quantitative basis for investigating formulaic expression in <em>Kanz al-Ummāl</em>.</p>
 <p>Unlike Script 04, which counts a predefined set of devotional formulae, Script 04b discovers repeated language empirically from the corpus itself. Together, the two scripts provide complementary approaches: one hypothesis-driven and one data-driven.</p>
 </section>
-<section id="outputs" class="level3" data-number="5.1.2">
-<h3 data-number="5.1.2" class="anchored" data-anchor-id="outputs"><span class="header-section-number">5.1.2</span> Outputs</h3>
+<section id="outputs" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="outputs"><span class="header-section-number">1.2</span> Outputs</h3>
 <p>The script generates the following analytical products. Separate phrase-length files are intentionally produced because they are easier to inspect manually than a single large review table.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -279,8 +274,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="phrase-discovery-at-a-glance" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="phrase-discovery-at-a-glance"><span class="header-section-number">5.2</span> Phrase Discovery at a Glance</h2>
+<section id="phrase-discovery-at-a-glance" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="phrase-discovery-at-a-glance"><span class="header-section-number">2</span> Phrase Discovery at a Glance</h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -358,13 +353,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="preliminary-results" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="preliminary-results"><span class="header-section-number">5.3</span> Preliminary Results</h2>
+<section id="preliminary-results" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="preliminary-results"><span class="header-section-number">3</span> Preliminary Results</h2>
 <p>Script 04b examined 43,846 matn-bearing reports and generated contiguous word sequences from 2-word through 8-word phrases. To reduce noise, a phrase was retained only if it occurred at least 2 times in the corpus and appeared in at least 2 separate hadith reports.</p>
 <p>The analysis produced 6,009,654 unique candidate phrases before filtering and retained 567,715 repeated phrases for review. These retained phrases generated 2,071,563 hadith-level phrase-hit rows, allowing each recurring expression to be traced back to the reports in which it appears.</p>
 </section>
-<section id="retained-phrases-by-n-gram-length" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="retained-phrases-by-n-gram-length"><span class="header-section-number">5.4</span> Retained Phrases by N-gram Length</h2>
+<section id="retained-phrases-by-n-gram-length" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="retained-phrases-by-n-gram-length"><span class="header-section-number">4</span> Retained Phrases by N-gram Length</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -419,8 +414,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>The retained-phrase counts decline as phrase length increases. This is expected: short two-word and three-word sequences are common because they often reflect ordinary grammatical or lexical combinations, whereas longer repeated phrases are more selective and more likely to represent recognizable formulae, stock expressions, or recurring narrative patterns.</p>
 </section>
-<section id="example-repeated-2-grams" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="example-repeated-2-grams"><span class="header-section-number">5.5</span> Example: Repeated 2-grams</h2>
+<section id="example-repeated-2-grams" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="example-repeated-2-grams"><span class="header-section-number">5</span> Example: Repeated 2-grams</h2>
 <p>Two-word repeated phrases provide a broad view of recurring lexical pairings and common grammatical combinations. Many are expected to be frequent and general, but they help establish the lower-level texture of the corpus and provide a starting point for later collocation analysis.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -566,8 +561,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="example-repeated-5-grams" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="example-repeated-5-grams"><span class="header-section-number">5.6</span> Example: Repeated 5-grams</h2>
+<section id="example-repeated-5-grams" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="example-repeated-5-grams"><span class="header-section-number">6</span> Example: Repeated 5-grams</h2>
 <p>Five-word repeated phrases are often more interpretable than two-word phrases because they are long enough to capture formulaic wording or recurring narrative language. For a non-specialist reader, the 5-gram table is therefore a useful bridge between raw frequency counting and the study of formulaic expression.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -713,8 +708,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="cross-length-examples" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="cross-length-examples"><span class="header-section-number">5.7</span> Cross-Length Examples</h2>
+<section id="cross-length-examples" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="cross-length-examples"><span class="header-section-number">7</span> Cross-Length Examples</h2>
 <p>The table below shows the highest-frequency examples across phrase lengths. It is intended as a quick inspection table rather than a complete inventory. The complete review files should be used for detailed phrase evaluation.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -950,8 +945,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="interpretation" class="level2" data-number="5.8">
-<h2 data-number="5.8" class="anchored" data-anchor-id="interpretation"><span class="header-section-number">5.8</span> Interpretation</h2>
+<section id="interpretation" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="interpretation"><span class="header-section-number">8</span> Interpretation</h2>
 <p>Unlike the manually curated devotional expressions counted in Script 04, this procedure makes no assumptions about which phrases are linguistically or religiously significant. Repeated language is discovered directly from the corpus itself. This distinction matters because recurrent expressions in hadith literature may include standard openings, narrative transitions, oaths, quotation formulae, supplications, and other conventional wording that would be difficult to enumerate exhaustively beforehand.</p>
 <p>The separate review files organized by phrase length also support practical human inspection. Short phrases are useful for identifying common lexical and grammatical pairings, while longer repeated phrases are more likely to reveal complete formulaic expressions or stereotyped narrative patterns. The 2-gram and 5-gram examples therefore serve different purposes: the former gives a broad view of local word association, while the latter begins to expose more meaningful repeated language.</p>
 <p>At the same time, these results should be interpreted as phrase candidates rather than final linguistic categories. Repetition alone does not prove that a phrase has a specific rhetorical, theological, or transmission function. The value of Script 04b is that it narrows the search space and produces an empirical phrase inventory that can be reviewed, classified, and reused in later analyses.</p>
@@ -969,8 +964,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="building-on-these-results" class="level2" data-number="5.9">
-<h2 data-number="5.9" class="anchored" data-anchor-id="building-on-these-results"><span class="header-section-number">5.9</span> Building on These Results</h2>
+<section id="building-on-these-results" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="building-on-these-results"><span class="header-section-number">9</span> Building on These Results</h2>
 <p>The repeated-phrase inventory provides a foundation for several accessible computational linguistic extensions:</p>
 <ul>
 <li><strong>Formulaic language discovery:</strong> identifying recurring expressions that appear across multiple hadith reports.</li>
@@ -983,8 +978,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Machine-learning preparation:</strong> producing phrase-level features that can be used in clustering, topic discovery, or semantic modelling.</li>
 </ul>
 </section>
-<section id="summary-assessment" class="level2" data-number="5.10">
-<h2 data-number="5.10" class="anchored" data-anchor-id="summary-assessment"><span class="header-section-number">5.10</span> Summary Assessment</h2>
+<section id="summary-assessment" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="summary-assessment"><span class="header-section-number">10</span> Summary Assessment</h2>
 <p>Script 04b is a proof-of-concept for data-driven formulaic language discovery in the preliminary <em>Kanz al-Ummāl</em> corpus. It does not solve the linguistic classification problem by itself, but it creates the empirical foundation needed for later classification. The result is a practical bridge between raw text extraction and higher-level computational linguistics: repeated language can now be found, counted, reviewed, and traced back to individual hadith reports.</p>
 
 
@@ -1064,7 +1059,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ali-altimimi-phd\.github\.io\/arabic-computational-linguistics\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1078,6 +1073,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -1391,21 +1391,23 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./03_matn_stats.html" class="pagination-link" aria-label="Matn Statistics">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matn Statistics</span></span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./05_source_narrator.html" class="pagination-link" aria-label="Source Abbreviations and Narrators">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Source Abbreviations and Narrators</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Ali M. Al-Timimi, PhD</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Version 1.0 — Proof of Concept</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ali-altimimi-phd/arabic-computational-linguistics/blob/main/04_repeated_phrases.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>CC BY 4.0</p>
+</div>
+  </div>
+</footer>
 
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

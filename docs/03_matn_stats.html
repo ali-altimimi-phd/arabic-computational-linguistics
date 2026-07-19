@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Matn Statistics – دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</title>
+<title>Matn Statistics – Arabic Computational Linguistics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,24 +33,22 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./04_repeated_phrases.html" rel="next">
-<link href="./02_computational_corpus.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9e3e5b9121e68b3f077afb32f2c64d95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bb22cb1031d83fa3367499398b846a4e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -72,122 +70,119 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03_matn_stats.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matn Statistics</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Arabic Computational Linguistics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-corpus" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Corpus</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-corpus">    
+        <li>
+    <a class="dropdown-item" href="./01_source_text_and_digital_sources.html">
+ <span class="dropdown-text">Source Text &amp; Digital Sources</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./02_computational_corpus.html">
+ <span class="dropdown-text">Computational Corpus</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-analyses" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Analyses</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-analyses">    
+        <li>
+    <a class="dropdown-item" href="./03_matn_stats.html">
+ <span class="dropdown-text">Matn Statistics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./04_repeated_phrases.html">
+ <span class="dropdown-text">Repeated Phrases</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./05_source_narrator.html">
+ <span class="dropdown-text">Sources &amp; Narrators</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./06_towards_computational_study_prophetic_traditions.html"> 
+<span class="menu-text">Future Directions</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ali-altimimi-phd/arabic-computational-linguistics"> <i class="bi bi-github" role="img" aria-label="GitHub repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./01_source_text_and_digital_sources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Source Text and Digital Sources</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./02_computational_corpus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Computational Corpus</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./03_matn_stats.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matn Statistics</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./04_repeated_phrases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Repeated Matn Phrases</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./05_source_narrator.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Source Abbreviations and Narrators</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./06_towards_computational_study_prophetic_traditions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Towards the Computational Study of the Prophetic Traditions</span></span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#script-04-matn-counts-and-descriptive-statistics" id="toc-script-04-matn-counts-and-descriptive-statistics" class="nav-link active" data-scroll-target="#script-04-matn-counts-and-descriptive-statistics"><span class="header-section-number">4.1</span> Script 04 — Matn Counts and Descriptive Statistics</a>
+  <li><a href="#script-04-matn-counts-and-descriptive-statistics" id="toc-script-04-matn-counts-and-descriptive-statistics" class="nav-link active" data-scroll-target="#script-04-matn-counts-and-descriptive-statistics"><span class="header-section-number">1</span> Script 04 — Matn Counts and Descriptive Statistics</a>
   <ul class="collapse">
-  <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose"><span class="header-section-number">4.1.1</span> Purpose</a></li>
-  <li><a href="#outputs" id="toc-outputs" class="nav-link" data-scroll-target="#outputs"><span class="header-section-number">4.1.2</span> Outputs</a></li>
+  <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose"><span class="header-section-number">1.1</span> Purpose</a></li>
+  <li><a href="#outputs" id="toc-outputs" class="nav-link" data-scroll-target="#outputs"><span class="header-section-number">1.2</span> Outputs</a></li>
   </ul></li>
-  <li><a href="#corpus-at-a-glance" id="toc-corpus-at-a-glance" class="nav-link" data-scroll-target="#corpus-at-a-glance"><span class="header-section-number">4.2</span> Corpus at a Glance</a></li>
-  <li><a href="#preliminary-results" id="toc-preliminary-results" class="nav-link" data-scroll-target="#preliminary-results"><span class="header-section-number">4.3</span> Preliminary Results</a></li>
-  <li><a href="#matn-length-statistics" id="toc-matn-length-statistics" class="nav-link" data-scroll-target="#matn-length-statistics"><span class="header-section-number">4.4</span> Matn Length Statistics</a></li>
-  <li><a href="#distribution-of-matn-lengths" id="toc-distribution-of-matn-lengths" class="nav-link" data-scroll-target="#distribution-of-matn-lengths"><span class="header-section-number">4.5</span> Distribution of Matn Lengths</a></li>
-  <li><a href="#lexical-word-frequencies" id="toc-lexical-word-frequencies" class="nav-link" data-scroll-target="#lexical-word-frequencies"><span class="header-section-number">4.6</span> Lexical Word Frequencies</a></li>
-  <li><a href="#independent-ḥurūf" id="toc-independent-ḥurūf" class="nav-link" data-scroll-target="#independent-ḥurūf"><span class="header-section-number">4.7</span> Independent Ḥurūf</a></li>
-  <li><a href="#pious-and-devotional-formulae" id="toc-pious-and-devotional-formulae" class="nav-link" data-scroll-target="#pious-and-devotional-formulae"><span class="header-section-number">4.8</span> Pious and Devotional Formulae</a></li>
-  <li><a href="#source-code-length-summary" id="toc-source-code-length-summary" class="nav-link" data-scroll-target="#source-code-length-summary"><span class="header-section-number">4.9</span> Source-Code Length Summary</a></li>
-  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation"><span class="header-section-number">4.10</span> Interpretation</a></li>
-  <li><a href="#building-on-these-results" id="toc-building-on-these-results" class="nav-link" data-scroll-target="#building-on-these-results"><span class="header-section-number">4.11</span> Building on These Results</a></li>
-  <li><a href="#template-pattern-for-later-script-sections" id="toc-template-pattern-for-later-script-sections" class="nav-link" data-scroll-target="#template-pattern-for-later-script-sections"><span class="header-section-number">4.12</span> Template Pattern for Later Script Sections</a></li>
+  <li><a href="#corpus-at-a-glance" id="toc-corpus-at-a-glance" class="nav-link" data-scroll-target="#corpus-at-a-glance"><span class="header-section-number">2</span> Corpus at a Glance</a></li>
+  <li><a href="#preliminary-results" id="toc-preliminary-results" class="nav-link" data-scroll-target="#preliminary-results"><span class="header-section-number">3</span> Preliminary Results</a></li>
+  <li><a href="#matn-length-statistics" id="toc-matn-length-statistics" class="nav-link" data-scroll-target="#matn-length-statistics"><span class="header-section-number">4</span> Matn Length Statistics</a></li>
+  <li><a href="#distribution-of-matn-lengths" id="toc-distribution-of-matn-lengths" class="nav-link" data-scroll-target="#distribution-of-matn-lengths"><span class="header-section-number">5</span> Distribution of Matn Lengths</a></li>
+  <li><a href="#lexical-word-frequencies" id="toc-lexical-word-frequencies" class="nav-link" data-scroll-target="#lexical-word-frequencies"><span class="header-section-number">6</span> Lexical Word Frequencies</a></li>
+  <li><a href="#independent-ḥurūf" id="toc-independent-ḥurūf" class="nav-link" data-scroll-target="#independent-ḥurūf"><span class="header-section-number">7</span> Independent Ḥurūf</a></li>
+  <li><a href="#pious-and-devotional-formulae" id="toc-pious-and-devotional-formulae" class="nav-link" data-scroll-target="#pious-and-devotional-formulae"><span class="header-section-number">8</span> Pious and Devotional Formulae</a></li>
+  <li><a href="#source-code-length-summary" id="toc-source-code-length-summary" class="nav-link" data-scroll-target="#source-code-length-summary"><span class="header-section-number">9</span> Source-Code Length Summary</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation"><span class="header-section-number">10</span> Interpretation</a></li>
+  <li><a href="#building-on-these-results" id="toc-building-on-these-results" class="nav-link" data-scroll-target="#building-on-these-results"><span class="header-section-number">11</span> Building on These Results</a></li>
+  <li><a href="#template-pattern-for-later-script-sections" id="toc-template-pattern-for-later-script-sections" class="nav-link" data-scroll-target="#template-pattern-for-later-script-sections"><span class="header-section-number">12</span> Template Pattern for Later Script Sections</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ali-altimimi-phd/arabic-computational-linguistics/blob/main/03_matn_stats.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matn Statistics</span></h1>
+<h1 class="title">Matn Statistics</h1>
 </div>
 
 
@@ -204,15 +199,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="script-04-matn-counts-and-descriptive-statistics" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="script-04-matn-counts-and-descriptive-statistics"><span class="header-section-number">4.1</span> Script 04 — Matn Counts and Descriptive Statistics</h2>
-<section id="purpose" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="purpose"><span class="header-section-number">4.1.1</span> Purpose</h3>
+<section id="script-04-matn-counts-and-descriptive-statistics" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="script-04-matn-counts-and-descriptive-statistics"><span class="header-section-number">1</span> Script 04 — Matn Counts and Descriptive Statistics</h2>
+<section id="purpose" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="purpose"><span class="header-section-number">1.1</span> Purpose</h3>
 <p>This script performs the first large-scale quantitative analysis of the hadith text (<em>matn</em>) after construction of the preliminary corpus. Rather than examining individual reports, it summarizes the linguistic characteristics of the corpus as a whole and produces reusable statistical tables for subsequent analyses. All outputs are written both as CSV files and as mirrored DuckDB tables, allowing later scripts to query the results directly without recomputation.</p>
 <p>The script also reflects an important design principle of the pipeline: different linguistic phenomena are treated separately rather than merged into a single undifferentiated word count. Lexical vocabulary, independent particles (<em>ḥurūf</em>), and selected devotional formulae are counted independently. This allows later studies to focus on vocabulary, grammar, or formulaic language without repeating the preprocessing step.</p>
 </section>
-<section id="outputs" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="outputs"><span class="header-section-number">4.1.2</span> Outputs</h3>
+<section id="outputs" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="outputs"><span class="header-section-number">1.2</span> Outputs</h3>
 <p>The script generates the following analytical products. Each output is exported as a CSV file and mirrored into DuckDB, making the results immediately available for downstream statistical analyses.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -267,8 +262,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </section>
 </section>
-<section id="corpus-at-a-glance" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="corpus-at-a-glance"><span class="header-section-number">4.2</span> Corpus at a Glance</h2>
+<section id="corpus-at-a-glance" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="corpus-at-a-glance"><span class="header-section-number">2</span> Corpus at a Glance</h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -350,13 +345,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="preliminary-results" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="preliminary-results"><span class="header-section-number">4.3</span> Preliminary Results</h2>
+<section id="preliminary-results" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="preliminary-results"><span class="header-section-number">3</span> Preliminary Results</h2>
 <p>The current Version 1.0 corpus contains 46,623 hadith records, of which 43,846 (94.0%) currently contain matn text suitable for quantitative analysis. Across these reports, the corpus contains approximately 1,266,206 textual units, including approximately 1,058,736 lexical words and 207,454 independent Arabic particles. The lexical vocabulary presently consists of 83,280 distinct word forms.</p>
 <p>These figures indicate that the preliminary corpus is already large enough to support corpus-level descriptive analysis. Basic lexical statistics, length distributions, and particle frequencies can now be computed reproducibly across tens of thousands of reports.</p>
 </section>
-<section id="matn-length-statistics" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="matn-length-statistics"><span class="header-section-number">4.4</span> Matn Length Statistics</h2>
+<section id="matn-length-statistics" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="matn-length-statistics"><span class="header-section-number">4</span> Matn Length Statistics</h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -581,8 +576,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>The quantile table provides a compact way to understand what is typical in the corpus. Half of all reports contain 17 or fewer textual units, while the upper tail contains relatively few but substantially longer narrations.</p>
 </section>
-<section id="distribution-of-matn-lengths" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="distribution-of-matn-lengths"><span class="header-section-number">4.5</span> Distribution of Matn Lengths</h2>
+<section id="distribution-of-matn-lengths" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="distribution-of-matn-lengths"><span class="header-section-number">5</span> Distribution of Matn Lengths</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -595,8 +590,8 @@ ul.task-list li input[type="checkbox"] {
 <p>The histogram illustrates the strongly right-skewed nature of report lengths. Most narrations are comparatively short, while progressively fewer reports occupy the long tail of the distribution. The plot is truncated at 200 textual units to make the main distribution readable; the full corpus contains a small number of much longer reports.</p>
 <p>This pattern is expected in large hadith compilations, where many reports consist of brief statements, rulings, or narrative fragments, while a smaller number preserve extended narrations. Analytically, this means that later statistical models and stylometric comparisons should be designed with skewed text lengths in mind.</p>
 </section>
-<section id="lexical-word-frequencies" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="lexical-word-frequencies"><span class="header-section-number">4.6</span> Lexical Word Frequencies</h2>
+<section id="lexical-word-frequencies" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="lexical-word-frequencies"><span class="header-section-number">6</span> Lexical Word Frequencies</h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -734,8 +729,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>The lexical frequency table provides the foundation for later corpus linguistic work. It can be used to identify common vocabulary, compare subsets of reports, detect unusual lexical patterns, and support later phrase-level and semantic analyses.</p>
 </section>
-<section id="independent-ḥurūf" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="independent-ḥurūf"><span class="header-section-number">4.7</span> Independent Ḥurūf</h2>
+<section id="independent-ḥurūf" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="independent-ḥurūf"><span class="header-section-number">7</span> Independent Ḥurūf</h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -1022,8 +1017,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Independent particles account for approximately 16.4% of all textual units. This is important for Arabic analysis because particles carry significant grammatical and discourse functions. Counting them separately makes it possible to study Arabic function-word behavior without confusing it with lexical vocabulary.</p>
 <p>The current Version 1.0 script does not split connected prefixes such as و-, ف-, ب-, ل-, and ك-. The reported particle counts should therefore be understood as counts of independent particles only. This is a conservative choice and avoids overinterpreting attached forms before a dedicated Arabic morphological layer is added.</p>
 </section>
-<section id="pious-and-devotional-formulae" class="level2" data-number="4.8">
-<h2 data-number="4.8" class="anchored" data-anchor-id="pious-and-devotional-formulae"><span class="header-section-number">4.8</span> Pious and Devotional Formulae</h2>
+<section id="pious-and-devotional-formulae" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="pious-and-devotional-formulae"><span class="header-section-number">8</span> Pious and Devotional Formulae</h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -1073,8 +1068,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Selected devotional formulae are protected and counted as single textual units. This prevents blessings, peace formulae, divine honorifics, and companion formulae from being fragmented into ordinary word counts. The result is a cleaner separation between the lexical content of the matn and recurring formulaic expressions that serve religious, devotional, or editorial functions.</p>
 </section>
-<section id="source-code-length-summary" class="level2" data-number="4.9">
-<h2 data-number="4.9" class="anchored" data-anchor-id="source-code-length-summary"><span class="header-section-number">4.9</span> Source-Code Length Summary</h2>
+<section id="source-code-length-summary" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="source-code-length-summary"><span class="header-section-number">9</span> Source-Code Length Summary</h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -1209,14 +1204,14 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>The source-code summary provides a preliminary way to compare report lengths across source-classification categories. At this stage, these comparisons should be read cautiously because source classification remains under refinement. However, the table is useful as a quality-control tool and can help identify categories that contain unusually long or short records.</p>
 </section>
-<section id="interpretation" class="level2" data-number="4.10">
-<h2 data-number="4.10" class="anchored" data-anchor-id="interpretation"><span class="header-section-number">4.10</span> Interpretation</h2>
+<section id="interpretation" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="interpretation"><span class="header-section-number">10</span> Interpretation</h2>
 <p>This stage demonstrates that the preliminary corpus is already suitable for corpus-level descriptive analysis. Basic lexical statistics, report-length distributions, and Arabic particle frequencies can now be computed reproducibly across more than forty-six thousand hadith records.</p>
 <p>An important design principle of the pipeline is the explicit separation of lexical vocabulary, independent particles (<em>ḥurūf</em>), and devotional formulae. Rather than collapsing all tokens into a single frequency table, these linguistic categories are preserved independently. This allows future studies to investigate vocabulary, grammatical structure, and formulaic language without additional preprocessing.</p>
 <p>At the same time, these statistics should be regarded as preliminary because they reflect the current state of the corpus. Future refinement of report segmentation or source extraction may produce modest changes in individual counts. However, the overall statistical profile of the corpus is unlikely to change substantially unless large-scale changes are made to the underlying hadith number–matn–source table.</p>
 </section>
-<section id="building-on-these-results" class="level2" data-number="4.11">
-<h2 data-number="4.11" class="anchored" data-anchor-id="building-on-these-results"><span class="header-section-number">4.11</span> Building on These Results</h2>
+<section id="building-on-these-results" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="building-on-these-results"><span class="header-section-number">11</span> Building on These Results</h2>
 <p>Although this script performs only descriptive statistics, it establishes the foundation for a broad range of computational analyses. Reasonable extensions include:</p>
 <ul>
 <li><strong>Lexical profiling:</strong> identifying the most characteristic vocabulary of the corpus.</li>
@@ -1241,8 +1236,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="template-pattern-for-later-script-sections" class="level2" data-number="4.12">
-<h2 data-number="4.12" class="anchored" data-anchor-id="template-pattern-for-later-script-sections"><span class="header-section-number">4.12</span> Template Pattern for Later Script Sections</h2>
+<section id="template-pattern-for-later-script-sections" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="template-pattern-for-later-script-sections"><span class="header-section-number">12</span> Template Pattern for Later Script Sections</h2>
 <p>The same report structure can be reused for subsequent post-corpus scripts:</p>
 <ol type="1">
 <li><strong>Purpose</strong> — what question the script answers and why it matters.</li>
@@ -1330,7 +1325,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ali-altimimi-phd\.github\.io\/arabic-computational-linguistics\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1344,6 +1339,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -1657,21 +1657,23 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./02_computational_corpus.html" class="pagination-link" aria-label="Computational Corpus">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Computational Corpus</span></span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./04_repeated_phrases.html" class="pagination-link" aria-label="Repeated Matn Phrases">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Repeated Matn Phrases</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Ali M. Al-Timimi, PhD</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Version 1.0 — Proof of Concept</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ali-altimimi-phd/arabic-computational-linguistics/blob/main/03_matn_stats.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>CC BY 4.0</p>
+</div>
+  </div>
+</footer>
 
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

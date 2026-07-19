@@ -2,14 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Ali M. Al-Timimi, PhD">
-<meta name="dcterms.date" content="2026-07-09">
 
-<title>دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</title>
+<title>Arabic Computational Linguistics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -35,23 +33,22 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01_source_text_and_digital_sources.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9e3e5b9121e68b3f077afb32f2c64d95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bb22cb1031d83fa3367499398b846a4e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -73,184 +70,228 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Arabic Computational Linguistics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-corpus" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Corpus</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-corpus">    
+        <li>
+    <a class="dropdown-item" href="./01_source_text_and_digital_sources.html">
+ <span class="dropdown-text">Source Text &amp; Digital Sources</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./02_computational_corpus.html">
+ <span class="dropdown-text">Computational Corpus</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-analyses" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Analyses</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-analyses">    
+        <li>
+    <a class="dropdown-item" href="./03_matn_stats.html">
+ <span class="dropdown-text">Matn Statistics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./04_repeated_phrases.html">
+ <span class="dropdown-text">Repeated Phrases</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./05_source_narrator.html">
+ <span class="dropdown-text">Sources &amp; Narrators</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./06_towards_computational_study_prophetic_traditions.html"> 
+<span class="menu-text">Future Directions</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ali-altimimi-phd/arabic-computational-linguistics"> <i class="bi bi-github" role="img" aria-label="GitHub repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./01_source_text_and_digital_sources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Source Text and Digital Sources</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./02_computational_corpus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Computational Corpus</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./03_matn_stats.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matn Statistics</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./04_repeated_phrases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Repeated Matn Phrases</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./05_source_narrator.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Source Abbreviations and Narrators</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./06_towards_computational_study_prophetic_traditions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Towards the Computational Study of the Prophetic Traditions</span></span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a>
-  <ul class="collapse">
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background"><span class="header-section-number">1.1</span> Background</a></li>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives"><span class="header-section-number">1.2</span> Objectives</a></li>
-  <li><a href="#scope-of-version-1.0" id="toc-scope-of-version-1.0" class="nav-link" data-scroll-target="#scope-of-version-1.0"><span class="header-section-number">1.3</span> Scope of Version 1.0</a></li>
-  <li><a href="#organization-of-this-report" id="toc-organization-of-this-report" class="nav-link" data-scroll-target="#organization-of-this-report"><span class="header-section-number">1.4</span> Organization of this Report</a></li>
-  <li><a href="#development-philosophy" id="toc-development-philosophy" class="nav-link" data-scroll-target="#development-philosophy"><span class="header-section-number">1.5</span> Development Philosophy</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</h1>
-<p class="subtitle lead">A Preliminary Computational Study of the Language of the Hadith Reports in Kanz al-Ummāl</p>
+
+
+
+<div class="dashboard-hero">
+<div class="hero-arabic" lang="ar" dir="rtl">
+<p>دراسة حاسوبية أولية للألفاظ النبوية في كتاب كنز العمال</p>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Ali M. Al-Timimi, PhD </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">July 9, 2026</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="introduction" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
-<section id="background" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="background"><span class="header-section-number">1.1</span> Background</h2>
-<p>Computational methods have become increasingly important in the study of historical texts, enabling large collections to be explored using statistical, linguistic, and machine learning approaches that would be impractical through manual inspection alone. While such methods have become commonplace for many modern languages, relatively few large-scale computational corpora exist for the classical hadith literature.</p>
-<p><em>Kanz al-Ummāl fī Sunan al-Aqwāl wa al-Afʿāl</em> is among the largest printed compilations of Prophetic traditions. Its size, sequential organization, and extensive source citations make it an attractive candidate for computational corpus construction. At the same time, its editorial structure presents numerous challenges for automatic parsing, including page continuations, abbreviated source citations, embedded section headings, publisher footnotes, and inconsistencies in the presentation of source material.</p>
-<p>The present project seeks to develop a reproducible computational framework capable of transforming the printed work into a structured corpus suitable for quantitative analysis.</p>
+<section id="a-preliminary-computational-study-of-the-language-of-the-hadith-reports-in-kanz-al-ummāl" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> A Preliminary Computational Study of the Language of the Hadith Reports in <em>Kanz al-Ummāl</em></h1>
+<div class="hero-subtitle">
+<p>An evolving computational linguistics framework for constructing, curating, and analyzing a large Classical Arabic hadith corpus.</p>
+</div>
+<div class="status-pill">
+Version 1.0 · Proof of Concept
+</div>
 </section>
-<section id="objectives" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="objectives"><span class="header-section-number">1.2</span> Objectives</h2>
-<p>The immediate objective of Version 1.0 is not to produce a definitive digital edition of <em>Kanz al-Ummāl</em>. Rather, the goal is to demonstrate the feasibility of constructing a machine-readable computational corpus that supports large-scale quantitative investigation of the Prophetic traditions contained within the collection.</p>
-<p>Specific objectives include:</p>
-<ul>
-<li>Construct a reproducible computational corpus from the digital source text.</li>
-<li>Store the corpus within a DuckDB repository for efficient querying and downstream analysis.</li>
-<li>Implement audit procedures to identify potential parsing problems.</li>
-<li>Generate corpus-wide descriptive statistics.</li>
-<li>Identify repeated linguistic expressions.</li>
-<li>Analyze source abbreviations and narrator information.</li>
-<li>Establish a foundation for future computational linguistic investigations.</li>
-</ul>
+</div>
+<section id="corpus-at-a-glance" class="level2 dashboard-section-title" data-number="1.1">
+<h2 class="dashboard-section-title anchored" data-number="1.1" data-anchor-id="corpus-at-a-glance"><span class="header-section-number">1.1</span> Corpus at a Glance</h2>
+<div class="kpi-grid">
+<div class="kpi-card">
+<div class="kpi-value">
+46,623
+</div>
+<div class="kpi-label">
+Hadith records
+</div>
+</div>
+<div class="kpi-card">
+<div class="kpi-value">
+43,846
+</div>
+<div class="kpi-label">
+Records with matn
+</div>
+</div>
+<div class="kpi-card">
+<div class="kpi-value">
+≈1.06M
+</div>
+<div class="kpi-label">
+Lexical words
+</div>
+</div>
+<div class="kpi-card">
+<div class="kpi-value">
+83,280
+</div>
+<div class="kpi-label">
+Unique lexical forms
+</div>
+</div>
+<div class="kpi-card">
+<div class="kpi-value">
+38,998
+</div>
+<div class="kpi-label">
+Reports with source text
+</div>
+</div>
+<div class="kpi-card">
+<div class="kpi-value">
+31,598
+</div>
+<div class="kpi-label">
+Reports with recognized source abbreviation
+</div>
+</div>
+<div class="kpi-card">
+<div class="kpi-value">
+22,998
+</div>
+<div class="kpi-label">
+Reports with preliminary narrator extraction
+</div>
+</div>
+<div class="kpi-card">
+<div class="kpi-value">
+4,283
+</div>
+<div class="kpi-label">
+Distinct preliminary narrator names
+</div>
+</div>
+</div>
+<div class="dashboard-note">
+<p><strong>Current status.</strong> The corpus is sufficiently developed to demonstrate large-scale quantitative analysis, but it remains a preliminary computational corpus. The highest priority is continued curation of the <strong>hadith number → matn → source</strong> relationship.</p>
+</div>
 </section>
-<section id="scope-of-version-1.0" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="scope-of-version-1.0"><span class="header-section-number">1.3</span> Scope of Version 1.0</h2>
-<p>Version 1.0 should be regarded as a proof of concept. The project demonstrates that a large hadith collection can be transformed into a structured computational corpus and subjected to corpus-wide quantitative analysis using a reproducible processing pipeline.</p>
-<p>The corpus is not yet considered complete. A number of parsing challenges remain, particularly regarding precise separation of the matn from source citations in a minority of reports. Consequently, the present release emphasizes conservative extraction, comprehensive auditing, and reproducibility over aggressive automation.</p>
-<p>Despite these limitations, the current corpus already supports a broad range of descriptive and exploratory analyses, several of which are presented in the remainder of this report.</p>
+<section id="explore-the-project" class="level2 dashboard-section-title" data-number="1.2">
+<h2 class="dashboard-section-title anchored" data-number="1.2" data-anchor-id="explore-the-project"><span class="header-section-number">1.2</span> Explore the Project</h2>
+<div class="dashboard-card-grid">
+<section id="corpus-foundations" class="level3 dashboard-card" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="corpus-foundations"><span class="header-section-number">1.2.1</span> Corpus Foundations</h3>
+<p>Understand the source text, the Shamela digital sources, and how the material is represented computationally.</p>
+<p><a href="./01_source_text_and_digital_sources.html">Source Text &amp; Digital Sources →</a></p>
+<p><a href="./02_computational_corpus.html">Computational Corpus →</a></p>
 </section>
-<section id="organization-of-this-report" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="organization-of-this-report"><span class="header-section-number">1.4</span> Organization of this Report</h2>
-<p>This report is organized into two major parts.</p>
-<p>The first part describes the source materials used to construct the corpus, the computational framework developed for corpus construction, and the principal challenges encountered during automatic parsing.</p>
-<p>The second part presents the analytical products generated from the current Version 1.0 corpus, including descriptive corpus statistics, repeated phrase discovery, source abbreviation analysis, and preliminary narrator extraction.</p>
+<section id="matn-statistics" class="level3 dashboard-card" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="matn-statistics"><span class="header-section-number">1.2.2</span> Matn Statistics</h3>
+<p>Explore the first corpus-wide quantitative profile of the hadith text: lexical counts, particles, report lengths, lexical diversity, and descriptive distributions.</p>
+<p><a href="./03_matn_stats.html">Open Matn Statistics →</a></p>
 </section>
-<section id="development-philosophy" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="development-philosophy"><span class="header-section-number">1.5</span> Development Philosophy</h2>
-<p>Throughout development, emphasis has been placed on reproducibility, transparency, and conservative corpus construction. Intermediate audit tables are retained, all analytical products are mirrored into DuckDB, and each stage of the workflow produces independently verifiable outputs.</p>
-<p>Rather than attempting to maximize automatic parsing at the expense of reliability, the pipeline is designed to identify ambiguous cases explicitly and preserve them for later scholarly review. This philosophy ensures that future improvements to corpus fidelity can be incorporated incrementally without requiring reconstruction of the entire analytical framework.</p>
+<section id="repeated-phrases" class="level3 dashboard-card" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="repeated-phrases"><span class="header-section-number">1.2.3</span> Repeated Phrases</h3>
+<p>Examine repeated multi-word sequences across the corpus, including 2-grams through 5-grams, as a foundation for empirical study of formulaic language.</p>
+<p><a href="./04_repeated_phrases.html">Open Repeated Phrases →</a></p>
+</section>
+<section id="sources-narrators" class="level3 dashboard-card" data-number="1.2.4">
+<h3 data-number="1.2.4" class="anchored" data-anchor-id="sources-narrators"><span class="header-section-number">1.2.4</span> Sources &amp; Narrators</h3>
+<p>Review recognized source abbreviations, source-frequency patterns, preliminary narrator extraction, and the cases that remain priorities for human review.</p>
+<p><a href="./05_source_narrator.html">Open Sources &amp; Narrators →</a></p>
+</section>
+<section id="future-computational-study" class="level3 dashboard-card" data-number="1.2.5">
+<h3 data-number="1.2.5" class="anchored" data-anchor-id="future-computational-study"><span class="header-section-number">1.2.5</span> Future Computational Study</h3>
+<p>See the kinds of linguistic, morphological, statistical, and transmission-related questions that a more fully curated corpus could support.</p>
+<p><a href="./06_towards_computational_study_prophetic_traditions.html">Explore Future Directions →</a></p>
+</section>
+<section id="collaboration" class="level3 dashboard-card dashboard-card-accent" data-number="1.2.6">
+<h3 data-number="1.2.6" class="anchored" data-anchor-id="collaboration"><span class="header-section-number">1.2.6</span> Collaboration</h3>
+<p>Contributions are welcome from anyone interested in hadith studies, Classical Arabic, Arabic computational linguistics, corpus construction, or digital text curation.</p>
+<p>The highest current priority is improving the underlying corpus by validating the relationship between <strong>hadith numbers, matn, and source citations</strong>.</p>
+</section>
+</div>
+</section>
+<section id="project-scope" class="level2 dashboard-section-title" data-number="1.3">
+<h2 class="dashboard-section-title anchored" data-number="1.3" data-anchor-id="project-scope"><span class="header-section-number">1.3</span> Project Scope</h2>
+<p>The project begins with the approximately 46,600 numbered hadith reports preserved in <em>Kanz al-Ummāl</em>. The current computational framework stores the corpus and derived analyses in DuckDB and supports reproducible corpus-level investigation.</p>
+<p>Version 1.0 is intentionally a <strong>proof of concept</strong>, not a definitive digital edition. Its purpose is to demonstrate what becomes possible once a large Classical Arabic hadith collection is represented as structured computational data, while making the remaining curation needs explicit.</p>
+<section id="from-corpus-construction-to-computational-inquiry" class="level3 dashboard-footer-callout" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="from-corpus-construction-to-computational-inquiry"><span class="header-section-number">1.3.1</span> From Corpus Construction to Computational Inquiry</h3>
+<p>A carefully curated <strong>hadith number → matn → source</strong> table would strengthen every downstream analysis simultaneously—from lexical and formulaic studies to Arabic morphology, source profiling, narrator analysis, and eventually linkage to original source books containing fuller isnād information.</p>
+</section>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -327,7 +368,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ali-altimimi-phd\.github\.io\/arabic-computational-linguistics\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -341,6 +382,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -654,18 +700,23 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./01_source_text_and_digital_sources.html" class="pagination-link" aria-label="Source Text and Digital Sources">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Source Text and Digital Sources</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Ali M. Al-Timimi, PhD</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Version 1.0 — Proof of Concept</p>
+<div class="toc-actions"><ul><li><a href="https://github.com/ali-altimimi-phd/arabic-computational-linguistics/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>CC BY 4.0</p>
+</div>
+  </div>
+</footer>
 
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
