@@ -1,25 +1,33 @@
 ############################################################
 # Classical Arabic Computational Linguistics
-# Ignore everything except the published website and
-# essential project metadata.
 ############################################################
 
 # Ignore everything
 *
 
-# Keep Git configuration
+# Project metadata
 !.gitignore
-
-# Keep project documentation
 !README.md
 !LICENSE
 !CITATION.cff
+!_quarto.yml
 
-# Keep the published website
+# Published website
 !docs/
 !docs/**
 
-# (Optional) Keep the GitHub Pages configuration if you add one later
-#!.nojekyll
-/.quarto/
+# Quarto cache
+.quarto/
+
+# Jupyter cache
 **/*.quarto_ipynb
+
+# Editor files
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Computational Corpus – Arabic Computational Linguistics</title>
+<title>Possible Future Directions – Arabic Computational Linguistics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,41 +22,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -106,6 +71,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -204,26 +172,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#computational-corpus" id="toc-computational-corpus" class="nav-link active" data-scroll-target="#computational-corpus">Computational Corpus</a>
+  <li><a href="#possible-future-directions" id="toc-possible-future-directions" class="nav-link active" data-scroll-target="#possible-future-directions">Possible Future Directions</a>
   <ul class="collapse">
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#audit-driven-corpus-construction" id="toc-audit-driven-corpus-construction" class="nav-link" data-scroll-target="#audit-driven-corpus-construction">Audit-Driven Corpus Construction</a></li>
-  <li><a href="#example-1-hadith-numbering" id="toc-example-1-hadith-numbering" class="nav-link" data-scroll-target="#example-1-hadith-numbering">Example 1 — Hadith Numbering</a></li>
-  <li><a href="#hadith-numbering-audit" id="toc-hadith-numbering-audit" class="nav-link" data-scroll-target="#hadith-numbering-audit">Hadith Numbering Audit</a></li>
-  <li><a href="#example-2-separating-the-matn-from-source-citations" id="toc-example-2-separating-the-matn-from-source-citations" class="nav-link" data-scroll-target="#example-2-separating-the-matn-from-source-citations">Example 2 — Separating the Matn from Source Citations</a></li>
-  <li><a href="#source-citation-audit" id="toc-source-citation-audit" class="nav-link" data-scroll-target="#source-citation-audit">Source Citation Audit</a></li>
-  <li><a href="#why-corpus-refinement-matters" id="toc-why-corpus-refinement-matters" class="nav-link" data-scroll-target="#why-corpus-refinement-matters">Why Corpus Refinement Matters</a></li>
-  <li><a href="#transition-to-corpus-analysis" id="toc-transition-to-corpus-analysis" class="nav-link" data-scroll-target="#transition-to-corpus-analysis">Transition to Corpus Analysis</a></li>
+  <li><a href="#ai-assisted-analysis-of-speech-patterns" id="toc-ai-assisted-analysis-of-speech-patterns" class="nav-link" data-scroll-target="#ai-assisted-analysis-of-speech-patterns">1. AI-Assisted Analysis of Speech Patterns</a></li>
+  <li><a href="#comparative-analysis-across-topics-and-source-books" id="toc-comparative-analysis-across-topics-and-source-books" class="nav-link" data-scroll-target="#comparative-analysis-across-topics-and-source-books">2. Comparative Analysis Across Topics and Source Books</a></li>
+  <li><a href="#computational-study-of-omissions-in-al-suyūṭīs-compilation-project" id="toc-computational-study-of-omissions-in-al-suyūṭīs-compilation-project" class="nav-link" data-scroll-target="#computational-study-of-omissions-in-al-suyūṭīs-compilation-project">3. Computational Study of Omissions in al-Suyūṭī’s Compilation Project</a></li>
+  <li><a href="#other-hadith-based-computational-linguistics-projects" id="toc-other-hadith-based-computational-linguistics-projects" class="nav-link" data-scroll-target="#other-hadith-based-computational-linguistics-projects">4. Other Hadith-Based Computational Linguistics Projects</a></li>
+  <li><a href="#research-roadmap" id="toc-research-roadmap" class="nav-link" data-scroll-target="#research-roadmap">Research Roadmap</a></li>
+  <li><a href="#long-term-perspective" id="toc-long-term-perspective" class="nav-link" data-scroll-target="#long-term-perspective">Long-Term Perspective</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/ali-altimimi-phd/arabic-computational-linguistics/blob/main/02_computational_corpus.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ali-altimimi-phd/arabic-computational-linguistics/blob/main/07_possible_future_directions.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Computational Corpus</h1>
+<h1 class="title">Possible Future Directions</h1>
 </div>
 
 
@@ -240,206 +206,66 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="computational-corpus" class="level1">
-<h1>Computational Corpus</h1>
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>The canonical computational corpus is maintained in a DuckDB database. DuckDB stores the parsed hadith corpus together with audit tables, intermediate products, and downstream analytical results. This architecture provides a reproducible workflow from the original digital source files to the statistical analyses presented later in this report.</p>
-<p>The principal analytical table is:</p>
-<p><code>kanz_hadith_reports</code></p>
-<p>Conceptually, each record contains three components:</p>
-<ol type="1">
-<li>Hadith number</li>
-<li>Matn (text)</li>
-<li>Source citations</li>
-</ol>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="qmd_resources/structure_of_a_report.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<p>Although this structure appears straightforward, several characteristics of the Shamela digitalization complicate automatic corpus construction.</p>
+<section id="possible-future-directions" class="level1">
+<h1>Possible Future Directions</h1>
+<p>The preliminary <em>Kanz al-Ummāl</em> corpus establishes a foundation for research extending beyond corpus construction and descriptive statistics. Four broad directions are especially promising. Each would require additional annotation, validation, or external data, but all can build upon the same curated <strong>hadith number → matn → source</strong> reference table.</p>
+<section id="ai-assisted-analysis-of-speech-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="ai-assisted-analysis-of-speech-patterns">1. AI-Assisted Analysis of Speech Patterns</h2>
+<p>AI-assisted methods could classify the linguistic form of the speech preserved in individual hadith reports. Possible features include declarative statements (<em>khabar</em>), commands, prohibitions, questions, warnings, promises, supplications, conditional constructions, oaths, rhetorical forms, discourse markers, and formulaic expressions.</p>
+<p>Because many reports preserve only the words attributed to the Prophet without the question or event that prompted them, the analysis should classify the <strong>surviving speech fragment</strong> rather than attempt to reconstruct missing conversational context.</p>
 </section>
-<section id="audit-driven-corpus-construction" class="level2">
-<h2 class="anchored" data-anchor-id="audit-driven-corpus-construction">Audit-Driven Corpus Construction</h2>
-<p>Rather than relying on a single parsing pass, the project adopts an audit-driven approach. Independent quality-control procedures are used to identify ambiguous records before they enter the canonical corpus.</p>
-<p>This philosophy favors conservative extraction over aggressive automation. When uncertainty exists, the record is retained for later review rather than forcing an automatic decision.</p>
+<section id="comparative-analysis-across-topics-and-source-books" class="level2">
+<h2 class="anchored" data-anchor-id="comparative-analysis-across-topics-and-source-books">2. Comparative Analysis Across Topics and Source Books</h2>
+<p>Once speech-pattern annotations are available, the corpus could be used to test whether linguistic form varies systematically by subject matter or source collection. Examples include comparing:</p>
+<ul>
+<li>declarative and informative speech in reports concerning faith;</li>
+<li>directive and procedural speech in reports concerning prayer;</li>
+<li>conditional and qualifying language in reports concerning commerce or divorce;</li>
+<li>report length, formula density, and rhetorical structure across topics;</li>
+<li>linguistic profiles associated with different cited source books.</li>
+</ul>
+<p>This would make it possible to construct empirical discourse profiles for major topics and source traditions.</p>
 </section>
-<section id="example-1-hadith-numbering" class="level2">
-<h2 class="anchored" data-anchor-id="example-1-hadith-numbering">Example 1 — Hadith Numbering</h2>
-<p>The printed edition does not contain a perfectly continuous sequence of hadith numbers. During development, a dedicated audit compared the extracted numbering with the original source text to distinguish genuine numbering irregularities from parser failures.</p>
-<p>The primary purpose of this audit was validation rather than correction. It demonstrated that numbering anomalies are properties of the source edition itself and therefore should not automatically be interpreted as parser errors.</p>
-<p>Future versions of the corpus are expected to rely primarily on a manually curated numbering table, making the detailed audit outputs largely historical.</p>
+<section id="computational-study-of-omissions-in-al-suyūṭīs-compilation-project" class="level2">
+<h2 class="anchored" data-anchor-id="computational-study-of-omissions-in-al-suyūṭīs-compilation-project">3. Computational Study of Omissions in al-Suyūṭī’s Compilation Project</h2>
+<p>A larger comparative project could evaluate the coverage of al-Suyūṭī’s attempt to collect the hadith literature. Digitized source collections could be compared with the reports preserved in his compilations and their later reorganization in <em>Kanz al-Ummāl</em>.</p>
+<p>AI-assisted text matching could identify exact parallels, near matches, variant wordings, and probable omissions. Human review would remain necessary to distinguish genuine omissions from differences in wording, manuscript transmission, editorial selection, or modern source editions.</p>
 </section>
-<section id="hadith-numbering-audit" class="level2">
-<h2 class="anchored" data-anchor-id="hadith-numbering-audit">Hadith Numbering Audit</h2>
-<p>During corpus construction, the hadith numbering sequence was audited against the source text. The purpose of this audit was not to produce a final corrected edition, but to determine whether apparent gaps and anomalies were parser artifacts or features already present in the source edition.</p>
-<p>The audit reads the CSV outputs stored under:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>numbering_audit_dir <span class="ot">&lt;-</span> <span class="fu">file.path</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"kanz_outputs"</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"02a_missing_hadith_number_audit"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell">
+<section id="other-hadith-based-computational-linguistics-projects" class="level2">
+<h2 class="anchored" data-anchor-id="other-hadith-based-computational-linguistics-projects">4. Other Hadith-Based Computational Linguistics Projects</h2>
+<p>The corpus may also support additional projects not yet specified. Possible areas include lexical variation, collocation analysis, semantic similarity, formulaic language, automatic report clustering, Arabic morphological analysis, information retrieval, and comparisons with other Classical Arabic corpora.</p>
+<p>This fourth direction keeps the research program open to new questions that may emerge as the corpus becomes more accurate and additional hadith collections become computationally accessible.</p>
+</section>
+<section id="research-roadmap" class="level2">
+<h2 class="anchored" data-anchor-id="research-roadmap">Research Roadmap</h2>
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>Summary of the hadith numbering audit.</caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Measure</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Expected hadith numbering range</td>
-<td style="text-align: left;">1–46,624</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Observed hadith starts in source</td>
-<td style="text-align: left;">44,092</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Missing numbers checked</td>
-<td style="text-align: left;">2,582</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Missing numbers present as literal hadith starts</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Missing numbers absent as literal hadith starts</td>
-<td style="text-align: left;">2,582</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Consecutive missing-number ranges</td>
-<td style="text-align: left;">159</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Likely local source misnumberings</td>
-<td style="text-align: left;">7</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Source numbering gaps</td>
-<td style="text-align: left;">152</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Duplicate-number rows inspected</td>
-<td style="text-align: left;">0</td>
-</tr>
-</tbody>
-</table>
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A["Curated Kanz al-Ummāl Corpus"]
+
+    A --&gt; B["AI-Assisted Analysis of&lt;br/&gt;Speech Patterns"]
+    A --&gt; C["Comparative Analysis Across&lt;br/&gt;Topics and Source Books"]
+    A --&gt; D["Computational Study of&lt;br/&gt;Omissions in al-Suyūṭī's Project"]
+    A --&gt; H["Other Hadith-Based&lt;br/&gt;Computational Linguistics Projects"]
+
+    B --&gt; E["Speech Modes, Rhetorical Forms,&lt;br/&gt;and Formulaic Expressions"]
+    C --&gt; F["Linguistic Variation in&lt;br/&gt;Length, Type, and Structure"]
+    D --&gt; G["Coverage, Textual Parallels,&lt;br/&gt;and Candidate Omissions"]
+    H --&gt; I["Additional Corpus-Based&lt;br/&gt;Research Questions"]
+</pre>
 </div>
+<p></p></figure><p></p>
 </div>
-<p>The numbering audit demonstrates that apparent gaps in the hadith sequence are not simply parser failures. Missing report numbers were checked directly against the source text, and the audit distinguishes numbers that are literally absent from the source from those requiring further review.</p>
-<p>For the purposes of this Version 1.0 report, the detailed gap structure is less important than the general conclusion: the parser cannot assume a perfectly continuous sequence from 1 to 46,624. Numbering irregularities must be explicitly audited and, eventually, resolved through a curated reference table.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Interpretation">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Interpretation
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The numbering audit is primarily a validation layer. It documents that some numbering irregularities originate in the source edition itself and should not be treated automatically as extraction failures.</p>
-<p>In later versions of the project, this audit can be reduced or replaced once a curated hadith number table exists.</p>
 </div>
 </div>
 </section>
-<section id="example-2-separating-the-matn-from-source-citations" class="level2">
-<h2 class="anchored" data-anchor-id="example-2-separating-the-matn-from-source-citations">Example 2 — Separating the Matn from Source Citations</h2>
-<p>A more substantial challenge concerns identification of the boundary between the matn and the abbreviated source citations.</p>
-<p>Although most reports follow the general pattern</p>
-<blockquote class="blockquote">
-<p>hadith number → matn → source citations</p>
-</blockquote>
-<p>the editorial conventions used to indicate this transition are not completely standardized. Source citations may appear parenthetically, within quotation marks, or as bare abbreviations embedded directly in the running text. No single parsing rule correctly identifies every transition.</p>
-<p>Accordingly, the Version 1.0 parser adopts a conservative strategy. When the boundary cannot be determined confidently, potentially ambiguous material is preserved for subsequent scholarly review rather than being split automatically.</p>
-</section>
-<section id="source-citation-audit" class="level2">
-<h2 class="anchored" data-anchor-id="source-citation-audit">Source Citation Audit</h2>
-<p>A second audit examined the abbreviated source citations that follow the matn. Unlike the hadith numbering audit, this stage focuses on the transition between the text of the report and the bibliographic information identifying its original sources.</p>
-<p>The audit summarizes recognized source abbreviations, narrator extraction, unresolved source tokens, and report-level parsing decisions. Together these provide an overall assessment of the reliability of source identification in the current Version 1.0 corpus.</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>Summary of the source citation audit.</caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Measure</th>
-<th style="text-align: left;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Recognized source abbreviations</td>
-<td style="text-align: left;">36</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Distinct source abbreviations observed</td>
-<td style="text-align: left;">33</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Unknown source-review tokens</td>
-<td style="text-align: left;">1182</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Distinct narrators extracted</td>
-<td style="text-align: left;">4283</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Reports containing source abbreviations</td>
-<td style="text-align: left;">46,623</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Hadith/source matrix rows</td>
-<td style="text-align: left;">46,623</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>The audit demonstrates that most source citations can be recognized using a controlled lookup table of standard abbreviations. Nevertheless, the printed edition does not employ a completely uniform editorial style, and some reports contain abbreviated forms or formatting patterns that cannot yet be classified automatically.</p>
-<p>Rather than forcing uncertain classifications, the parser records these unresolved cases for subsequent scholarly review. This conservative strategy preserves the integrity of the corpus while simultaneously identifying the specific records that would benefit most from manual curation.</p>
-<div class="callout callout-style-default callout-important callout-titled" title="A Curated Source Table">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>A Curated Source Table
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The greatest remaining opportunity for improving the computational corpus is the creation of a manually curated <strong>hadith number → matn → source</strong> reference table.</p>
-<p>Such a resource would establish definitive boundaries between the text of each hadith and its accompanying source citations. Once available, it would immediately improve lexical analyses, repeated phrase discovery, narrator extraction, source attribution, transmission-network reconstruction, stylometric studies, and virtually every downstream computational linguistic analysis.</p>
-<p>The present audit framework is designed to facilitate that process by identifying precisely those records requiring scholarly review rather than attempting increasingly complex parsing heuristics.</p>
-</div>
-</div>
-</section>
-<section id="why-corpus-refinement-matters" class="level2">
-<h2 class="anchored" data-anchor-id="why-corpus-refinement-matters">Why Corpus Refinement Matters</h2>
-<div class="callout callout-style-default callout-important callout-titled" title="Collaborative Corpus Curation">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Collaborative Corpus Curation
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The principal remaining challenge is no longer demonstrating that large-scale computational analysis of <em>Kanz al-Ummāl</em> is feasible. Version 1.0 establishes that proof of concept.</p>
-<p>The next stage of the project is the creation of a carefully curated <strong>hadith number → matn → source</strong> reference table.</p>
-<p>Such a curated table would immediately improve every downstream analysis, including lexical statistics, repeated phrase discovery, source abbreviation analysis, narrator extraction, stylometric studies, transmission-network analysis, and future computational linguistics research.</p>
-<p>For this reason, scholarly corpus curation is expected to provide substantially greater long-term benefit than continued refinement of individual parsing heuristics.</p>
-</div>
-</div>
-</section>
-<section id="transition-to-corpus-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="transition-to-corpus-analysis">Transition to Corpus Analysis</h2>
-<p>Despite the remaining areas requiring curation, the current Version 1.0 corpus already supports meaningful quantitative investigation. The following chapters present three examples of corpus-wide analyses generated directly from the current DuckDB corpus: descriptive statistics of the matn, empirical discovery of repeated phrases, and analysis of source abbreviations and narrator information.</p>
+<section id="long-term-perspective" class="level2">
+<h2 class="anchored" data-anchor-id="long-term-perspective">Long-Term Perspective</h2>
+<p>Together, these directions would extend the present work from a computational edition of one major hadith compilation into a broader research platform for Arabic corpus linguistics, discourse analysis, textual comparison, and the history of hadith compilation.</p>
+<p>The canonical corpus should remain stable and auditable, while future projects are added as separate annotation and analytical layers. This preserves the underlying text and provenance while allowing increasingly sophisticated forms of AI-assisted research.</p>
 
 
 </section>
@@ -859,7 +685,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>   
     <div class="nav-footer-center">
 <p>Version 1.0 · Proof of Concept</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ali-altimimi-phd/arabic-computational-linguistics/blob/main/02_computational_corpus.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ali-altimimi-phd/arabic-computational-linguistics/blob/main/07_possible_future_directions.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>CC BY 4.0</p>
 </div>

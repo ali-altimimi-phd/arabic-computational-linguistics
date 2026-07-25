@@ -1,0 +1,65 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Arabic Computational Linguistics"
+  site-url: "https://ali-altimimi-phd.github.io/arabic-computational-linguistics/"
+  repo-url: "https://github.com/ali-altimimi-phd/arabic-computational-linguistics"
+  repo-actions: [source]
+
+  navbar:
+    background: dark
+    foreground: light
+
+    left:
+      - text: "Home"
+        href: index.qmd
+
+      - text: "Corpus"
+        menu:
+          - text: "Source Text & Digital Sources"
+            href: 01_source_text_and_digital_sources.qmd
+          - text: "Computational Corpus"
+            href: 02_computational_corpus.qmd
+
+      - text: "Analyses"
+        menu:
+          - text: "Matn Statistics"
+            href: 03_matn_stats.qmd
+          - text: "Repeated Phrases"
+            href: 04_repeated_phrases.qmd
+          - text: "Sources & Narrators"
+            href: 05_source_narrator.qmd
+
+      - text: "Future"
+        menu:
+          - text: "Towards Computational Hadith Studies"
+            href: 06_towards_computational_study_prophetic_traditions.qmd
+          - text: "Possible Future Directions"
+            href: 07_possible_future_directions.qmd
+
+    right:
+      - icon: github
+        href: "https://github.com/ali-altimimi-phd/arabic-computational-linguistics"
+        aria-label: "GitHub repository"
+
+  page-footer:
+    left: "Conceived and developed by Ali M. Al-Timimi, PhD"
+    center: "Version 1.0 · Proof of Concept"
+    right: "CC BY 4.0"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    smooth-scroll: true
+    link-external-newwindow: true
+
+execute:
+  echo: false
+  warning: false
+  message: false
